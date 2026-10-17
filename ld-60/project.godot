@@ -20,6 +20,10 @@ SignalManager="*uid://4t6aji4ot7y7"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=768
+window/size/window_height_override=432
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
