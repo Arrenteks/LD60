@@ -38,4 +38,3 @@ func _input(event: InputEvent) -> void:
 					tween = get_tree().create_tween()
 					tween.tween_property(self, "position", snap_position, weight* get_process_delta_time())
 					
-			
