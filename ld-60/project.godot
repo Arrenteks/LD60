@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="ld60"
+run/main_scene="uid://db5a012kxqppb"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://sprites/icon.svg"
 
 [autoload]
 
 SignalManager="*uid://4t6aji4ot7y7"
+Tickengine="*uid://db5a012kxqppb"
 
 [display]
 
