@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://db5a012kxqppb"]
+
+[ext_resource type="Script" uid="uid://b77abr1hkigxw" path="res://scripts/tickengine.gd" id="1_vlc7k"]
+
+[node name="Clock" type="Node" unique_id=1363110842]
+script = ExtResource("1_vlc7k")
+
+[node name="Timer" type="Timer" parent="." unique_id=243883612]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
