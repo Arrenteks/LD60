@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://by5bae5ec2wj2"]
+
+[ext_resource type="PackedScene" uid="uid://dmadmd48ho78p" path="res://scenes/grab_test/grab_item.tscn" id="1_yiyir"]
+[ext_resource type="PackedScene" uid="uid://dq1gpxn7ac8u7" path="res://scenes/grab_test/item_socket.tscn" id="2_qs5j1"]
+
+[node name="GrabTesting" type="Node2D" unique_id=2122397913]
+
+[node name="ItemSocket" parent="." unique_id=1394437148 instance=ExtResource("2_qs5j1")]
+position = Vector2(714, 180)
+scale = Vector2(10.5, 9.954175)
+collision_layer = 1
+collision_mask = 1
+monitoring = true
+
+[node name="GrabItem" parent="." unique_id=80330460 instance=ExtResource("1_yiyir")]
+position = Vector2(461.99997, 357)
+scale = Vector2(1, 0.99999994)
+collision_layer = 1
+collision_mask = 1
+has_origin = true

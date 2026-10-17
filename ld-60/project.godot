@@ -23,6 +23,10 @@ SignalManager="*uid://4t6aji4ot7y7"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+item_socket=""
+
 [layer_names]
 
 2d_physics/layer_1="Level"
