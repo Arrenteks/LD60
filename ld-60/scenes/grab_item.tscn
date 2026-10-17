@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dmadmd48ho78p"]
+
+[ext_resource type="Script" uid="uid://clitrvuv1ed7h" path="res://scenes/grab_config.gd" id="1_6q2k3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymojk"]
+size = Vector2(63.064735, 62.49765)
+
+[sub_resource type="Gradient" id="Gradient_402un"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yd4de"]
+gradient = SubResource("Gradient_402un")
+
+[node name="Sprite2D" type="CharacterBody2D" unique_id=614658]
+input_pickable = true
+script = ExtResource("1_6q2k3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1991569894]
+position = Vector2(-0.33403778, -0.15024567)
+scale = Vector2(0.99999964, 1)
+shape = SubResource("RectangleShape2D_ymojk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1503038693]
+position = Vector2(-0.33403778, 0.15023041)
+scale = Vector2(0.99999994, 1)
+texture = SubResource("GradientTexture2D_yd4de")

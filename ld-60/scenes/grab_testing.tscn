@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://by5bae5ec2wj2"]
 
+[ext_resource type="PackedScene" uid="uid://dmadmd48ho78p" path="res://scenes/grab_item.tscn" id="1_yiyir"]
+
 [node name="GrabTesting" type="Node2D" unique_id=2122397913]
+
+[node name="GrabItem" parent="." unique_id=80330460 instance=ExtResource("1_yiyir")]
+position = Vector2(462, 357)
+weight = 50
