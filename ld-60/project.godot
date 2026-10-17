@@ -14,6 +14,10 @@ config/name="ld60"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://sprites/icon.svg"
 
+[autoload]
+
+SignalManager="*uid://4t6aji4ot7y7"
+
 [display]
 
 window/stretch/mode="canvas_items"
