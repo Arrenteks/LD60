@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="NameData" format=3 uid="uid://dwyj7ebctcjpu"]
+
+[ext_resource type="Script" uid="uid://boab74wurw2j7" path="res://resources/name_data.gd" id="1_1uqql"]
+
+[resource]
+script = ExtResource("1_1uqql")
+name = "Lena Murphy"
+metadata/_custom_type_script = "uid://boab74wurw2j7"

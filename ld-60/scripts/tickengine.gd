@@ -1,4 +1,4 @@
-class_name TickEngine extends Sprite2D
+class_name TickEngine extends Node
 
 @export var tick_timer_duration : float = 1.0;
 @export var start_hour_tens : int = 0;

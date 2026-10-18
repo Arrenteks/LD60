@@ -25,7 +25,7 @@ func _get_drag_data(_at_position: Vector2) -> Color:
 # Returns a boolean by examining the data being dragged to see if it's valid
 # to drop here.
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
-	return typeof(data) == TYPE_TEXT
+	return true
 
 
 # Takes the data being dragged and processes it. In this case, we are

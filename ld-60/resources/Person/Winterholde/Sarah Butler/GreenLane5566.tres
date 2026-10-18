@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="AddressData" format=3 uid="uid://d0nduhnlcnwyt"]
+
+[ext_resource type="Script" uid="uid://b3y8ied4fg870" path="res://resources/address_data.gd" id="1_24bee"]
+
+[resource]
+script = ExtResource("1_24bee")
+address = "Green Lane 556"
+metadata/_custom_type_script = "uid://b3y8ied4fg870"
