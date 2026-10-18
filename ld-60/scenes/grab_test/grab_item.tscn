@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmadmd48ho78p"]
 
-[ext_resource type="Script" uid="uid://clitrvuv1ed7h" path="res://scenes/grab_test/grab_config.gd" id="1_uiygk"]
-[ext_resource type="Texture2D" uid="uid://3cof1c0u4nnc" path="res://sprites/icon.svg" id="2_a30m7"]
+[ext_resource type="Script" uid="uid://clitrvuv1ed7h" path="res://scripts/grab_config.gd" id="1_eju3x"]
+[ext_resource type="Texture2D" uid="uid://3cof1c0u4nnc" path="res://sprites/icon.svg" id="2_odptq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymojk"]
 size = Vector2(63.064735, 62.49765)
@@ -13,7 +13,7 @@ size = Vector2(146, 141)
 collision_layer = 4
 collision_mask = 2
 input_pickable = true
-script = ExtResource("1_uiygk")
+script = ExtResource("1_eju3x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1991569894]
 position = Vector2(-0.33403778, -0.15024567)
@@ -23,7 +23,7 @@ shape = SubResource("RectangleShape2D_ymojk")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1503038693]
 position = Vector2(-0.33403778, 0.15023041)
 scale = Vector2(0.99999994, 1)
-texture = ExtResource("2_a30m7")
+texture = ExtResource("2_odptq")
 
 [node name="MagnetPullZone" type="Area2D" parent="." unique_id=769347577]
 
