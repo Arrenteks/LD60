@@ -2,6 +2,7 @@ extends Node
 
 signal money_changed(value)
 signal x_unlocked
+signal numberSelected(value)
 
 signal start_day
 signal end_day

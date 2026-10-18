@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c25aw66vnx4kj"]
+
+[ext_resource type="Theme" uid="uid://bvqoqu52e0hn1" path="res://Themes/ButtonTheme.tres" id="1_q2a50"]
+[ext_resource type="Script" uid="uid://bho3u22sp0ka3" path="res://UIComponentScenes/options_loader_button.gd" id="2_4jrx7"]
+[ext_resource type="PackedScene" uid="uid://c31pwql3b1bqa" path="res://UIComponentScenes/OptionsMenu.tscn" id="3_wo1fi"]
+
+[node name="OptionsLoaderButton" type="Button" unique_id=281677663]
+custom_minimum_size = Vector2(240, 70)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -38.5
+offset_right = 120.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_q2a50")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Options"
+script = ExtResource("2_4jrx7")
+option_menu = ExtResource("3_wo1fi")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d20qdp6k664o7"]
+
+[node name="Checkfield" type="HBoxContainer" unique_id=19514137]
+
+[node name="Label" type="Label" parent="." unique_id=1179218493]
+layout_mode = 2
+text = "Checkbutton"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=737882697]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=1988180845]
+layout_mode = 2

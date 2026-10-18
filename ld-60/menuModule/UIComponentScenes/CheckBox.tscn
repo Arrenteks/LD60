@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cke2l8x8ilgdj"]
+
+[node name="CheckBox" type="HBoxContainer" unique_id=1137128807]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=1874188984]
+layout_mode = 2
+text = "Checkbox"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=829982821]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="." unique_id=1576183387]
+layout_mode = 2

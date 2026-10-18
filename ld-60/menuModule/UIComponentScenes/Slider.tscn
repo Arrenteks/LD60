@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dlfks82nx3e1k"]
+
+[node name="Slider" type="HBoxContainer" unique_id=711733230]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=191848862]
+layout_mode = 2
+text = "Slider"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1246330261]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="." unique_id=1875504817]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="." unique_id=1619761848]
+layout_mode = 2

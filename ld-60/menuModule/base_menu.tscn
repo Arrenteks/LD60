@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cjrebuc1xguo"]
+
+[ext_resource type="PackedScene" uid="uid://b2csx1pyx7mrq" path="res://menuModule/UIComponentScenes/SceneLoaderButton.tscn" id="1_pe8at"]
+[ext_resource type="PackedScene" uid="uid://bmf7o48xbp3w8" path="res://scenes/MainGameScene.tscn" id="2_g2c2q"]
+[ext_resource type="PackedScene" uid="uid://c25aw66vnx4kj" path="res://menuModule/UIComponentScenes/OptionsLoaderButton.tscn" id="2_pe8at"]
+[ext_resource type="PackedScene" uid="uid://eqpn6qvxlbt2" path="res://menuModule/UIComponentScenes/ExitButton.tscn" id="3_1o4ma"]
+
+[node name="BaseMenu" type="MarginContainer" unique_id=756688707]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1783924919]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=364906273]
+layout_mode = 2
+alignment = 1
+
+[node name="SceneLoaderButton" parent="HBoxContainer/VBoxContainer" unique_id=821742066 instance=ExtResource("1_pe8at")]
+layout_mode = 2
+_load_scene = ExtResource("2_g2c2q")
+
+[node name="OptionsLoaderButton" parent="HBoxContainer/VBoxContainer" unique_id=281677663 instance=ExtResource("2_pe8at")]
+layout_mode = 2
+
+[node name="ExitButton" parent="HBoxContainer/VBoxContainer" unique_id=781916588 instance=ExtResource("3_1o4ma")]
+layout_mode = 2
+
+[node name="MainMenu" type="CanvasLayer" parent="." unique_id=945338665]

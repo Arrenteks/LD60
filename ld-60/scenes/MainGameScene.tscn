@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bmf7o48xbp3w8"]
+
+[ext_resource type="PackedScene" uid="uid://c6ihyv5ev2ctt" path="res://menuModule/PauseMenu/PauseMenu.tscn" id="1_6xila"]
+[ext_resource type="PackedScene" uid="uid://ccy2o7kramesx" path="res://scenes/DialogSystem/dialogWindow.tscn" id="2_cpixv"]
+
+[node name="MainGameScene" type="Node" unique_id=417379477]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=305884312]
+
+[node name="DialogWindow" parent="CanvasLayer" unique_id=235159567 instance=ExtResource("2_cpixv")]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=614204342 instance=ExtResource("1_6xila")]
+process_mode = 3
+visible = false

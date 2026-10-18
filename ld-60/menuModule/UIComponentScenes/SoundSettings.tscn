@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dj5p0n7oka37b"]
+
+[ext_resource type="Script" uid="uid://oflebltqcfjt" path="res://menuModule/UIComponentScenes/sound_settings.gd" id="1_8c47f"]
+
+[node name="SoundSettings" type="VBoxContainer" unique_id=329443865 node_paths=PackedStringArray("masterSoundSlider", "masterSoundBox", "musicSoundSlider", "musicSoundBox", "effectsSoundSlider", "effectsSoundBox", "dialogSoundSlider", "dialogSoundBox", "voiceSoundSlider", "voiceSoundBox")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8c47f")
+masterSoundSlider = NodePath("VBoxContainer/collapsedMaster/masterSoundSlider")
+masterSoundBox = NodePath("VBoxContainer/collapsedMaster/masterSoundBox")
+musicSoundSlider = NodePath("VBoxContainer/collapsedMusic/musicSoundSlider")
+musicSoundBox = NodePath("VBoxContainer/collapsedMusic/musicSoundBox")
+effectsSoundSlider = NodePath("VBoxContainer/collapsedEffects/effectsSoundSlider")
+effectsSoundBox = NodePath("VBoxContainer/collapsedEffects/effectsSoundBox")
+dialogSoundSlider = NodePath("VBoxContainer/collapsedDialog/dialogSoundSlider")
+dialogSoundBox = NodePath("VBoxContainer/collapsedDialog/dialogSoundBox")
+voiceSoundSlider = NodePath("VBoxContainer/collapsedVoice/voiceSoundSlider")
+voiceSoundBox = NodePath("VBoxContainer/collapsedVoice/voiceSoundBox")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=47054785]
+layout_mode = 2
+
+[node name="collapsedMaster" type="HBoxContainer" parent="VBoxContainer" unique_id=1277332241]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/collapsedMaster" unique_id=1068393760]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Master"
+
+[node name="masterSoundSlider" type="HSlider" parent="VBoxContainer/collapsedMaster" unique_id=153335414]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+
+[node name="masterSoundBox" type="SpinBox" parent="VBoxContainer/collapsedMaster" unique_id=186640546]
+layout_mode = 2
+rounded = true
+
+[node name="collapsedMusic" type="HBoxContainer" parent="VBoxContainer" unique_id=745667158]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/collapsedMusic" unique_id=1425513354]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Music"
+
+[node name="musicSoundSlider" type="HSlider" parent="VBoxContainer/collapsedMusic" unique_id=1482698280]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+
+[node name="musicSoundBox" type="SpinBox" parent="VBoxContainer/collapsedMusic" unique_id=1308612543]
+layout_mode = 2
+rounded = true
+
+[node name="collapsedEffects" type="HBoxContainer" parent="VBoxContainer" unique_id=1236365867]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/collapsedEffects" unique_id=1284857312]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Effects"
+
+[node name="effectsSoundSlider" type="HSlider" parent="VBoxContainer/collapsedEffects" unique_id=1248144443]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+
+[node name="effectsSoundBox" type="SpinBox" parent="VBoxContainer/collapsedEffects" unique_id=2132194603]
+layout_mode = 2
+rounded = true
+
+[node name="collapsedDialog" type="HBoxContainer" parent="VBoxContainer" unique_id=279026545]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/collapsedDialog" unique_id=2087848864]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Dialog"
+
+[node name="dialogSoundSlider" type="HSlider" parent="VBoxContainer/collapsedDialog" unique_id=1037421972]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+
+[node name="dialogSoundBox" type="SpinBox" parent="VBoxContainer/collapsedDialog" unique_id=760249487]
+layout_mode = 2
+rounded = true
+
+[node name="collapsedVoice" type="HBoxContainer" parent="VBoxContainer" unique_id=1971434306]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/collapsedVoice" unique_id=1527875573]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Voice"
+
+[node name="voiceSoundSlider" type="HSlider" parent="VBoxContainer/collapsedVoice" unique_id=1197271363]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+
+[node name="voiceSoundBox" type="SpinBox" parent="VBoxContainer/collapsedVoice" unique_id=768052768]
+layout_mode = 2
+rounded = true
+
+[connection signal="drag_ended" from="VBoxContainer/collapsedMaster/masterSoundSlider" to="." method="_on_master_sound_slider_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/collapsedMaster/masterSoundBox" to="." method="_on_master_sound_box_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/collapsedMusic/musicSoundSlider" to="." method="_on_music_sound_slider_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/collapsedMusic/musicSoundBox" to="." method="_on_music_sound_box_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/collapsedEffects/effectsSoundSlider" to="." method="_on_effects_sound_slider_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/collapsedEffects/effectsSoundBox" to="." method="_on_effects_sound_box_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/collapsedDialog/dialogSoundSlider" to="." method="_on_dialog_sound_slider_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/collapsedDialog/dialogSoundBox" to="." method="_on_dialog_sound_box_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/collapsedVoice/voiceSoundSlider" to="." method="_on_voice_sound_slider_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/collapsedVoice/voiceSoundBox" to="." method="_on_voice_sound_box_value_changed"]

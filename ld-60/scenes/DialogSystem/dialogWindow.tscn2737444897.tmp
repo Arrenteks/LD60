@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ccy2o7kramesx"]
+
+[ext_resource type="Script" uid="uid://derdv74ksphuc" path="res://scripts/DialogSystem/dialog_window.gd" id="1_hgno8"]
+[ext_resource type="Script" uid="uid://b0nkrt5e4ts1m" path="res://scenes/DialogSystem/voice_acting.gd" id="2_s5x2p"]
+
+[node name="DialogWindow" type="MarginContainer" unique_id=235159567 node_paths=PackedStringArray("textbox")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_hgno8")
+textbox = NodePath("RichTextLabel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=214871747]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="VoiceActing" type="AudioStreamPlayer" parent="." unique_id=5364708]
+pitch_scale = 2.0
+playback_type = 1
+script = ExtResource("2_s5x2p")

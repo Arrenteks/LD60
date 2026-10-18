@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://wexorqy3socj"]
+
+[sub_resource type="Theme" id="Theme_trddn"]
+
+[node name="GeneralSettings" type="GridContainer" unique_id=1430096600]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -103.0
+offset_right = 103.0
+offset_bottom = 31.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+columns = 3
+
+[node name="Label" type="Label" parent="." unique_id=960157305]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "Testlabel"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1347728438]
+layout_mode = 2
+
+[node name="Language" type="OptionButton" parent="." unique_id=707439492]
+layout_mode = 2
+theme = SubResource("Theme_trddn")
+selected = 0
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 1
+popup/item_1/text = "German"
+popup/item_1/id = 0
