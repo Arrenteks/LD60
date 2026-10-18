@@ -20,7 +20,7 @@ func _get_drag_data(_at_position: Vector2) -> PersonData:
 
 	# Sets what the user will see they are dragging.
 	set_drag_preview(preview)
-  
+
 	return person_data
 
 # Returns a boolean by examining the data being dragged to see if it's valid

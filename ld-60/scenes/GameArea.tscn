@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://r1u6d8ji0ak1"]
+
+[ext_resource type="Texture2D" uid="uid://cbn0xvqowkflp" path="res://sprites/Tisch.png" id="1_y3m0s"]
+[ext_resource type="Texture2D" uid="uid://bpg04vbg5xhcu" path="res://sprites/jan/BG.png" id="1_yhdnk"]
+[ext_resource type="Texture2D" uid="uid://44yq2brbco6x" path="res://sprites/Telefonbuch.png" id="2_yhdnk"]
+[ext_resource type="Texture2D" uid="uid://dc4wkcw6qhu22" path="res://sprites/Fragen.png" id="3_t6131"]
+[ext_resource type="Texture2D" uid="uid://buig821qdroj3" path="res://sprites/Maschine/Maschiene.png" id="4_xxp6o"]
+[ext_resource type="PackedScene" uid="uid://dg28d7nvok3sm" path="res://scenes/item_cable.tscn" id="7_3tn20"]
+[ext_resource type="PackedScene" uid="uid://cfr7y5r6fisa7" path="res://scenes/socket.tscn" id="8_2dfqc"]
+[ext_resource type="Texture2D" uid="uid://b7pfnblanbsb3" path="res://sprites/Schalter.png" id="9_qqxer"]
+[ext_resource type="PackedScene" uid="uid://cau2ckh08fckc" path="res://scenes/Klinke_grabbable.tscn" id="10_yhdnk"]
+
+[node name="GameArea" type="Node2D" unique_id=1015749483]
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=1514668760]
+position = Vector2(963, 546)
+texture = ExtResource("1_yhdnk")
+
+[node name="Tisch" type="Sprite2D" parent="." unique_id=1693612253]
+position = Vector2(2178, -174)
+texture = ExtResource("1_y3m0s")
+offset = Vector2(-1218, 1008)
+
+[node name="Maschiene" type="Sprite2D" parent="." unique_id=1371764844]
+position = Vector2(957, 531)
+texture = ExtResource("4_xxp6o")
+
+[node name="grp_Kabel" type="Node2D" parent="." unique_id=1233695503]
+position = Vector2(950, 653)
+
+[node name="ItemCable01" parent="grp_Kabel" unique_id=110500897 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+position = Vector2(-402, 184)
+default_color = Color(0.5372549, 0.8509804, 0, 1)
+connection_start = NodePath(".")
+connection_end = NodePath("../../grp_Klinke/Klinke01")
+
+[node name="ItemCable02" parent="grp_Kabel" unique_id=2075025389 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+position = Vector2(-233, 187)
+connection_start = NodePath(".")
+connection_end = NodePath("../../grp_Klinke/Klinke02")
+
+[node name="ItemCable03" parent="grp_Kabel" unique_id=526910364 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+position = Vector2(-72, 189)
+connection_start = NodePath(".")
+connection_end = NodePath("../../grp_Klinke/Klinke03")
+
+[node name="ItemCable04" parent="grp_Kabel" unique_id=1021842306 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+position = Vector2(87, 201)
+connection_start = NodePath(".")
+connection_end = NodePath("../../grp_Klinke/Klinke04")
+
+[node name="Telefonbuch" type="Sprite2D" parent="grp_Kabel" unique_id=1888902373]
+position = Vector2(765, 105)
+texture = ExtResource("2_yhdnk")
+
+[node name="Fragen" type="Sprite2D" parent="grp_Kabel" unique_id=1114576092]
+position = Vector2(-735, 124)
+texture = ExtResource("3_t6131")
+
+[node name="grp_Sockets" type="Node" parent="." unique_id=39759795]
+
+[node name="ItemSocket01" parent="grp_Sockets" unique_id=1394437148 instance=ExtResource("8_2dfqc")]
+position = Vector2(717, 170.00003)
+scale = Vector2(1.9787046, 2.3709595)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket02" parent="grp_Sockets" unique_id=23690075 instance=ExtResource("8_2dfqc")]
+position = Vector2(817, 172.00003)
+scale = Vector2(1.9787046, 2.3709595)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket03" parent="grp_Sockets" unique_id=180162585 instance=ExtResource("8_2dfqc")]
+position = Vector2(911.00006, 172.00003)
+scale = Vector2(1.9787046, 2.3709595)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket04" parent="grp_Sockets" unique_id=1685638125 instance=ExtResource("8_2dfqc")]
+position = Vector2(723.00006, 312.00003)
+scale = Vector2(1.9787046, 2.3709595)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket05" parent="grp_Sockets" unique_id=241929341 instance=ExtResource("8_2dfqc")]
+position = Vector2(826, 320.00003)
+scale = Vector2(1.9787046, 2.3709595)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket06" parent="grp_Sockets" unique_id=1245776160 instance=ExtResource("8_2dfqc")]
+position = Vector2(924, 308.00003)
+scale = Vector2(1.9787046, 2.3709595)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket07" parent="grp_Sockets" unique_id=750107973 instance=ExtResource("8_2dfqc")]
+position = Vector2(723, 525)
+scale = Vector2(1.9787046, 2.3709595)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket08" parent="grp_Sockets" unique_id=1095101092 instance=ExtResource("8_2dfqc")]
+position = Vector2(836, 521)
+scale = Vector2(1.9787046, 2.3709595)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket09" parent="grp_Sockets" unique_id=1506292444 instance=ExtResource("8_2dfqc")]
+position = Vector2(930, 527)
+scale = Vector2(1.9787046, 2.3709595)
+collision_mask = 1
+monitoring = true
+
+[node name="grp_Schalter" type="Node2D" parent="." unique_id=954044214]
+visible = false
+position = Vector2(962, 789)
+
+[node name="Schalter01" type="Sprite2D" parent="grp_Schalter" unique_id=2057168219]
+position = Vector2(-313, -12)
+texture = ExtResource("9_qqxer")
+
+[node name="Schalter02" type="Sprite2D" parent="grp_Schalter" unique_id=1182362726]
+position = Vector2(-189, -15)
+texture = ExtResource("9_qqxer")
+
+[node name="Schalter03" type="Sprite2D" parent="grp_Schalter" unique_id=1316369496]
+position = Vector2(-28, -18)
+texture = ExtResource("9_qqxer")
+
+[node name="Schalter04" type="Sprite2D" parent="grp_Schalter" unique_id=1141751506]
+position = Vector2(124, -12)
+texture = ExtResource("9_qqxer")
+
+[node name="Schalter05" type="Sprite2D" parent="grp_Schalter" unique_id=1186452148]
+position = Vector2(255, -16)
+texture = ExtResource("9_qqxer")
+
+[node name="Schalter06" type="Sprite2D" parent="grp_Schalter" unique_id=680858480]
+position = Vector2(-228, 53)
+texture = ExtResource("9_qqxer")
+
+[node name="Schalter07" type="Sprite2D" parent="grp_Schalter" unique_id=86154629]
+position = Vector2(-104, 50)
+texture = ExtResource("9_qqxer")
+
+[node name="Schalter08" type="Sprite2D" parent="grp_Schalter" unique_id=1807335806]
+position = Vector2(57, 47)
+texture = ExtResource("9_qqxer")
+
+[node name="Schalter09" type="Sprite2D" parent="grp_Schalter" unique_id=984316671]
+position = Vector2(209, 53)
+texture = ExtResource("9_qqxer")
+
+[node name="Schalter10" type="Sprite2D" parent="grp_Schalter" unique_id=520141224]
+position = Vector2(340, 49)
+texture = ExtResource("9_qqxer")
+
+[node name="grp_Lights" type="Node2D" parent="." unique_id=1082602496]
+position = Vector2(368, 491)
+
+[node name="Telefonbuch" type="Sprite2D" parent="." unique_id=1777166672]
+visible = false
+position = Vector2(1711, 738)
+texture = ExtResource("2_yhdnk")
+
+[node name="Fragen" type="Sprite2D" parent="." unique_id=94876790]
+visible = false
+position = Vector2(220, 744)
+texture = ExtResource("3_t6131")
+
+[node name="grp_Klinke" type="Node2D" parent="." unique_id=1164707480]
+
+[node name="Klinke01" parent="grp_Klinke" unique_id=614658 instance=ExtResource("10_yhdnk")]
+position = Vector2(550, 857)
+has_origin = true
+
+[node name="Klinke02" parent="grp_Klinke" unique_id=1104335867 instance=ExtResource("10_yhdnk")]
+position = Vector2(725, 855)
+has_origin = true
+
+[node name="Klinke03" parent="grp_Klinke" unique_id=624402278 instance=ExtResource("10_yhdnk")]
+position = Vector2(878, 845)
+has_origin = true
+
+[node name="Klinke04" parent="grp_Klinke" unique_id=726968096 instance=ExtResource("10_yhdnk")]
+position = Vector2(1024, 842)
+has_origin = true
