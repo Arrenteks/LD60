@@ -1,15 +1,13 @@
 [gd_resource type="Resource" script_class="PersonResource" format=3 uid="uid://cv2vrkuwvhjfu"]
 
 [ext_resource type="Resource" uid="uid://cjidq8cms6w7x" path="res://resources/Person/Bellport/Brian Howard/BrightLane21.tres" id="1_0njks"]
-[ext_resource type="Resource" uid="uid://daaa344yjeupd" path="res://resources/Person/Bellport/Brian Howard/BrianHowardNumber.tres" id="2_ge75i"]
-[ext_resource type="Script" uid="uid://cw3n2qf3u611g" path="res://resources/person_resources.gd" id="3_0njks"]
+[ext_resource type="Resource" uid="uid://dpah32or2457e" path="res://resources/Person/Bellport/Brian Howard/BrianHowardName.tres" id="2_0njks"]
+[ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_0njks"]
 [ext_resource type="Resource" uid="uid://cliof0xckjbtp" path="res://resources/Person/Bellport/Brian Howard/BrianHowardPhone.tres" id="4_v6wjh"]
 
 [resource]
 script = ExtResource("3_0njks")
-name = ExtResource("2_ge75i")
+name = ExtResource("2_0njks")
 address = ExtResource("1_0njks")
 telephone_number = ExtResource("4_v6wjh")
-base_pitch = 0.4
-pitch_varianz = 0.2
 metadata/_custom_type_script = "uid://bxo062f3w34bj"
