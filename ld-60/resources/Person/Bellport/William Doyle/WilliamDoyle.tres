@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PersonResource" format=3 uid="uid://8dggi2xpgyvm"]
+
+[ext_resource type="Resource" uid="uid://bvisehnuwlbiv" path="res://resources/Person/Bellport/William Doyle/PenrosePassage112.tres" id="1_et42a"]
+[ext_resource type="Resource" uid="uid://bf0twv4owyf27" path="res://resources/Person/Bellport/William Doyle/WilliamDoyleName.tres" id="2_urmqj"]
+[ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_et42a"]
+[ext_resource type="Resource" uid="uid://bnbekf1nr45qg" path="res://resources/Person/Bellport/William Doyle/WilliamDoylePhone.tres" id="4_h3ga5"]
+
+[resource]
+script = ExtResource("3_et42a")
+name = ExtResource("2_urmqj")
+address = ExtResource("1_et42a")
+telephone_number = ExtResource("4_h3ga5")
+metadata/_custom_type_script = "uid://bxo062f3w34bj"

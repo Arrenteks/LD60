@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cp1e82c30hcvl"]
+
+[ext_resource type="Script" uid="uid://bxan650di37pk" path="res://scripts/questions/drag_drop_question_row.gd" id="1_csy01"]
+
+[node name="DragDropQuestionRow" type="VBoxContainer" unique_id=1369241560]
+anchors_preset = -1
+anchor_right = 0.10300001
+anchor_bottom = 0.025
+offset_right = 4.23999
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_csy01")
+
+[node name="Questiontext" type="Label" parent="." unique_id=477967074]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Who made the Cake a lie?"
+
+[node name="Dropable" type="HBoxContainer" parent="." unique_id=139706778]
+layout_mode = 2
+theme_override_constants/separation = 15

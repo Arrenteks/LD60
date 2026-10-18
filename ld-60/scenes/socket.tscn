@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cfr7y5r6fisa7"]
+
+[ext_resource type="Script" uid="uid://kx4glug70dnq" path="res://scripts/item_socket.gd" id="1_6rr4c"]
+[ext_resource type="Texture2D" uid="uid://36adpfyiib4f" path="res://sprites/Maschine/Loch.png" id="2_bme3t"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ymojk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymojk"]
+size = Vector2(43, 39)
+
+[node name="ItemSocket" type="Area2D" unique_id=1394437148 groups=["item_socket"]]
+collision_layer = 4
+collision_mask = 2
+monitoring = false
+script = ExtResource("1_6rr4c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1622419496]
+texture = ExtResource("2_bme3t")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=655933855]
+visible = false
+scale = Vector2(34.5, 34.5)
+mesh = SubResource("QuadMesh_ymojk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1414879978]
+shape = SubResource("RectangleShape2D_ymojk")

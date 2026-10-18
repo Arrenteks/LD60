@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TelephoneNumberData" format=3 uid="uid://cgg6cr6wgbdnc"]
+
+[ext_resource type="Script" uid="uid://yqep25fbpemb" path="res://resources/telephone_number_data.gd" id="1_f3fla"]
+
+[resource]
+script = ExtResource("1_f3fla")
+area_code = "19"
+number = "24"
+metadata/_custom_type_script = "uid://yqep25fbpemb"

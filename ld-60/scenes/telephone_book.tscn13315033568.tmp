@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c2go5f5ld4qoi"]
+
+[ext_resource type="Script" uid="uid://cjl50ysqh2cff" path="res://scripts/telephone_book.gd" id="1_ukddc"]
+[ext_resource type="Theme" uid="uid://bj3n7tyqjwgod" path="res://themes/telephone_book.tres" id="1_wdrb8"]
+
+[node name="TelephoneBook" type="Control" unique_id=1928895459]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1420.0
+offset_bottom = -430.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wdrb8")
+script = ExtResource("1_ukddc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=497948910]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 650.0
+color = Color(0.13725491, 0.13725491, 0.13725491, 1)
+
+[node name="Page" type="VBoxContainer" parent="." unique_id=764368120]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 650.0

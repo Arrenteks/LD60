@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cau2ckh08fckc"]
+
+[ext_resource type="Script" uid="uid://clitrvuv1ed7h" path="res://scripts/grab_config.gd" id="1_ctqdd"]
+[ext_resource type="Texture2D" uid="uid://bpeoudeerr7t4" path="res://sprites/Klinker/Klinker_Top.png" id="2_ctqdd"]
+[ext_resource type="Texture2D" uid="uid://by5hxsbq75nus" path="res://sprites/Klinker/Klinker_Bottom.png" id="2_j4cqr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymojk"]
+size = Vector2(54.000015, 175)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byb5f"]
+size = Vector2(67, 190)
+
+[node name="Sprite2D" type="CharacterBody2D" unique_id=614658]
+collision_layer = 4
+collision_mask = 2
+input_pickable = true
+script = ExtResource("1_ctqdd")
+
+[node name="Bottom" type="Sprite2D" parent="." unique_id=316270008]
+position = Vector2(1, -44.5)
+texture = ExtResource("2_j4cqr")
+
+[node name="Top" type="Sprite2D" parent="Bottom" unique_id=1503038693]
+position = Vector2(0, -79.5)
+texture = ExtResource("2_ctqdd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1991569894]
+position = Vector2(1, -81)
+shape = SubResource("RectangleShape2D_ymojk")
+
+[node name="MagnetPullZone" type="Area2D" parent="." unique_id=769347577]
+position = Vector2(1, -82)
+
+[node name="MagnetCollision" type="CollisionShape2D" parent="MagnetPullZone" unique_id=255413276]
+shape = SubResource("RectangleShape2D_byb5f")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="MagnetPullZone" to="." method="_on_magnet_pull_zone_mouse_entered"]
+[connection signal="mouse_exited" from="MagnetPullZone" to="." method="_on_magnet_pull_zone_mouse_exited"]

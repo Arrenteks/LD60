@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://bgyfhdnsoydww"]
+
+[ext_resource type="Script" uid="uid://t3raufy8xgqj" path="res://scripts/clock.gd" id="1_ohn53"]
+[ext_resource type="Texture2D" uid="uid://3cof1c0u4nnc" path="res://sprites/icon.svg" id="2_ohn53"]
+
+[sub_resource type="Gradient" id="Gradient_63ma7"]
+offsets = PackedFloat32Array(0.47651008, 0.49217004)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hxdpb"]
+gradient = SubResource("Gradient_63ma7")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Gradient" id="Gradient_y451n"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.7411765, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ca7ix"]
+gradient = SubResource("Gradient_y451n")
+
+[sub_resource type="Gradient" id="Gradient_ohn53"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.8627451, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ca7ix"]
+gradient = SubResource("Gradient_ohn53")
+
+[node name="Clock" type="Node2D" unique_id=1958296638 node_paths=PackedStringArray("hour_hand", "minute_hand")]
+script = ExtResource("1_ohn53")
+hour_hand = NodePath("HourHand")
+minute_hand = NodePath("MinuteHand")
+
+[node name="Clockface" type="Sprite2D" parent="." unique_id=341975232]
+scale = Vector2(2.1210938, 2.1210938)
+texture = SubResource("GradientTexture2D_hxdpb")
+
+[node name="striche" type="Node2D" parent="Clockface" unique_id=77097166]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Node2D" type="Node2D" parent="Clockface/striche" unique_id=185393286]
+scale = Vector2(0.47145492, 0.47145492)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D" unique_id=2091269419]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D2" type="Node2D" parent="Clockface/striche" unique_id=1798853093]
+rotation = 0.5235988
+scale = Vector2(0.47145492, 0.47145492)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D2" unique_id=662825517]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D3" type="Node2D" parent="Clockface/striche" unique_id=765291295]
+rotation = 1.0471976
+scale = Vector2(0.47145495, 0.47145495)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D3" unique_id=2075940573]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D4" type="Node2D" parent="Clockface/striche" unique_id=890407792]
+rotation = 1.5707964
+scale = Vector2(0.47145492, 0.47145492)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D4" unique_id=1353269368]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D5" type="Node2D" parent="Clockface/striche" unique_id=2024763720]
+rotation = 2.0943952
+scale = Vector2(0.47145495, 0.47145495)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D5" unique_id=1312719460]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D6" type="Node2D" parent="Clockface/striche" unique_id=1888337248]
+rotation = 2.6179938
+scale = Vector2(0.47145495, 0.47145495)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D6" unique_id=888131517]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D7" type="Node2D" parent="Clockface/striche" unique_id=1098386318]
+rotation = -3.1415925
+scale = Vector2(0.47145492, 0.47145492)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D7" unique_id=386628828]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D8" type="Node2D" parent="Clockface/striche" unique_id=685992458]
+rotation = -2.6179938
+scale = Vector2(0.47145492, 0.47145492)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D8" unique_id=86957714]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D9" type="Node2D" parent="Clockface/striche" unique_id=563148171]
+rotation = -2.094395
+scale = Vector2(0.47145492, 0.47145492)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D9" unique_id=480125606]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D10" type="Node2D" parent="Clockface/striche" unique_id=1224117355]
+rotation = -1.5707964
+scale = Vector2(0.47145492, 0.47145492)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D10" unique_id=1864564430]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D11" type="Node2D" parent="Clockface/striche" unique_id=1798404070]
+rotation = -1.0471977
+scale = Vector2(0.47145492, 0.47145492)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D11" unique_id=898748022]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="Node2D12" type="Node2D" parent="Clockface/striche" unique_id=1237878052]
+rotation = -0.523599
+scale = Vector2(0.47145495, 0.47145495)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clockface/striche/Node2D12" unique_id=1508277512]
+position = Vector2(0, -176)
+scale = Vector2(0.12499999, 0.25)
+texture = ExtResource("2_ohn53")
+
+[node name="HourHand" type="Node2D" parent="." unique_id=1057091817]
+scale = Vector2(2.1210938, 2.1210938)
+
+[node name="Sprite2D" type="Sprite2D" parent="HourHand" unique_id=167382175]
+position = Vector2(0, -27.344)
+scale = Vector2(0.02, 54.689)
+texture = SubResource("GradientTexture1D_ca7ix")
+
+[node name="MinuteHand" type="Node2D" parent="." unique_id=2124031003]
+scale = Vector2(2.1210935, 2.1210935)
+
+[node name="Sprite2D" type="Sprite2D" parent="MinuteHand" unique_id=741355261]
+position = Vector2(0, -38.659)
+scale = Vector2(0.058932193, 1.2081037)
+texture = SubResource("GradientTexture2D_ca7ix")

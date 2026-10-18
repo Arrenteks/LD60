@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dxktmclx6en1x"]
+
+[ext_resource type="Script" uid="uid://2sfrh7vwm1bs" path="res://scripts/telephone_book_row.gd" id="1_mljqk"]
+[ext_resource type="PackedScene" uid="uid://c8vostjommnf8" path="res://scenes/telephone_book_dragable.tscn" id="2_7akjw"]
+
+[node name="TelephoneBookRow" type="HBoxContainer" unique_id=1280299212]
+offset_right = 360.0
+offset_bottom = 23.0
+script = ExtResource("1_mljqk")
+
+[node name="Name" parent="." unique_id=325637540 instance=ExtResource("2_7akjw")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Address" parent="." unique_id=1811762329 instance=ExtResource("2_7akjw")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TelephoneNumber" parent="." unique_id=1818843928 instance=ExtResource("2_7akjw")]
+layout_mode = 2
+size_flags_horizontal = 3

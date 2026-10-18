@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonResource" format=3 uid="uid://cmvflldb1es2y"]
+
+[ext_resource type="Resource" uid="uid://b45r5gbiw77fa" path="res://resources/Person/Fayshield/Matthew Clarke/MatthewClarkName.tres" id="1_jqn1c"]
+[ext_resource type="Resource" uid="uid://70i0wovf6311" path="res://resources/Person/Fayshield/Matthew Clarke/JulyRoad5.tres" id="1_uaw74"]
+[ext_resource type="Script" uid="uid://cw3n2qf3u611g" path="res://resources/person_resources.gd" id="3_f1wme"]
+[ext_resource type="Resource" uid="uid://bmtoj81v438sf" path="res://resources/Person/Fayshield/Matthew Clarke/MatthewClarkPhone.tres" id="3_uaw74"]
+
+[resource]
+script = ExtResource("3_f1wme")
+name = ExtResource("1_jqn1c")
+address = ExtResource("1_uaw74")
+telephone_number = ExtResource("3_uaw74")
+base_pitch = 0.45
+pitch_varianz = 0.3
+metadata/_custom_type_script = "uid://bxo062f3w34bj"

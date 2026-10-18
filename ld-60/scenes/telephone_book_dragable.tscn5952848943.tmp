@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c8vostjommnf8"]
+
+[ext_resource type="Script" uid="uid://1wlhg8wk3f0x" path="res://scripts/telephone_book_dragable.gd" id="1_tyh4v"]
+
+[node name="TelephoneBookDragable" type="Button" unique_id=325637540]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "lorem ipsum"
+script = ExtResource("1_tyh4v")

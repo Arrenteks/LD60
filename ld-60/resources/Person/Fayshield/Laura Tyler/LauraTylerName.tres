@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="NameData" format=3 uid="uid://cdce886o5jg51"]
+
+[ext_resource type="Script" uid="uid://boab74wurw2j7" path="res://resources/name_data.gd" id="1_38foc"]
+
+[resource]
+script = ExtResource("1_38foc")
+name = "Laura Tyler"
+metadata/_custom_type_script = "uid://boab74wurw2j7"
