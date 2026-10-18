@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonData" format=3 uid="uid://djq2atw6fbbw8"]
+
+[ext_resource type="Resource" uid="uid://b231vse1htm5q" path="res://resources/Person/Winterholde/James Smith/GoldRoute56.tres" id="1_5fwio"]
+[ext_resource type="Script" uid="uid://bxo062f3w34bj" path="res://resources/person_data.gd" id="1_blh2c"]
+[ext_resource type="Resource" uid="uid://dlxrhkxwevamx" path="res://resources/Person/Winterholde/James Smith/JamesSmithName.tres" id="2_hups1"]
+[ext_resource type="Resource" uid="uid://rctkt338ocap" path="res://resources/Person/Winterholde/James Smith/JamesSmithPhone.tres" id="4_ouuam"]
+
+[resource]
+script = ExtResource("1_blh2c")
+name = ExtResource("2_hups1")
+address = ExtResource("1_5fwio")
+telephone_number = ExtResource("4_ouuam")
+base_pitch = 0.4
+pitch_varianz = 0.35
+metadata/_custom_type_script = "uid://bxo062f3w34bj"

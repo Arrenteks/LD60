@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonData" format=3 uid="uid://b0dsknauij3i3"]
+
+[ext_resource type="Resource" uid="uid://68j4u0fmyxrq" path="res://resources/Person/Bellport/Susan Howard/MonumentStreet3.tres" id="1_380pl"]
+[ext_resource type="Script" uid="uid://bxo062f3w34bj" path="res://resources/person_data.gd" id="1_diwao"]
+[ext_resource type="Resource" uid="uid://dut70wawxn8i3" path="res://resources/Person/Bellport/Susan Howard/SusanHowardName.tres" id="2_wy6d1"]
+[ext_resource type="Resource" uid="uid://bw7w76r0grb4h" path="res://resources/Person/Bellport/Susan Howard/SusanHowardNumber.tres" id="4_0dbk3"]
+
+[resource]
+script = ExtResource("1_diwao")
+name = ExtResource("2_wy6d1")
+address = ExtResource("1_380pl")
+telephone_number = ExtResource("4_0dbk3")
+base_pitch = 0.6
+pitch_varianz = 0.01
+metadata/_custom_type_script = "uid://bxo062f3w34bj"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TelephoneNumberData" format=3 uid="uid://c16uy6t7027gj"]
+
+[ext_resource type="Script" uid="uid://yqep25fbpemb" path="res://resources/telephone_number_data.gd" id="1_ep61b"]
+
+[resource]
+script = ExtResource("1_ep61b")
+area_code = "5342"
+number = "004"
+metadata/_custom_type_script = "uid://yqep25fbpemb"
