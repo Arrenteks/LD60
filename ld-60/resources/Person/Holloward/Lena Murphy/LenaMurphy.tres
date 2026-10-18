@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="PersonData" format=3 uid="uid://dv3l127q5y620"]
+[gd_resource type="Resource" script_class="PersonResource" format=3 uid="uid://dv3l127q5y620"]
 
-[ext_resource type="Script" uid="uid://bxo062f3w34bj" path="res://resources/person_data.gd" id="1_81hq6"]
 [ext_resource type="Resource" uid="uid://cjvytiu4c8c6y" path="res://resources/Person/Holloward/Lena Murphy/LavenderLane5.tres" id="1_d8hi1"]
 [ext_resource type="Resource" uid="uid://dwyj7ebctcjpu" path="res://resources/Person/Holloward/Lena Murphy/LenaMurphyName.tres" id="1_jefo6"]
 [ext_resource type="Resource" uid="uid://c6bv4oitslq6f" path="res://resources/Person/Holloward/Lena Murphy/LenaMurphyPhone.tres" id="3_d8hi1"]
+[ext_resource type="Script" uid="uid://cw3n2qf3u611g" path="res://resources/person_resources.gd" id="3_jnxut"]
 
 [resource]
-script = ExtResource("1_81hq6")
+script = ExtResource("3_jnxut")
 name = ExtResource("1_jefo6")
 address = ExtResource("1_d8hi1")
 telephone_number = ExtResource("3_d8hi1")
