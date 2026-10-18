@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c6ihyv5ev2ctt"]
+
+[ext_resource type="Theme" uid="uid://bvqoqu52e0hn1" path="res://menuModule/Themes/ButtonTheme.tres" id="1_06adw"]
+[ext_resource type="PackedScene" uid="uid://c25aw66vnx4kj" path="res://menuModule/UIComponentScenes/OptionsLoaderButton.tscn" id="1_cy4t0"]
+[ext_resource type="Script" uid="uid://df0ioy6xchu6q" path="res://menuModule/PauseMenu/continue.gd" id="2_1j00s"]
+[ext_resource type="PackedScene" uid="uid://eqpn6qvxlbt2" path="res://menuModule/UIComponentScenes/ExitButton.tscn" id="3_1j00s"]
+
+[node name="PauseMenu" type="MarginContainer" unique_id=614204342]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+script = ExtResource("2_1j00s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=17465286]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=1768225274]
+layout_mode = 2
+theme = ExtResource("1_06adw")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Continue"
+
+[node name="OptionsLoaderButton2" parent="VBoxContainer" unique_id=281677663 instance=ExtResource("1_cy4t0")]
+layout_mode = 2
+
+[node name="ExitButton" parent="VBoxContainer" unique_id=1415624177 instance=ExtResource("3_1j00s")]
+layout_mode = 2
+
+[connection signal="button_down" from="VBoxContainer/Continue" to="." method="_on_continue_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/Continue" to="." method="_on_continue_mouse_entered"]
