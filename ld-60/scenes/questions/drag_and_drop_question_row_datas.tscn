@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bnxwinwepecpg"]
+
+[ext_resource type="Script" uid="uid://c81h2p1x5bk78" path="res://scripts/questions/drag_and_drop_question_row_datas.gd" id="1_08tco"]
+
+[node name="DragAndDropQuestionRowDatas" type="Control" unique_id=14741558]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 3
+anchor_right = 0.031000001
+anchor_bottom = 0.035
+offset_right = 0.47999573
+offset_bottom = -0.79999924
+size_flags_horizontal = 6
+size_flags_vertical = 3
+script = ExtResource("1_08tco")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=362256443]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 59.0
+offset_bottom = 39.0
+
+[node name="DataText" type="Label" parent="HBoxContainer" unique_id=1276078552]
+layout_mode = 2
+text = "Data"
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=661766594]
+layout_mode = 2
+text = "x"
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]

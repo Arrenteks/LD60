@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DragDropQuestion" format=3 uid="uid://ca7v60afhwlhs"]
+
+[ext_resource type="Script" uid="uid://bxo062f3w34bj" path="res://resources/person_data.gd" id="1_45mml"]
+[ext_resource type="Script" uid="uid://n8cadt7wn8ir" path="res://resources/drag_drop_question.gd" id="2_0y35o"]
+
+[resource]
+script = ExtResource("2_0y35o")
+questionType = 2
+questionText = "Who is the best?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
