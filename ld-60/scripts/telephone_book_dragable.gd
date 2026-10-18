@@ -6,10 +6,10 @@ var person_data: PersonData
 # Returns the data to pass from an object when you click and drag away from
 # this object. Also calls `set_drag_preview()` to show the mouse dragging
 # something so the user knows that the operation is working.
-func _get_drag_data(_at_position: Vector2) -> String:
+func _get_drag_data(_at_position: Vector2) -> PersonData:
 	# Use another Button as drag preview.
 	var temp_button := Button.new()
-	temp_button.text = text
+	temp_button.text = person_data._get_text()
 	temp_button.size = Vector2(117.0, 31.0)
 	
 
@@ -22,4 +22,4 @@ func _get_drag_data(_at_position: Vector2) -> String:
 	set_drag_preview(preview)
 
 	# Return color as drag data.
-	return text
+	return person_data

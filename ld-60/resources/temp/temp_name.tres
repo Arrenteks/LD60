@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="NameData" format=3 uid="uid://c3xetx4ddq7rv"]
+
+[ext_resource type="Script" uid="uid://boab74wurw2j7" path="res://resources/name_data.gd" id="1_3tpn7"]
+
+[resource]
+script = ExtResource("1_3tpn7")
+name = "Spongebob Schwammkopf"
+metadata/_custom_type_script = "uid://boab74wurw2j7"
