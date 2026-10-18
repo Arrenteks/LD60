@@ -1,16 +1,15 @@
 [gd_scene format=3 uid="uid://dd06wyaj3erju"]
 
 [ext_resource type="Script" uid="uid://5s3v2rjf2igx" path="res://scripts/questions/question_sheet.gd" id="1_gc8ai"]
-[ext_resource type="PackedScene" uid="uid://c2go5f5ld4qoi" path="res://scenes/telephone_book.tscn" id="2_gpaum"]
 
 [node name="QuestionSheet" type="Control" unique_id=451217894]
+z_index = 100
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.286
+anchor_bottom = 0.61800003
 offset_left = -2.0
-offset_right = -1371.0
-offset_bottom = -413.0
+offset_right = -0.11999512
+offset_bottom = -0.44006348
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gc8ai")
@@ -33,13 +32,6 @@ offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
-
-[node name="TelephoneBook" parent="ColorRect" unique_id=1928895459 instance=ExtResource("2_gpaum")]
-layout_mode = 1
-offset_left = 1288.0
-offset_top = 182.0
-offset_right = 737.0
-offset_bottom = -248.0
 
 [node name="nextPage" type="Button" parent="ColorRect" unique_id=2133195270]
 layout_mode = 1
