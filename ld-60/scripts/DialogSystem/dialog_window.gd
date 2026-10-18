@@ -38,7 +38,6 @@ func _process(delta: float) -> void:
 			else:
 				isTyping = false
 				arrayPosition += 1
-				print(arrayPosition)
 				if(arrayPosition < futureText.size()):
 					get_tree().create_timer(textDelay).timeout.connect(func(): startText(futureText[arrayPosition]))
 			

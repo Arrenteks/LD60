@@ -22,6 +22,12 @@ layout_mode = 2
 size_flags_horizontal = 4
 alignment = 1
 
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=369918703]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "PAUSE"
+horizontal_alignment = 1
+
 [node name="Continue" type="Button" parent="VBoxContainer" unique_id=1768225274]
 layout_mode = 2
 theme = ExtResource("1_06adw")

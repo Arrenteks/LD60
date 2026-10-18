@@ -19,7 +19,9 @@ func _on_selection_changed(target: BaseButton):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("PauseToggle"):
+		closed.emit()
+		queue_free()
 	
 
 func _on_general_button_toggled(toggled_on: bool) -> void:

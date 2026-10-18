@@ -8,24 +8,24 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("PauseToggle"):
+		toggle_pause()
 
-
-func _on_button_down() -> void:
-	if(visible):
-		visible = !visible
-	if(get_tree().paused):
-		get_tree().paused = !get_tree().paused
-	pass # Replace with function body.
-
-
-func _on_mouse_entered() -> void:
-	pass # Replace with function body.
+func toggle_pause():
+	visible = !visible
+	var state = false
+	if !get_tree().paused:
+		state = true
+	#visible = state
+	get_tree().paused = state
+	print("is paused?  ")
+	print(get_tree().paused)
 
 
 func _on_continue_button_down() -> void:
-	pass # Replace with function body.
+	toggle_pause()
 
 
 func _on_continue_mouse_entered() -> void:
 	pass # Replace with function body.
+	

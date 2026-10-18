@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dj5p0n7oka37b" path="res://menuModule/UIComponentScenes/SoundSettings.tscn" id="5_ab8l4"]
 
 [node name="OptionsMenu" type="MarginContainer" unique_id=1946249548 node_paths=PackedStringArray("_GeneralSettings", "_GraphicsSettings", "_AudioSettings")]
+process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -24,14 +25,17 @@ _GraphicsSettings = NodePath("VBoxContainer2/Menus/GraphicSettings")
 _AudioSettings = NodePath("VBoxContainer2/Menus/SoundSettings")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1630622738]
+process_mode = 3
 layout_mode = 2
 
 [node name="MenuPointSelector" type="HBoxContainer" parent="VBoxContainer2" unique_id=2120636263]
+process_mode = 3
 layout_mode = 2
 theme_override_constants/separation = 6
 alignment = 1
 
 [node name="GeneralButton" type="Button" parent="VBoxContainer2/MenuPointSelector" unique_id=1440958738]
+process_mode = 3
 visible = false
 custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
@@ -42,6 +46,7 @@ button_group = ExtResource("2_o844p")
 text = "General"
 
 [node name="GameplayButton" type="Button" parent="VBoxContainer2/MenuPointSelector" unique_id=1190869012]
+process_mode = 3
 visible = false
 custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
@@ -52,6 +57,7 @@ button_group = ExtResource("2_o844p")
 text = "Gameplay"
 
 [node name="GraphicButton" type="Button" parent="VBoxContainer2/MenuPointSelector" unique_id=1809656357]
+process_mode = 3
 custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -62,6 +68,7 @@ button_group = ExtResource("2_o844p")
 text = "Graphics"
 
 [node name="AudioButton" type="Button" parent="VBoxContainer2/MenuPointSelector" unique_id=1408828173]
+process_mode = 3
 custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -71,6 +78,7 @@ button_group = ExtResource("2_o844p")
 text = "Audio"
 
 [node name="KeybindButton" type="Button" parent="VBoxContainer2/MenuPointSelector" unique_id=271828691]
+process_mode = 3
 visible = false
 custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
@@ -81,22 +89,27 @@ button_group = ExtResource("2_o844p")
 text = "Keybinds"
 
 [node name="Menus" type="BoxContainer" parent="VBoxContainer2" unique_id=822088599]
+process_mode = 3
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="GeneralSettings" parent="VBoxContainer2/Menus" unique_id=1430096600 instance=ExtResource("3_dvedr")]
+process_mode = 3
 visible = false
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 
 [node name="GraphicSettings" parent="VBoxContainer2/Menus" unique_id=496706003 instance=ExtResource("4_c678o")]
+process_mode = 3
 layout_mode = 2
 
 [node name="SoundSettings" parent="VBoxContainer2/Menus" unique_id=154970724 instance=ExtResource("5_ab8l4")]
+process_mode = 3
 visible = false
 layout_mode = 2
 
 [node name="Close" type="Button" parent="VBoxContainer2" unique_id=1970450081]
+process_mode = 3
 custom_minimum_size = Vector2(100, 35)
 layout_mode = 2
 size_flags_horizontal = 8

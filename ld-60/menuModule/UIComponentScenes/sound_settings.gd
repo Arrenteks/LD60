@@ -13,7 +13,7 @@ extends Control
 @export var voiceSoundBox : SpinBox 
 
 func _ready() -> void:
-	print(AudioServer.get_bus_volume_linear(0))
+	#print(AudioServer.get_bus_volume_linear(0))
 	if masterSoundBox && masterSoundSlider: masterSoundBox.value = AudioServer.get_bus_volume_linear(0)*100
 	if musicSoundBox && musicSoundSlider: musicSoundBox.value = AudioServer.get_bus_volume_linear(1)*100
 	if effectsSoundBox && effectsSoundSlider: effectsSoundBox.value = AudioServer.get_bus_volume_linear(2)*100

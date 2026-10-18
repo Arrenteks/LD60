@@ -7,12 +7,12 @@ extends Button
 func _on_button_down() -> void:
 	if(option_menu.can_instantiate()):
 		var newMenu = option_menu.instantiate()
-		get_tree().root.add_child(newMenu)
+		owner.get_parent().add_child(newMenu)
 		newMenu.closed.connect(_return_to_main)
-		get_parent().hide()
+		owner.hide()
 
 func _return_to_main():
-	get_parent().show()
+	owner.visible = !owner.visible
 
 #function to play sounds or something on hoverbutton
 func _on_mouse_entered() -> void:
