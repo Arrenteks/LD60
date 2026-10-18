@@ -2,14 +2,14 @@
 
 [ext_resource type="Resource" uid="uid://bc8qeykugpek3" path="res://resources/Person/Holloward/Paul Murphy/StormBoulevard10b.tres" id="1_woypq"]
 [ext_resource type="Resource" uid="uid://01xmidvnihn4" path="res://resources/Person/Holloward/Paul Murphy/PaulMurphyName.tres" id="2_qov2l"]
-[ext_resource type="Script" uid="uid://cw3n2qf3u611g" path="res://resources/person_resources.gd" id="3_woypq"]
+[ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_woypq"]
 [ext_resource type="Resource" uid="uid://dm4iijx7ijx4o" path="res://resources/Person/Holloward/Paul Murphy/PaulMurphyPhone.tres" id="4_n1k8b"]
+[ext_resource type="Resource" uid="uid://cu3jyl0rkw34o" path="res://resources/Person/Holloward/Holloward.tres" id="5_qov2l"]
 
 [resource]
 script = ExtResource("3_woypq")
 name = ExtResource("2_qov2l")
+town = ExtResource("5_qov2l")
 address = ExtResource("1_woypq")
 telephone_number = ExtResource("4_n1k8b")
-base_pitch = 0.4
-pitch_varianz = 0.5
 metadata/_custom_type_script = "uid://bxo062f3w34bj"

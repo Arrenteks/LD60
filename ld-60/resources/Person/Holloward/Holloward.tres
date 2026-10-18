@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TownNameData" format=3 uid="uid://cu3jyl0rkw34o"]
+
+[ext_resource type="Script" uid="uid://cgx47i2mrftvc" path="res://resources/Townname_data.gd" id="1_p42ni"]
+
+[resource]
+script = ExtResource("1_p42ni")
+town_name = "Holloward"
+metadata/_custom_type_script = "uid://cgx47i2mrftvc"

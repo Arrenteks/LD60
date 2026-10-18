@@ -4,10 +4,12 @@
 [ext_resource type="Resource" uid="uid://dpah32or2457e" path="res://resources/Person/Bellport/Brian Howard/BrianHowardName.tres" id="2_0njks"]
 [ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_0njks"]
 [ext_resource type="Resource" uid="uid://cliof0xckjbtp" path="res://resources/Person/Bellport/Brian Howard/BrianHowardPhone.tres" id="4_v6wjh"]
+[ext_resource type="Resource" uid="uid://gmmy65oeuogk" path="res://resources/Person/Bellport/Bellport.tres" id="5_ge75i"]
 
 [resource]
 script = ExtResource("3_0njks")
 name = ExtResource("2_0njks")
+town = ExtResource("5_ge75i")
 address = ExtResource("1_0njks")
 telephone_number = ExtResource("4_v6wjh")
 metadata/_custom_type_script = "uid://bxo062f3w34bj"
