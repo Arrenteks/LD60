@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://28cmecscwpil"]
+
+[ext_resource type="Theme" uid="uid://utwhrxv6kb36" path="res://Themes/OptionButtonTheme.tres" id="1_ihfvn"]
+
+[node name="Dropdown" type="HBoxContainer" unique_id=2076286626]
+offset_right = 109.0
+offset_bottom = 23.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="." unique_id=1431533923]
+layout_mode = 2
+text = "Dropdown"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=484326772]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=579391878]
+layout_mode = 2
+tooltip_text = "Resolution
+"
+theme = ExtResource("1_ihfvn")

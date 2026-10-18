@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://nhppocmsby3g"]
+
+[ext_resource type="StyleBox" uid="uid://wu5kbd5hfoxa" path="res://Themes/HoveredButtonStyleLila.tres" id="1_ruv5u"]
+[ext_resource type="StyleBox" uid="uid://csx3cn7wk4ymr" path="res://Themes/BaseButtonStyleLila.tres" id="2_0orpl"]
+[ext_resource type="StyleBox" uid="uid://c3qmpsxuh2ole" path="res://Themes/PressedButtonStyleLila.tres" id="3_n06u5"]
+
+[resource]
+default_font_size = 35
+Button/styles/hover = ExtResource("1_ruv5u")
+Button/styles/normal = ExtResource("2_0orpl")
+Button/styles/pressed = ExtResource("3_n06u5")
