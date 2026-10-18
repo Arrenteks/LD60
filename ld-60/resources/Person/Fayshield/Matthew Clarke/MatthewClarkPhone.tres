@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_0qkc3")
 area_code = "4242"
+number = "478"
 metadata/_custom_type_script = "uid://yqep25fbpemb"

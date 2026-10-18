@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="AddressData" format=3 uid="uid://70i0wovf6311"]
+
+[ext_resource type="Script" uid="uid://b3y8ied4fg870" path="res://resources/address_data.gd" id="1_akqa0"]
+
+[resource]
+script = ExtResource("1_akqa0")
+address = "JulyRoad5"
+metadata/_custom_type_script = "uid://b3y8ied4fg870"
