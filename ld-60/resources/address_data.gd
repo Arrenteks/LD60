@@ -1,7 +1,7 @@
 extends PersonData
 class_name AddressData
 
-@export var address: String
+@export var person_address: String
 
 func _get_text() -> String:
-	return address
+	return person_address

@@ -1,10 +1,12 @@
 [gd_resource type="Resource" script_class="Day" format=3 uid="uid://ba2jk6fodusdk"]
 
-[ext_resource type="Script" uid="uid://blcx8oly3lfly" path="res://resources/end_of_day_question.gd" id="1_bpapk"]
+[ext_resource type="Script" uid="uid://blcx8oly3lfly" path="res://resources/question.gd" id="1_7qcre"]
 [ext_resource type="Script" uid="uid://5jjmv1u4ppl4" path="res://resources/day.gd" id="2_1ql5l"]
 [ext_resource type="Resource" uid="uid://barg3drbvuv83" path="res://resources/questions/TestBoolQuestion.tres" id="2_wx43h"]
+[ext_resource type="Resource" uid="uid://bdfabr1quy134" path="res://resources/questions/TestIntQuestion.tres" id="3_wx43h"]
+[ext_resource type="Resource" uid="uid://ca7v60afhwlhs" path="res://resources/questions/TestDragDropQuestion.tres" id="4_np1v3"]
 
 [resource]
 script = ExtResource("2_1ql5l")
-questions = Array[ExtResource("1_bpapk")]([ExtResource("2_wx43h")])
+questions = Array[ExtResource("1_7qcre")]([ExtResource("2_wx43h"), ExtResource("3_wx43h"), ExtResource("4_np1v3"), ExtResource("4_np1v3"), ExtResource("3_wx43h"), ExtResource("2_wx43h"), ExtResource("2_wx43h")])
 metadata/_custom_type_script = "uid://5jjmv1u4ppl4"

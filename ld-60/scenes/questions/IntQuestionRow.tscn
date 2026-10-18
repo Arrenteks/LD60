@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dh1du1dvk13fk"]
 
-[ext_resource type="Script" uid="uid://dls0eomf0pevq" path="res://scenes/questions/int_question_row.gd" id="1_euy51"]
+[ext_resource type="Script" uid="uid://dls0eomf0pevq" path="res://scripts/questions/int_question_row.gd" id="1_euy51"]
 
 [node name="IntQuestionRow" type="HBoxContainer" unique_id=1649016422]
 anchors_preset = 10
@@ -9,9 +9,11 @@ grow_horizontal = 2
 script = ExtResource("1_euy51")
 metadata/_custom_type_script = "uid://2sfrh7vwm1bs"
 
-[node name="Label" type="Label" parent="." unique_id=2129189451]
+[node name="QuestionText" type="Label" parent="." unique_id=2129189451]
 layout_mode = 2
-text = "How many pears did Pete pluck form Petra?"
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "How many pears did Pete pluck from Petra?"
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=182205551]
 custom_minimum_size = Vector2(45, 0)

@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_f3fla")
-telephone_number = "1924"
+area_code = "19"
+number = "24"
 metadata/_custom_type_script = "uid://yqep25fbpemb"

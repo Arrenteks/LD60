@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chj175d3wp6un"]
 
-[ext_resource type="Script" uid="uid://dsa8gs15d8e6d" path="res://scenes/questions/bool_question_row.gd" id="1_def8e"]
+[ext_resource type="Script" uid="uid://dsa8gs15d8e6d" path="res://scripts/questions/bool_question_row.gd" id="1_def8e"]
 
 [node name="BoolQuestionRow" type="HBoxContainer" unique_id=75211694]
 anchors_preset = -1
@@ -13,6 +13,7 @@ script = ExtResource("1_def8e")
 
 [node name="QuestionText" type="Label" parent="." unique_id=1704795326]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.072842635, 0.072842635, 0.072842635, 1)
 text = "Question of the Day: If a monkey steals my ass, is it still mine?"
 vertical_alignment = 1

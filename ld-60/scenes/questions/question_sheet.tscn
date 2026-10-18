@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://dd06wyaj3erju"]
 
-[ext_resource type="Script" uid="uid://5s3v2rjf2igx" path="res://scenes/questions/question_sheet.gd" id="1_gc8ai"]
+[ext_resource type="Script" uid="uid://5s3v2rjf2igx" path="res://scripts/questions/question_sheet.gd" id="1_gc8ai"]
+[ext_resource type="PackedScene" uid="uid://c2go5f5ld4qoi" path="res://scenes/telephone_book.tscn" id="2_gpaum"]
 
 [node name="QuestionSheet" type="Control" unique_id=451217894]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1369.0
-offset_bottom = -406.0
+offset_left = -2.0
+offset_right = -1371.0
+offset_bottom = -413.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gc8ai")
@@ -24,5 +26,66 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = 19.0
+offset_right = -18.0
+offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="TelephoneBook" parent="ColorRect" unique_id=1928895459 instance=ExtResource("2_gpaum")]
+layout_mode = 1
+offset_left = 1288.0
+offset_top = 182.0
+offset_right = 737.0
+offset_bottom = -248.0
+
+[node name="nextPage" type="Button" parent="ColorRect" unique_id=2133195270]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 83.5
+offset_top = -46.0
+offset_right = 101.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+text = ">"
+
+[node name="prevPage" type="Button" parent="ColorRect" unique_id=262817429]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -107.5
+offset_top = -44.0
+offset_right = -89.5
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "<"
+
+[node name="Button" type="Button" parent="." unique_id=990251281]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -258.5
+offset_top = -42.0
+offset_right = -149.5
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Test answers"
+
+[connection signal="pressed" from="ColorRect/nextPage" to="." method="_on_next_page_pressed"]
+[connection signal="pressed" from="ColorRect/prevPage" to="." method="_on_prev_page_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

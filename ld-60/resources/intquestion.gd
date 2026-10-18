@@ -4,4 +4,7 @@ class_name IntQuestion
 @export var truthful_answer : int;
 
 func give_answer(value) -> bool:
-	return value is int && value == truthful_answer
+	if(!value.is_valid_int()):
+		return false;
+	
+	return value as int == truthful_answer

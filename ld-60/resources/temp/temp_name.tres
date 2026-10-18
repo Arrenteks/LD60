@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_3tpn7")
-name = "Spongebob Schwammkopf"
+person_name = "Spongebob Squarepants"
 metadata/_custom_type_script = "uid://boab74wurw2j7"
