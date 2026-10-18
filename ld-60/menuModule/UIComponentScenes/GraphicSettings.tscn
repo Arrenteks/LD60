@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bthbkik3ncj76"]
 
-[ext_resource type="Script" uid="uid://bxuotwtjqfi1m" path="res://UIComponentScenes/graphic_settings.gd" id="1_ex5j4"]
+[ext_resource type="Script" uid="uid://bxuotwtjqfi1m" path="res://menuModule/UIComponentScenes/graphic_settings.gd" id="1_ex5j4"]
 
 [node name="GraphicSettings" type="Control" unique_id=496706003 node_paths=PackedStringArray("resolutionMenu", "screenMenu", "fpsMenu", "fpsMenuBox", "uncapFPS", "collapsedFPS", "qualityMenu", "shadowsMenu", "texturesMenu", "effectsMenu", "hdrMenu", "vsyncMenu")]
 layout_mode = 3
@@ -35,12 +35,15 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="vsyncMenu" type="OptionButton" parent="VBoxContainer" unique_id=747970797]
+visible = false
 layout_mode = 2
 
 [node name="hdrBox" type="CheckBox" parent="VBoxContainer" unique_id=1414931973]
+visible = false
 layout_mode = 2
 
 [node name="uncapFPS" type="CheckBox" parent="VBoxContainer" unique_id=223893597]
+visible = false
 layout_mode = 2
 
 [node name="collapsedFPS" type="HBoxContainer" parent="VBoxContainer" unique_id=1322022859]
@@ -58,15 +61,19 @@ max_value = 500.0
 rounded = true
 
 [node name="qualityMenu" type="OptionButton" parent="VBoxContainer" unique_id=1266320899]
+visible = false
 layout_mode = 2
 
 [node name="shadowsMenu" type="OptionButton" parent="VBoxContainer" unique_id=541460398]
+visible = false
 layout_mode = 2
 
 [node name="texturesMenu" type="OptionButton" parent="VBoxContainer" unique_id=1951198516]
+visible = false
 layout_mode = 2
 
 [node name="effectsMenu" type="OptionButton" parent="VBoxContainer" unique_id=1482917363]
+visible = false
 layout_mode = 2
 
 [connection signal="item_selected" from="VBoxContainer/resolutionMenu" to="." method="_on_resolution_menu_item_selected"]
