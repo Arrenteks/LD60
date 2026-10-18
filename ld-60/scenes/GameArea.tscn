@@ -25,6 +25,14 @@ offset = Vector2(-1218, 1008)
 position = Vector2(957, 531)
 texture = ExtResource("4_xxp6o")
 
+[node name="Telefonbuch2" type="Sprite2D" parent="." unique_id=1888902373]
+position = Vector2(1715, 758)
+texture = ExtResource("2_yhdnk")
+
+[node name="Fragen2" type="Sprite2D" parent="." unique_id=1114576092]
+position = Vector2(215, 777)
+texture = ExtResource("3_t6131")
+
 [node name="grp_Kabel" type="Node2D" parent="." unique_id=1233695503]
 position = Vector2(950, 653)
 
@@ -48,14 +56,6 @@ connection_end = NodePath("../../grp_Klinke/Klinke03")
 position = Vector2(87, 201)
 connection_start = NodePath(".")
 connection_end = NodePath("../../grp_Klinke/Klinke04")
-
-[node name="Telefonbuch" type="Sprite2D" parent="grp_Kabel" unique_id=1888902373]
-position = Vector2(765, 105)
-texture = ExtResource("2_yhdnk")
-
-[node name="Fragen" type="Sprite2D" parent="grp_Kabel" unique_id=1114576092]
-position = Vector2(-735, 124)
-texture = ExtResource("3_t6131")
 
 [node name="grp_Sockets" type="Node" parent="." unique_id=39759795]
 
