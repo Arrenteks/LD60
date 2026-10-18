@@ -12,6 +12,12 @@ scale = Vector2(10.5, 9.954175)
 collision_mask = 1
 monitoring = true
 
+[node name="ItemSocket2" parent="." unique_id=169554282 instance=ExtResource("2_qs5j1")]
+position = Vector2(142, 113)
+scale = Vector2(3.9311595, 3.1748197)
+collision_mask = 1
+monitoring = true
+
 [node name="GrabItem" parent="." unique_id=80330460 instance=ExtResource("1_yiyir")]
 position = Vector2(264, 401)
 scale = Vector2(1, 0.99999994)
@@ -21,3 +27,11 @@ has_origin = true
 position = Vector2(458, 510)
 connection_start = NodePath(".")
 connection_end = NodePath("../GrabItem")
+
+[node name="grabitem_2" parent="." unique_id=614658 instance=ExtResource("1_yiyir")]
+position = Vector2(640, 497)
+
+[node name="ItemCable2" parent="." unique_id=830591747 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("3_m7vxj")]
+position = Vector2(832, 539)
+connection_start = NodePath(".")
+connection_end = NodePath("../grabitem_2")
