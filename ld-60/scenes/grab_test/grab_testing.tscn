@@ -17,5 +17,7 @@ position = Vector2(264, 401)
 scale = Vector2(1, 0.99999994)
 has_origin = true
 
-[node name="ItemCable" parent="." unique_id=110500897 instance=ExtResource("3_m7vxj")]
+[node name="ItemCable" parent="." unique_id=110500897 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("3_m7vxj")]
 position = Vector2(458, 510)
+connection_start = NodePath(".")
+connection_end = NodePath("../GrabItem")
