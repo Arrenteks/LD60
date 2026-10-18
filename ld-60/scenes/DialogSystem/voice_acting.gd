@@ -39,6 +39,8 @@ func set_character_params(base_pitch : float, pitch_varianz : float, used_bus : 
 	self.pitch_varianz = pitch_varianz
 
 func play_sound(sound):
+	if !sounds.has(sound):
+		sound = "."
 	stream = sounds[sound]
 	var effect = AudioServer.get_bus_effect(AudioServer.get_bus_index(bus),0)
 	effect.pitch_scale = max(0.001,base_pitch + randf_range(- pitch_varianz/2, pitch_varianz/2))
