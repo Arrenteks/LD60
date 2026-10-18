@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_myfoq")
-address = "Monument Street 3"
+person_address = "Monument Street 3"
 metadata/_custom_type_script = "uid://b3y8ied4fg870"

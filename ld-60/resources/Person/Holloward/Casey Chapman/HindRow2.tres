@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_8ntcg")
-address = "Hind Row 2"
+person_address = "Hind Row 2"
 metadata/_custom_type_script = "uid://b3y8ied4fg870"

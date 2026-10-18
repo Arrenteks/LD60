@@ -6,4 +6,5 @@ class_name TelephoneNumberData
 var person_telephone_number
 
 func _get_text() -> String:
-	return area_code+number
+	#only area code because we ignore the drehscehiben thingy
+	return area_code

@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_dcej3")
-address = "Snowflake Row 32"
+person_address = "Snowflake Row 32"
 metadata/_custom_type_script = "uid://b3y8ied4fg870"

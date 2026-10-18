@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_bx86i")
-address = "Gold Route 56"
+person_address = "Gold Route 56"
 metadata/_custom_type_script = "uid://b3y8ied4fg870"
