@@ -1,4 +1,4 @@
-extends Resource
+extends PersonData
 class_name TelephoneNumberData
 
 @export var area_code : String
