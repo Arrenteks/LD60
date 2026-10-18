@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bo28doh1nkkdj"]
+
+[ext_resource type="Script" uid="uid://bdy75tgy23n5k" path="res://scripts/Cellphone/custom_round_button.gd" id="1_lskax"]
+
+[node name="Cellphone" type="Node" unique_id=2132789963]
+
+[node name="CustomRoundButton" type="Area2D" parent="." unique_id=1925033576]
+position = Vector2(201, 93)
+scale = Vector2(5, 5)
+script = ExtResource("1_lskax")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CustomRoundButton" unique_id=1491773482]
+position = Vector2(1, 0)
+polygon = PackedVector2Array(0, -10, -7.5, -7.5, -10, 0, -7.5, 7.5, 0, 10, 7.5, 7.5, 10, 0, 7.5, -7.5)
