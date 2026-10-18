@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://by5bae5ec2wj2"]
+
+[ext_resource type="PackedScene" uid="uid://dmadmd48ho78p" path="res://scenes/grab_test/grab_item.tscn" id="1_yiyir"]
+[ext_resource type="PackedScene" uid="uid://dq1gpxn7ac8u7" path="res://scenes/grab_test/item_socket.tscn" id="2_qs5j1"]
+[ext_resource type="PackedScene" uid="uid://dg28d7nvok3sm" path="res://scenes/grab_test/item_cable.tscn" id="3_m7vxj"]
+
+[node name="GrabTesting" type="Node2D" unique_id=2122397913]
+
+[node name="ItemSocket" parent="." unique_id=1394437148 instance=ExtResource("2_qs5j1")]
+position = Vector2(714, 180)
+scale = Vector2(10.5, 9.954175)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket2" parent="." unique_id=169554282 instance=ExtResource("2_qs5j1")]
+position = Vector2(142, 113)
+scale = Vector2(3.9311595, 3.1748197)
+collision_mask = 1
+monitoring = true
+
+[node name="GrabItem" parent="." unique_id=80330460 instance=ExtResource("1_yiyir")]
+position = Vector2(264, 401)
+scale = Vector2(1, 0.99999994)
+has_origin = true
+
+[node name="ItemCable" parent="." unique_id=110500897 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("3_m7vxj")]
+position = Vector2(458, 510)
+connection_start = NodePath(".")
+connection_end = NodePath("../GrabItem")
+
+[node name="grabitem_2" parent="." unique_id=614658 instance=ExtResource("1_yiyir")]
+position = Vector2(640, 497)
+
+[node name="ItemCable2" parent="." unique_id=830591747 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("3_m7vxj")]
+position = Vector2(832, 539)
+connection_start = NodePath(".")
+connection_end = NodePath("../grabitem_2")

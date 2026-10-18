@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dg28d7nvok3sm"]
+
+[ext_resource type="Script" uid="uid://dkx4m06ccj1eb" path="res://scripts/cabe_connection.gd" id="1_6p13o"]
+
+[node name="ItemCable" type="Line2D" unique_id=110500897]
+points = PackedVector2Array(0, 0, 0, 0)
+closed = true
+default_color = Color(1, 0, 1, 1)
+sharp_limit = 5.0
+script = ExtResource("1_6p13o")

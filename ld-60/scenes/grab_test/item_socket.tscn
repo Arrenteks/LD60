@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dq1gpxn7ac8u7"]
+
+[ext_resource type="Script" uid="uid://kx4glug70dnq" path="res://scripts/item_socket.gd" id="1_53mfk"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ymojk"]
+
+[sub_resource type="Gradient" id="Gradient_hi0ms"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_byb5f"]
+gradient = SubResource("Gradient_hi0ms")
+fill_from = Vector2(0.78695655, 0.4826087)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymojk"]
+size = Vector2(43, 39)
+
+[node name="ItemSocket" type="Area2D" unique_id=1394437148 groups=["item_socket"]]
+collision_layer = 4
+collision_mask = 2
+monitoring = false
+script = ExtResource("1_53mfk")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=655933855]
+scale = Vector2(34.5, 34.5)
+mesh = SubResource("QuadMesh_ymojk")
+texture = SubResource("GradientTexture2D_byb5f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1414879978]
+shape = SubResource("RectangleShape2D_ymojk")
