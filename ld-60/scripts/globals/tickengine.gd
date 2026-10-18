@@ -25,7 +25,7 @@ func _ready() -> void:
 	game_time = Game_Time.new(start_hour_tens, start_hour_first, start_minute_tens, start_minute_first)
 	game_time_event_dictionary["08:00"] = Game_Routine_Event.new(GameRoutineEventType.StartDay)
 	game_time_event_dictionary["08:10"] = Game_Routine_Event.new(GameRoutineEventType.Boss)
-	game_time_event_dictionary["08:15"] = Game_Routine_Event.new(GameRoutineEventType.Call, 22)
+	game_time_event_dictionary["08:15"] = Game_Routine_Event.new(GameRoutineEventType.Call, "4122")
 	game_time_event_dictionary["08:20"] = Game_Routine_Event.new(GameRoutineEventType.EndDay)
 	tick_timer.start(tick_timer_duration);
 
