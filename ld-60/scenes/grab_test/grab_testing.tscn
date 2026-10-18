@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://dmadmd48ho78p" path="res://scenes/grab_test/grab_item.tscn" id="1_yiyir"]
 [ext_resource type="PackedScene" uid="uid://dq1gpxn7ac8u7" path="res://scenes/grab_test/item_socket.tscn" id="2_qs5j1"]
-[ext_resource type="PackedScene" uid="uid://dg28d7nvok3sm" path="res://scenes/grab_test/item_cable.tscn" id="3_m7vxj"]
+[ext_resource type="PackedScene" uid="uid://dg28d7nvok3sm" path="res://scenes/item_cable.tscn" id="3_m7vxj"]
+[ext_resource type="PackedScene" uid="uid://cfr7y5r6fisa7" path="res://scenes/socket.tscn" id="4_xfwrx"]
+[ext_resource type="PackedScene" uid="uid://cau2ckh08fckc" path="res://scenes/Klinke_grabbable.tscn" id="5_x2qy0"]
 
 [node name="GrabTesting" type="Node2D" unique_id=2122397913]
 
@@ -15,6 +17,12 @@ monitoring = true
 [node name="ItemSocket2" parent="." unique_id=169554282 instance=ExtResource("2_qs5j1")]
 position = Vector2(142, 113)
 scale = Vector2(3.9311595, 3.1748197)
+collision_mask = 1
+monitoring = true
+
+[node name="ItemSocket3" parent="." unique_id=1302682989 instance=ExtResource("4_xfwrx")]
+position = Vector2(1274, 739)
+scale = Vector2(2.4942586, 3.7512336)
 collision_mask = 1
 monitoring = true
 
@@ -36,3 +44,7 @@ has_origin = true
 position = Vector2(832, 539)
 connection_start = NodePath(".")
 connection_end = NodePath("../grabitem_2")
+
+[node name="Sprite2D" parent="." unique_id=238122239 instance=ExtResource("5_x2qy0")]
+position = Vector2(422, 795)
+has_origin = true
