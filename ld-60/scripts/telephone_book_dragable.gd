@@ -20,6 +20,17 @@ func _get_drag_data(_at_position: Vector2) -> PersonData:
 
 	# Sets what the user will see they are dragging.
 	set_drag_preview(preview)
+  
+  return person_data
 
-	# Return color as drag data.
-	return person_data
+# Returns a boolean by examining the data being dragged to see if it's valid
+# to drop here.
+func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
+	return true
+
+
+# Takes the data being dragged and processes it. In this case, we are
+# assigning a new color to the target color picker button.
+func _drop_data(_at_position: Vector2, data: Variant) -> void:
+	text = data
+

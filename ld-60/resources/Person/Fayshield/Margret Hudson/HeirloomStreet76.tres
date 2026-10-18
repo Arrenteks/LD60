@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="AddressData" format=3 uid="uid://btbri6eeoexko"]
+
+[ext_resource type="Script" uid="uid://b3y8ied4fg870" path="res://resources/address_data.gd" id="1_6pa5j"]
+
+[resource]
+script = ExtResource("1_6pa5j")
+address = "Heirloom Street 76"
+metadata/_custom_type_script = "uid://b3y8ied4fg870"

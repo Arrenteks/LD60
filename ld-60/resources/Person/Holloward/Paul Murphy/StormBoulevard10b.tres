@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="AddressData" format=3 uid="uid://bc8qeykugpek3"]
+
+[ext_resource type="Script" uid="uid://b3y8ied4fg870" path="res://resources/address_data.gd" id="1_d2b55"]
+
+[resource]
+script = ExtResource("1_d2b55")
+address = "Storm Boulevard 10b"
+metadata/_custom_type_script = "uid://b3y8ied4fg870"

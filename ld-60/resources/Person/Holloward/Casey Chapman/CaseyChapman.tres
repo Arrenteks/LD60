@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PersonData" format=3 uid="uid://ni2cnwi60axq"]
+
+[ext_resource type="Resource" uid="uid://d4n4spab0evys" path="res://resources/Person/Holloward/Casey Chapman/HindRow2.tres" id="1_kb82b"]
+[ext_resource type="Resource" uid="uid://cl7itdgucbcuv" path="res://resources/Person/Holloward/Casey Chapman/CaseyChapmanName.tres" id="2_nve0c"]
+[ext_resource type="Script" uid="uid://bxo062f3w34bj" path="res://resources/person_data.gd" id="3_y0wnu"]
+[ext_resource type="Resource" uid="uid://dhalu3j080us" path="res://resources/Person/Holloward/Casey Chapman/CaseyChapmanPhone.tres" id="4_nve0c"]
+
+[resource]
+script = ExtResource("3_y0wnu")
+name = ExtResource("2_nve0c")
+address = ExtResource("1_kb82b")
+telephone_number = ExtResource("4_nve0c")
+base_pitch = 0.7
+metadata/_custom_type_script = "uid://bxo062f3w34bj"
