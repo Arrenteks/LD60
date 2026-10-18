@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BoolQuestion" format=3 uid="uid://barg3drbvuv83"]
+
+[ext_resource type="Script" uid="uid://di60qaym01tbh" path="res://resources/boolquestion.gd" id="1_bgj3s"]
+
+[resource]
+script = ExtResource("1_bgj3s")
+questionText = "All good?"
+metadata/_custom_type_script = "uid://di60qaym01tbh"

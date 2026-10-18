@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Day" format=3 uid="uid://ba2jk6fodusdk"]
+
+[ext_resource type="Script" uid="uid://blcx8oly3lfly" path="res://resources/end_of_day_question.gd" id="1_bpapk"]
+[ext_resource type="Script" uid="uid://5jjmv1u4ppl4" path="res://resources/day.gd" id="2_1ql5l"]
+[ext_resource type="Resource" uid="uid://barg3drbvuv83" path="res://resources/questions/TestBoolQuestion.tres" id="2_wx43h"]
+
+[resource]
+script = ExtResource("2_1ql5l")
+questions = Array[ExtResource("1_bpapk")]([ExtResource("2_wx43h")])
+metadata/_custom_type_script = "uid://5jjmv1u4ppl4"
