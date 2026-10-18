@@ -34,5 +34,6 @@ position = Vector2(1, -82)
 [node name="MagnetCollision" type="CollisionShape2D" parent="MagnetPullZone" unique_id=255413276]
 shape = SubResource("RectangleShape2D_byb5f")
 
+[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="MagnetPullZone" to="." method="_on_magnet_pull_zone_mouse_entered"]
 [connection signal="mouse_exited" from="MagnetPullZone" to="." method="_on_magnet_pull_zone_mouse_exited"]

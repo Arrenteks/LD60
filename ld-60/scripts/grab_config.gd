@@ -27,7 +27,13 @@ func _physics_process(delta: float) -> void:
 		tween = get_tree().create_tween()
 		tween.tween_property(self, "position", og_pos, weight * delta)
 		
-func _input(event: InputEvent) -> void:
+func _on_magnet_pull_zone_mouse_entered() -> void:
+	is_hovered = true
+
+func _on_magnet_pull_zone_mouse_exited() -> void:
+	is_hovered = false
+
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed and is_hovered:
 			is_grabbed = true
@@ -42,12 +48,3 @@ func _input(event: InputEvent) -> void:
 						snap_position = socket.position
 						tween = get_tree().create_tween()
 						tween.tween_property(self, "position", snap_position, weight* get_process_delta_time())
-					
-
-
-func _on_magnet_pull_zone_mouse_entered() -> void:
-	is_hovered = true
-
-
-func _on_magnet_pull_zone_mouse_exited() -> void:
-	is_hovered = false
