@@ -1,4 +1,5 @@
 extends MarginContainer
+@onready var voice_acting: VoiceActing = $VoiceActing
 
 @export var textbox: RichTextLabel
 @export var typeSpeed: float = 15
@@ -10,6 +11,9 @@ var arrayPosition: int = 0
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
+	#depending on where we will initilize the textbox for the character, wie need to setup the voice. The params will come from character ressources
+	# we also need to assigne the caller to the Bus Caller, the reciever to the bus Reciever and incase of interuption the Interuptor
+	voice_acting.set_character_params(0.5,0.3,&"Caller")
 	addText(["first there was war", "Lorem ipsum dingsi bumsi", "Markov Grrrrrrrrrrrrrrrrrrrrrrrrrrrrr"])
 	
 func addText(newText: Array[String]):
@@ -30,6 +34,7 @@ func _process(delta: float) -> void:
 		if(isTyping):
 			if(textbox.visible_characters < textbox.get_total_character_count()):
 				textbox.visible_characters += 1
+				voice_acting.play_sound(textbox.text[textbox.visible_characters-1].to_lower())
 			else:
 				isTyping = false
 				arrayPosition += 1
