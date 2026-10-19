@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dhu6qhnlb3f85"]
+
+[ext_resource type="Script" uid="uid://d2cu5mc660rpq" path="res://scripts/DialogSystem/dialogue.gd" id="1_w7mbq"]
+[ext_resource type="PackedScene" uid="uid://ccy2o7kramesx" path="res://scenes/DialogSystem/dialogWindow.tscn" id="2_8ahr4"]
+
+[node name="Dialogue" type="Control" unique_id=1917376598]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w7mbq")
+
+[node name="DialogWindow" parent="." unique_id=235159567 instance=ExtResource("2_8ahr4")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[editable path="DialogWindow"]
