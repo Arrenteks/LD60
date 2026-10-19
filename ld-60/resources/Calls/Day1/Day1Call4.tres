@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://dij5iyklq8d2o"]
+
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_3lea6"]
+[ext_resource type="Resource" uid="uid://8dggi2xpgyvm" path="res://resources/Person/Bellport/William Doyle/WilliamDoyle.tres" id="1_twya3"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_4clsg"]
+[ext_resource type="Resource" uid="uid://cv2vrkuwvhjfu" path="res://resources/Person/Bellport/Brian Howard/BrianHoward.tres" id="3_afbhg"]
+
+[sub_resource type="Resource" id="Resource_twya3"]
+script = ExtResource("1_3lea6")
+speaker = ExtResource("1_twya3")
+text = "Hello, I want to call Brian Howard. Have forgotten his number though, if you would be so nice."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_afbhg"]
+script = ExtResource("1_3lea6")
+speaker = ExtResource("1_twya3")
+text = "Hi Brian, Willi here. Have you heard that the police presence in Holloward is really high right now?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_vyvvp"]
+script = ExtResource("1_3lea6")
+speaker = ExtResource("3_afbhg")
+text = "Hey Willi! Yes I have heard. Good thing that Susan and I aren't there anymore with our guest."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_xbpkw"]
+script = ExtResource("1_3lea6")
+speaker = ExtResource("1_twya3")
+text = "Yes! It was good though to see you and Susan in Holloward yesterday! Haven't seen you in a while."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_87tlh"]
+script = ExtResource("1_3lea6")
+speaker = ExtResource("3_afbhg")
+text = "Oh right, you haven't seen us in a long time! Listen, Susan's calling. Some problem with our guest. See you!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_4clsg")
+callId = "Day1Call4"
+caller = ExtResource("1_twya3")
+ceciever = ExtResource("3_afbhg")
+caller_request = SubResource("Resource_twya3")
+diaologue = Array[ExtResource("1_3lea6")]([SubResource("Resource_afbhg"), SubResource("Resource_vyvvp"), SubResource("Resource_xbpkw"), SubResource("Resource_87tlh")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

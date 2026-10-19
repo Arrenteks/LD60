@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://brcdnrt3vjvfi"]
+
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_f3s82"]
+[ext_resource type="Resource" uid="uid://bws13q6m44ed1" path="res://resources/Person/Winterholde/Sarah Butler/SarahButler.tres" id="1_qcfhm"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_jdb1o"]
+[ext_resource type="Resource" uid="uid://e108mppdbg7n" path="res://resources/Person/Winterholde/Peter Powell/PeterPowell.tres" id="3_y0mv0"]
+
+[sub_resource type="Resource" id="Resource_qcfhm"]
+script = ExtResource("1_f3s82")
+speaker = ExtResource("1_qcfhm")
+text = "Good Morning! I need to call Peter."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_llkjr"]
+script = ExtResource("1_f3s82")
+speaker = ExtResource("1_qcfhm")
+text = "Hello Peter! I have heard that someone broke into your house as well! Do you know when that happened and if anything was stolen?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_pwu4m"]
+script = ExtResource("1_f3s82")
+speaker = ExtResource("3_y0mv0")
+text = "Hello Sarah! Someone entered my house around 3 pm and while there was utter chaos in the living room, nothing was stolen! I'm quite surprised by this."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_700ay"]
+script = ExtResource("1_f3s82")
+speaker = ExtResource("1_qcfhm")
+text = "Around 3pm you say? I saw your nephew James around this time in your garden..."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_y0mv0"]
+script = ExtResource("1_f3s82")
+speaker = ExtResource("3_y0mv0")
+text = "Really? I might need to ask him then if he's seen anything. Thank you!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_jdb1o")
+callId = "Day3Call1"
+caller = ExtResource("1_qcfhm")
+ceciever = ExtResource("3_y0mv0")
+caller_request = SubResource("Resource_qcfhm")
+diaologue = Array[ExtResource("1_f3s82")]([SubResource("Resource_llkjr"), SubResource("Resource_pwu4m"), SubResource("Resource_700ay"), SubResource("Resource_y0mv0")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

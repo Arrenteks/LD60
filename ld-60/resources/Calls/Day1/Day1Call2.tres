@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://btpkkalwsh1dp"]
+
+[ext_resource type="Resource" uid="uid://dv3l127q5y620" path="res://resources/Person/Holloward/Lena Murphy/LenaMurphy.tres" id="1_0h64v"]
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_qya70"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_v0dts"]
+[ext_resource type="Resource" uid="uid://8dggi2xpgyvm" path="res://resources/Person/Bellport/William Doyle/WilliamDoyle.tres" id="3_oqn8k"]
+
+[sub_resource type="Resource" id="Resource_1870m"]
+script = ExtResource("1_qya70")
+speaker = ExtResource("1_0h64v")
+text = "Hello! I wish to speak to the number 5242."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_p42e8"]
+script = ExtResource("1_qya70")
+speaker = ExtResource("1_0h64v")
+text = "Hello Willi, can Paul come over for the night? He has to be in Bellport tomorrow."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_mdyqm"]
+script = ExtResource("1_qya70")
+speaker = ExtResource("3_oqn8k")
+text = "Sure, no problem. Oh, by the way, how's the police activity in Holloward right now?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_nwd11"]
+script = ExtResource("1_qya70")
+speaker = ExtResource("1_0h64v")
+text = "High. I won't be able to leave any time soon without raising suspicion."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_31lrl"]
+script = ExtResource("1_qya70")
+speaker = ExtResource("3_oqn8k")
+text = "Alright, then I will get Paul later, bye!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_v0dts")
+callId = "Day1Call2"
+caller = ExtResource("1_0h64v")
+ceciever = ExtResource("3_oqn8k")
+caller_request = SubResource("Resource_1870m")
+diaologue = Array[ExtResource("1_qya70")]([SubResource("Resource_p42e8"), SubResource("Resource_mdyqm"), SubResource("Resource_nwd11"), SubResource("Resource_31lrl")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

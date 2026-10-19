@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://bkh0b53ijonwo"]
+
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_afxn6"]
+[ext_resource type="Resource" uid="uid://8dggi2xpgyvm" path="res://resources/Person/Bellport/William Doyle/WilliamDoyle.tres" id="1_j630x"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_7isoy"]
+[ext_resource type="Resource" uid="uid://dv3l127q5y620" path="res://resources/Person/Holloward/Lena Murphy/LenaMurphy.tres" id="3_3fpax"]
+
+[sub_resource type="Resource" id="Resource_j630x"]
+script = ExtResource("1_afxn6")
+speaker = ExtResource("1_j630x")
+text = "Ah hello again. I want to call my sister. Her number is 5242."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_3fpax"]
+script = ExtResource("1_afxn6")
+speaker = ExtResource("1_j630x")
+text = "Hey Lena, you know who the talented artist behind the new town hall incident is?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_58a6g"]
+script = ExtResource("1_afxn6")
+speaker = ExtResource("3_3fpax")
+text = "Hi Willi! No I don't know, but Paul's friend Matty might know them. I have heard them talking about it recently.
+Anyway, is the Holloward money still safe?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_0edql"]
+script = ExtResource("1_afxn6")
+speaker = ExtResource("1_j630x")
+text = "Hush! Don't talk about it!  
+But yes, it's still safe. Got to go now, bye!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_7isoy")
+callId = "Day2Call5"
+caller = ExtResource("1_j630x")
+ceciever = ExtResource("3_3fpax")
+caller_request = SubResource("Resource_j630x")
+diaologue = Array[ExtResource("1_afxn6")]([SubResource("Resource_3fpax"), SubResource("Resource_58a6g"), SubResource("Resource_0edql")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

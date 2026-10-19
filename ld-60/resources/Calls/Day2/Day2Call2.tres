@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://ca1cqv4dcdflj"]
+
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_h1snn"]
+[ext_resource type="Resource" uid="uid://cv2vrkuwvhjfu" path="res://resources/Person/Bellport/Brian Howard/BrianHoward.tres" id="1_y1h7d"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_3rp2e"]
+[ext_resource type="Resource" uid="uid://8dggi2xpgyvm" path="res://resources/Person/Bellport/William Doyle/WilliamDoyle.tres" id="3_3y5cp"]
+
+[sub_resource type="Resource" id="Resource_y1h7d"]
+script = ExtResource("1_h1snn")
+speaker = ExtResource("1_y1h7d")
+text = "Hello! I wish to call Willi, you should know his number."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_3y5cp"]
+script = ExtResource("1_h1snn")
+speaker = ExtResource("1_y1h7d")
+text = "Hey Willi, did you know that your Nephew Paul and his friend Matty were in Bellport?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_nnelo"]
+script = ExtResource("1_h1snn")
+speaker = ExtResource("3_3y5cp")
+text = "Yeah, I do. They're still here, currently staying at my house till it's calmer outside. They will return home later.
+How's Susan doing with the new guest?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_h1d6b"]
+script = ExtResource("1_h1snn")
+speaker = ExtResource("1_y1h7d")
+text = "Quite well, but he ran earlier for a bit. Talking about him, I have to go to Susan, help relocate him. See ya!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_3rp2e")
+callId = "Day2Call2"
+caller = ExtResource("1_y1h7d")
+ceciever = ExtResource("3_3y5cp")
+caller_request = SubResource("Resource_y1h7d")
+diaologue = Array[ExtResource("1_h1snn")]([SubResource("Resource_3y5cp"), SubResource("Resource_nnelo"), SubResource("Resource_h1d6b")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

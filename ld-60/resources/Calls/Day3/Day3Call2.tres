@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://bqkmp1g2s1bgo"]
+
+[ext_resource type="Resource" uid="uid://ct41j2vwpotr5" path="res://resources/Person/Fayshield/Laura Tyler/LauraTyler.tres" id="1_cl8s5"]
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_i3ugi"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_hty3a"]
+[ext_resource type="Resource" uid="uid://cmvflldb1es2y" path="res://resources/Person/Fayshield/Matthew Clarke/MatthewClark.tres" id="3_h7ffj"]
+
+[sub_resource type="Resource" id="Resource_cl8s5"]
+script = ExtResource("1_i3ugi")
+speaker = ExtResource("1_cl8s5")
+text = "Hey! Would you please connect me to Matty? His number is 4242."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_h7ffj"]
+script = ExtResource("1_i3ugi")
+speaker = ExtResource("1_cl8s5")
+text = "Hey Matty! Are you ready? Jean's waiting for the go."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_nlrlq"]
+script = ExtResource("1_i3ugi")
+speaker = ExtResource("3_h7ffj")
+text = "Heya Laura! Yes, we are ready. We need her with the car now."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_upp0d"]
+script = ExtResource("1_i3ugi")
+speaker = ExtResource("1_cl8s5")
+text = "Alright, I will tell her. Love you!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_hty3a")
+callId = "Day3Call2"
+caller = ExtResource("1_cl8s5")
+ceciever = ExtResource("3_h7ffj")
+caller_request = SubResource("Resource_cl8s5")
+diaologue = Array[ExtResource("1_i3ugi")]([SubResource("Resource_h7ffj"), SubResource("Resource_nlrlq"), SubResource("Resource_upp0d")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

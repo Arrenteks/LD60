@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://cb5yh5u8xtfj0"]
+
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_dwhaw"]
+[ext_resource type="Resource" uid="uid://e108mppdbg7n" path="res://resources/Person/Winterholde/Peter Powell/PeterPowell.tres" id="1_e73w2"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_65f6s"]
+[ext_resource type="Resource" uid="uid://bws13q6m44ed1" path="res://resources/Person/Winterholde/Sarah Butler/SarahButler.tres" id="3_6ic2s"]
+
+[sub_resource type="Resource" id="Resource_e73w2"]
+script = ExtResource("1_dwhaw")
+speaker = ExtResource("1_e73w2")
+text = "Hello, please let me talk to Sarah Butler. I have important information for her!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_6ic2s"]
+script = ExtResource("1_dwhaw")
+speaker = ExtResource("1_e73w2")
+text = "Hello Sarah! You wouldn't believe who I saw today on my walk in Bellport earlier. Richard Chapman, followed by a friend of my nephew!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_8f4nb"]
+script = ExtResource("1_dwhaw")
+speaker = ExtResource("3_6ic2s")
+text = "Really? Are you absolutely sure about this?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_w1rgo"]
+script = ExtResource("1_dwhaw")
+speaker = ExtResource("1_e73w2")
+text = "Yes, I am sure! I know it was him."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_gv8sq"]
+script = ExtResource("1_dwhaw")
+speaker = ExtResource("3_6ic2s")
+text = "I have to go and tell Casey, see you!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_65f6s")
+caller = ExtResource("1_e73w2")
+ceciever = ExtResource("3_6ic2s")
+caller_request = SubResource("Resource_e73w2")
+diaologue = Array[ExtResource("1_dwhaw")]([SubResource("Resource_6ic2s"), SubResource("Resource_8f4nb"), SubResource("Resource_w1rgo"), SubResource("Resource_gv8sq")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

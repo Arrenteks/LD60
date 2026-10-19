@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://csqb133mby48f"]
+
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_1870m"]
+[ext_resource type="Resource" uid="uid://toe6wmjv3adn" path="res://resources/Person/Holloward/Paul Murphy/PaulMurphy.tres" id="1_mdyqm"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_p42e8"]
+[ext_resource type="Resource" uid="uid://cmvflldb1es2y" path="res://resources/Person/Fayshield/Matthew Clarke/MatthewClark.tres" id="3_nwd11"]
+
+[sub_resource type="Resource" id="Resource_x8ag8"]
+script = ExtResource("1_1870m")
+speaker = ExtResource("1_mdyqm")
+text = "Hey! I want to call Matty. His number is 4242."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_korii"]
+script = ExtResource("1_1870m")
+speaker = ExtResource("1_mdyqm")
+text = "Hey Matty! How's your grandma doing?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_hry5b"]
+script = ExtResource("1_1870m")
+speaker = ExtResource("3_nwd11")
+text = "She's doing great! I've brought her the groceries I... got. You know."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_2vqmd"]
+script = ExtResource("1_1870m")
+speaker = ExtResource("1_mdyqm")
+text = "Oh yeah, right. Nice! Is tomorrow in Bellport still standing?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_hllqc"]
+script = ExtResource("1_1870m")
+speaker = ExtResource("3_nwd11")
+text = "Of course! I'm looking forward to it. See ya!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_p42e8")
+callId = "Day1Call3"
+caller = ExtResource("1_mdyqm")
+ceciever = ExtResource("3_nwd11")
+caller_request = SubResource("Resource_x8ag8")
+diaologue = Array[ExtResource("1_1870m")]([SubResource("Resource_korii"), SubResource("Resource_hry5b"), SubResource("Resource_2vqmd"), SubResource("Resource_hllqc")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"
