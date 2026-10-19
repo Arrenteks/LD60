@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://c3a21lxov6x2f"]
+
+[ext_resource type="Resource" uid="uid://buryvstdvnwdm" path="res://resources/Person/Fayshield/Margret Hudson/MargretHudson.tres" id="1_2kfyn"]
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="2_mqq7o"]
+[ext_resource type="Resource" uid="uid://bws13q6m44ed1" path="res://resources/Person/Winterholde/Sarah Butler/SarahButler.tres" id="3_plafl"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="4_xt8ot"]
+
+[sub_resource type="Resource" id="Resource_mwg6r"]
+script = ExtResource("2_mqq7o")
+speaker = ExtResource("1_2kfyn")
+text = "Oh hello, Deary! I wish to speak to my good friend Sarah Butler, but I have misplaced my address book with her number! Could you be so kind and put me through to her? I have wonderful news I need to share!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_c2w2d"]
+script = ExtResource("2_mqq7o")
+speaker = ExtResource("3_plafl")
+text = "Hello Marge! Haven't heard from you in a while, how are you?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_e3gdm"]
+script = ExtResource("2_mqq7o")
+speaker = ExtResource("1_2kfyn")
+text = "Hello Sarah, dear, I am great!
+My grandson Matty has brought me a large bag of nice groceries for the week!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_mdyqm"]
+script = ExtResource("2_mqq7o")
+speaker = ExtResource("3_plafl")
+text = "Oh that is nice of him! 
+Listen, I have heard that Casey's nephew Richard went missing yesterday at 5pm from his front porch in Holloward!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_nwd11"]
+script = ExtResource("2_mqq7o")
+speaker = ExtResource("1_2kfyn")
+text = "Oh no, that is horrible!  
+I have heard that a bank across his home was robbed at the same time. Perhaps there's a connection?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_31lrl"]
+script = ExtResource("2_mqq7o")
+speaker = ExtResource("3_plafl")
+text = "Could be, but... Oh! Oh no, my pie is burning in the oven! I have to go now, Marge, goodbye!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("4_xt8ot")
+callId = "Day1Call1"
+caller = ExtResource("1_2kfyn")
+ceciever = ExtResource("3_plafl")
+caller_request = SubResource("Resource_mwg6r")
+diaologue = Array[ExtResource("2_mqq7o")]([SubResource("Resource_c2w2d"), SubResource("Resource_e3gdm"), SubResource("Resource_mdyqm"), SubResource("Resource_nwd11"), SubResource("Resource_31lrl")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://280uxl0t8sbt"]
+
+[ext_resource type="Resource" uid="uid://b0dsknauij3i3" path="res://resources/Person/Bellport/Susan Howard/SusanHoward.tres" id="1_5udys"]
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_8hngf"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_v5oeb"]
+[ext_resource type="Resource" uid="uid://djq2atw6fbbw8" path="res://resources/Person/Winterholde/James Smith/JamesSmith.tres" id="3_psfq2"]
+
+[sub_resource type="Resource" id="Resource_5udys"]
+script = ExtResource("1_8hngf")
+speaker = ExtResource("1_5udys")
+text = "Hello, please connect me to 5322."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_ccxjk"]
+script = ExtResource("1_8hngf")
+speaker = ExtResource("1_5udys")
+text = "Hey Jamey, have you found what you were looking for?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_sikol"]
+script = ExtResource("1_8hngf")
+speaker = ExtResource("3_psfq2")
+text = "No, unfortunately I haven't."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_psfq2"]
+script = ExtResource("1_8hngf")
+speaker = ExtResource("1_5udys")
+text = "Alright, let me know if you have! Goodbye."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_v5oeb")
+callId = "Day3Call3"
+caller = ExtResource("1_5udys")
+ceciever = ExtResource("3_psfq2")
+caller_request = SubResource("Resource_5udys")
+diaologue = Array[ExtResource("1_8hngf")]([SubResource("Resource_ccxjk"), SubResource("Resource_sikol"), SubResource("Resource_psfq2")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

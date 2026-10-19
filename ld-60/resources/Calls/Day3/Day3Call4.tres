@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://bjvtgsqavk45v"]
+
+[ext_resource type="Resource" uid="uid://bws13q6m44ed1" path="res://resources/Person/Winterholde/Sarah Butler/SarahButler.tres" id="1_7k83i"]
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_lhlxi"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_a7206"]
+[ext_resource type="Resource" uid="uid://ni2cnwi60axq" path="res://resources/Person/Holloward/Casey Chapman/CaseyChapman.tres" id="3_xsbrk"]
+
+[sub_resource type="Resource" id="Resource_qeswp"]
+script = ExtResource("1_lhlxi")
+speaker = ExtResource("1_7k83i")
+text = "Hello again! I need to speak to Casey Chapman this time, urgently!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_hebpj"]
+script = ExtResource("1_lhlxi")
+speaker = ExtResource("1_7k83i")
+text = "Hello Casey. Someone broke into my home and destroyed a bunch of stuff but nothing went missing!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_c71h7"]
+script = ExtResource("1_lhlxi")
+speaker = ExtResource("3_xsbrk")
+text = "Really!? But you are fine, aren't you?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_hedqi"]
+script = ExtResource("1_lhlxi")
+speaker = ExtResource("1_7k83i")
+text = "Yeah, I'm fine. Oh, Paul saw Richard in Bellport yesterday!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_2jgw0"]
+script = ExtResource("1_lhlxi")
+speaker = ExtResource("3_xsbrk")
+text = "Oh! Bellport you say... The day my nephew vanished, I saw the Howards walking around Holloward, and they are from Bellport, aren't they?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_xsbrk"]
+script = ExtResource("1_lhlxi")
+speaker = ExtResource("1_7k83i")
+text = "Yes they are! And Peter mentioned seeing Richard followed by a friend of his nephew, and I believe Susan Howard fits that description!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_7k83i"]
+script = ExtResource("1_lhlxi")
+speaker = ExtResource("3_xsbrk")
+text = "Thank you so much for this information! I will need to go now, goodbye!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_a7206")
+callId = "Day3Call4"
+caller = ExtResource("1_7k83i")
+ceciever = ExtResource("3_xsbrk")
+caller_request = SubResource("Resource_qeswp")
+diaologue = Array[ExtResource("1_lhlxi")]([SubResource("Resource_hebpj"), SubResource("Resource_c71h7"), SubResource("Resource_hedqi"), SubResource("Resource_2jgw0"), SubResource("Resource_xsbrk"), SubResource("Resource_7k83i")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

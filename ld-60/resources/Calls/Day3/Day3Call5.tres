@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://bbrs27338wqcp"]
+
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_kq5bs"]
+[ext_resource type="Resource" uid="uid://ct41j2vwpotr5" path="res://resources/Person/Fayshield/Laura Tyler/LauraTyler.tres" id="1_nhj2o"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_537ue"]
+[ext_resource type="Resource" uid="uid://dvcrad2w4vbtk" path="res://resources/Person/Fayshield/Jean Hopkins/JeanHopkins.tres" id="3_qef8t"]
+
+[sub_resource type="Resource" id="Resource_nhj2o"]
+script = ExtResource("1_kq5bs")
+speaker = ExtResource("1_nhj2o")
+text = "Hey again! This time I need to call Jean."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_b5bhu"]
+script = ExtResource("1_kq5bs")
+speaker = ExtResource("1_nhj2o")
+text = "Hey Jeany, is your car ready? Matty and Paul need it now."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_qef8t"]
+script = ExtResource("1_kq5bs")
+speaker = ExtResource("3_qef8t")
+text = "It's not my car, but the owner surely won't miss it. I'm on my way!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_537ue")
+callId = "Day3Call5"
+caller = ExtResource("1_nhj2o")
+ceciever = ExtResource("3_qef8t")
+caller_request = SubResource("Resource_nhj2o")
+diaologue = Array[ExtResource("1_kq5bs")]([SubResource("Resource_b5bhu"), SubResource("Resource_qef8t")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

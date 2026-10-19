@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://c0e1oprup5eov"]
+
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_ilfpl"]
+[ext_resource type="Resource" uid="uid://dvcrad2w4vbtk" path="res://resources/Person/Fayshield/Jean Hopkins/JeanHopkins.tres" id="1_q2kn5"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_4oake"]
+[ext_resource type="Resource" uid="uid://ct41j2vwpotr5" path="res://resources/Person/Fayshield/Laura Tyler/LauraTyler.tres" id="3_okthv"]
+
+[sub_resource type="Resource" id="Resource_q2kn5"]
+script = ExtResource("1_ilfpl")
+speaker = ExtResource("1_q2kn5")
+text = "Heyo! Could you connect me to Laura Tyler please?"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_fw0do"]
+script = ExtResource("1_ilfpl")
+speaker = ExtResource("1_q2kn5")
+text = "Heyo! Have you heard the news about the bank robbers in Bellport already? The police know nothing about the method of entry yet!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_lpxwo"]
+script = ExtResource("1_ilfpl")
+speaker = ExtResource("3_okthv")
+text = "Of course! Why do you even ask?
+I still find it quite impressive that they climbed through the small vents to get into the bank!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_okthv"]
+script = ExtResource("1_ilfpl")
+speaker = ExtResource("1_q2kn5")
+text = "Oh yea, that sounds quite impressive!  
+Listen, I need to go now, bye!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_4oake")
+callId = "Day2Call4"
+caller = ExtResource("1_q2kn5")
+ceciever = ExtResource("3_okthv")
+caller_request = SubResource("Resource_q2kn5")
+diaologue = Array[ExtResource("1_ilfpl")]([SubResource("Resource_fw0do"), SubResource("Resource_lpxwo"), SubResource("Resource_okthv")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"

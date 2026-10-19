@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://cd0y7g4unluje"]
+
+[ext_resource type="Resource" uid="uid://cmvflldb1es2y" path="res://resources/Person/Fayshield/Matthew Clarke/MatthewClark.tres" id="1_1m5tu"]
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_41jb3"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="2_icb3h"]
+[ext_resource type="Resource" uid="uid://ct41j2vwpotr5" path="res://resources/Person/Fayshield/Laura Tyler/LauraTyler.tres" id="3_6s5l6"]
+
+[sub_resource type="Resource" id="Resource_1m5tu"]
+script = ExtResource("1_41jb3")
+speaker = ExtResource("1_1m5tu")
+text = "Hey, I want to call Laura. Her number is 4268."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_6s5l6"]
+script = ExtResource("1_41jb3")
+speaker = ExtResource("1_1m5tu")
+text = "Hey babe! I have seen your latest artwork, congratulations on it and its success!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_l632f"]
+script = ExtResource("1_41jb3")
+speaker = ExtResource("3_6s5l6")
+text = "Aw, thank you! But it could have been better, the rain smeared a few letters."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_bsnpo"]
+script = ExtResource("1_41jb3")
+speaker = ExtResource("1_1m5tu")
+text = "Oh, don't worry, it's still amazing!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_r1fww"]
+script = ExtResource("1_41jb3")
+speaker = ExtResource("3_6s5l6")
+text = "Yea, thanks! Oh, by the way, Jean is still up to help you guys tomorrow!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_ivi25"]
+script = ExtResource("1_41jb3")
+speaker = ExtResource("1_1m5tu")
+text = "Great, that's good! I have to go now, love ya!"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("2_icb3h")
+callId = "Day2Call1"
+caller = ExtResource("1_1m5tu")
+ceciever = ExtResource("3_6s5l6")
+caller_request = SubResource("Resource_1m5tu")
+diaologue = Array[ExtResource("1_41jb3")]([SubResource("Resource_6s5l6"), SubResource("Resource_l632f"), SubResource("Resource_bsnpo"), SubResource("Resource_r1fww"), SubResource("Resource_ivi25")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"
