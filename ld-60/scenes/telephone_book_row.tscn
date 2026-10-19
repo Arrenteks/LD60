@@ -16,6 +16,10 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="Town" parent="." unique_id=1132322927 instance=ExtResource("2_7akjw")]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [node name="TelephoneNumber" parent="." unique_id=1818843928 instance=ExtResource("2_7akjw")]
 layout_mode = 2
 size_flags_horizontal = 3

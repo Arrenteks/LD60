@@ -10,17 +10,21 @@ var person: PersonResource
 @onready var person_name_button: TelephoneBookDragable = $Name
 @onready var address_button: TelephoneBookDragable = $Address
 @onready var telephone_number_button: TelephoneBookDragable = $TelephoneNumber
+@onready var town_button: TelephoneBookDragable = $Town
 
-func set_text(_name: String, _address: String, _telephone_number: String) -> void:
+func set_text(_name: String, _address: String, _telephone_number: String, _town : String) -> void:
 	person_name_button.text = _name
 	address_button.text = _address
 	telephone_number_button.text = _telephone_number
+	town_button.text = _town
 
 func set_person_data() -> void:
-	set_text(person.name._get_text(), person.address._get_text(), person.telephone_number._get_text())
+	set_text(person.name._get_text(), person.address._get_text(), person.telephone_number._get_text(), person.town._get_text())
 	person_name_button.person_data = person.name
 	address_button.person_data = person.address
 	telephone_number_button.person_data = person.telephone_number
+	town_button.person_data = person.town
+	
 
 #func random_bs_go() -> void:
 	#var new_name = generate_word(characters, 10)

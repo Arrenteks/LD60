@@ -8,7 +8,7 @@
 [sub_resource type="Resource" id="Resource_1870m"]
 script = ExtResource("1_qya70")
 speaker = ExtResource("1_0h64v")
-text = "Hello! I wish to speak to the number 5242."
+text = "Hello! I wish to speak to the number 4148."
 metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
 
 [sub_resource type="Resource" id="Resource_p42e8"]

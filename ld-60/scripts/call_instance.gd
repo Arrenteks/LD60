@@ -9,6 +9,9 @@ var plgCaller : PhoneLogicGroup # Light and Hole of caller
 var plgReciever : PhoneLogicGroup # light and hole of reciever
 var call_rev_group : CallRevGroup # teh cluster of cabels and the switch
 
+@onready var sound: AudioStreamPlayer = $Switch
+
+
 var d : DialogueWindow
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,6 +38,7 @@ func set_call_rev_group(call_rev_group : CallRevGroup):
 	self.call_rev_group = call_rev_group
 	
 	plgCaller.modluate_signal(Color(0.852, 0.431, 0.223, 1.0))
+	
 	if call_rev_group.schalter.get_talking():
 		start_Caller_request()
 	
@@ -72,7 +76,8 @@ func call_registered():
 	#print("registered")
 	#print(plgCaller)
 	#print(plgReciever)
-	plgCaller.modluate_signal(Color(0.996, 1.0, 0.192, 1.0))
+	plgCaller.modluate_signal(Color(1.0, 0.783, 0.0, 1.0))
+	sound.play()
 
 func start_Caller_request():
 	status = CallManager.CallStatus.CallerRequestAcceptet
