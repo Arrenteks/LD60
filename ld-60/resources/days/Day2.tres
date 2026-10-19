@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="Day" format=3 uid="uid://bqk77d8agxp2h"]
+
+[ext_resource type="Script" uid="uid://blcx8oly3lfly" path="res://resources/question.gd" id="1_g337k"]
+[ext_resource type="Script" uid="uid://5jjmv1u4ppl4" path="res://resources/day.gd" id="2_a0e4p"]
+[ext_resource type="Script" uid="uid://bxo062f3w34bj" path="res://resources/person_data.gd" id="2_qspx6"]
+[ext_resource type="Resource" uid="uid://cdce886o5jg51" path="res://resources/Person/Fayshield/Laura Tyler/LauraTylerName.tres" id="3_tu5cs"]
+[ext_resource type="Script" uid="uid://n8cadt7wn8ir" path="res://resources/drag_drop_question.gd" id="4_ek7jt"]
+[ext_resource type="Resource" uid="uid://dv1xg1v7125nq" path="res://resources/Person/Fayshield/Laura Tyler/LotusStreet9a.tres" id="5_r5qkj"]
+[ext_resource type="Resource" uid="uid://bf0twv4owyf27" path="res://resources/Person/Bellport/William Doyle/WilliamDoyleName.tres" id="6_q74a4"]
+[ext_resource type="Resource" uid="uid://dwyj7ebctcjpu" path="res://resources/Person/Holloward/Lena Murphy/LenaMurphyName.tres" id="7_xc4ik"]
+[ext_resource type="Resource" uid="uid://bvisehnuwlbiv" path="res://resources/Person/Bellport/William Doyle/PenrosePassage112.tres" id="8_oooc7"]
+[ext_resource type="Resource" uid="uid://cjvytiu4c8c6y" path="res://resources/Person/Holloward/Lena Murphy/LavenderLane5.tres" id="9_y22pk"]
+[ext_resource type="Resource" uid="uid://01xmidvnihn4" path="res://resources/Person/Holloward/Paul Murphy/PaulMurphyName.tres" id="10_460ip"]
+[ext_resource type="Resource" uid="uid://b45r5gbiw77fa" path="res://resources/Person/Fayshield/Matthew Clarke/MatthewClarkName.tres" id="11_2ddhw"]
+[ext_resource type="Script" uid="uid://di60qaym01tbh" path="res://resources/boolquestion.gd" id="12_oyjdw"]
+[ext_resource type="Resource" uid="uid://gmmy65oeuogk" path="res://resources/Person/Bellport/Bellport.tres" id="13_wvrko"]
+
+[sub_resource type="Resource" id="Resource_pcbx0"]
+script = ExtResource("4_ek7jt")
+correct_datas = Array[ExtResource("2_qspx6")]([ExtResource("3_tu5cs")])
+questionType = 2
+questionText = "Who is an artist?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_7dndi"]
+script = ExtResource("4_ek7jt")
+correct_datas = Array[ExtResource("2_qspx6")]([ExtResource("5_r5qkj")])
+questionType = 2
+questionText = " Where does the artist live?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_ql5li"]
+script = ExtResource("4_ek7jt")
+correct_datas = Array[ExtResource("2_qspx6")]([ExtResource("6_q74a4"), ExtResource("7_xc4ik")])
+questionType = 2
+questionText = "Who is still talking about the bankrobbery in Holloward?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_44c40"]
+script = ExtResource("4_ek7jt")
+correct_datas = Array[ExtResource("2_qspx6")]([ExtResource("8_oooc7"), ExtResource("9_y22pk")])
+questionType = 2
+questionText = "At which adressess do the Holloward bankrobbers live?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_738yg"]
+script = ExtResource("4_ek7jt")
+correct_datas = Array[ExtResource("2_qspx6")]([ExtResource("10_460ip"), ExtResource("11_2ddhw")])
+questionType = 2
+questionText = "Who visited Bellport?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_bdf76"]
+script = ExtResource("12_oyjdw")
+truthful_statement = true
+questionText = "Has anyone seen Richard?"
+metadata/_custom_type_script = "uid://di60qaym01tbh"
+
+[sub_resource type="Resource" id="Resource_giepm"]
+script = ExtResource("4_ek7jt")
+correct_datas = Array[ExtResource("2_qspx6")]([ExtResource("13_wvrko")])
+questionType = 2
+questionText = "Where was Richard?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_ne2wu"]
+script = ExtResource("4_ek7jt")
+correct_datas = Array[ExtResource("2_qspx6")]([ExtResource("3_tu5cs")])
+questionType = 2
+questionText = "Who knows something about the bankrobbery in Bellport?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[resource]
+script = ExtResource("2_a0e4p")
+questions = Array[ExtResource("1_g337k")]([SubResource("Resource_pcbx0"), SubResource("Resource_7dndi"), SubResource("Resource_ql5li"), SubResource("Resource_44c40"), SubResource("Resource_738yg"), SubResource("Resource_bdf76"), SubResource("Resource_giepm"), SubResource("Resource_ne2wu")])
+metadata/_custom_type_script = "uid://5jjmv1u4ppl4"

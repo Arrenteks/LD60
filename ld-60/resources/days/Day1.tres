@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="Day" format=3 uid="uid://caxa57avn3vkr"]
+
+[ext_resource type="Script" uid="uid://blcx8oly3lfly" path="res://resources/question.gd" id="1_nwnm2"]
+[ext_resource type="Script" uid="uid://bxo062f3w34bj" path="res://resources/person_data.gd" id="2_7ap1q"]
+[ext_resource type="Script" uid="uid://5jjmv1u4ppl4" path="res://resources/day.gd" id="2_uch1h"]
+[ext_resource type="Resource" uid="uid://dgr0h306nyj5e" path="res://resources/Person/Fayshield/Margret Hudson/MargretHudsonName.tres" id="3_15k3t"]
+[ext_resource type="Script" uid="uid://n8cadt7wn8ir" path="res://resources/drag_drop_question.gd" id="4_dqot6"]
+[ext_resource type="Resource" uid="uid://70i0wovf6311" path="res://resources/Person/Fayshield/Matthew Clarke/JulyRoad5.tres" id="5_0olfs"]
+[ext_resource type="Resource" uid="uid://cu3jyl0rkw34o" path="res://resources/Person/Holloward/Holloward.tres" id="6_ry27e"]
+[ext_resource type="Script" uid="uid://c6etj67cu2o7x" path="res://resources/intquestion.gd" id="7_4uo00"]
+[ext_resource type="Script" uid="uid://di60qaym01tbh" path="res://resources/boolquestion.gd" id="8_o3wd1"]
+[ext_resource type="Resource" uid="uid://dwyj7ebctcjpu" path="res://resources/Person/Holloward/Lena Murphy/LenaMurphyName.tres" id="9_0o4sr"]
+[ext_resource type="Resource" uid="uid://bf0twv4owyf27" path="res://resources/Person/Bellport/William Doyle/WilliamDoyleName.tres" id="10_eccs3"]
+[ext_resource type="Resource" uid="uid://dpah32or2457e" path="res://resources/Person/Bellport/Brian Howard/BrianHowardName.tres" id="11_evwha"]
+[ext_resource type="Resource" uid="uid://dut70wawxn8i3" path="res://resources/Person/Bellport/Susan Howard/SusanHowardName.tres" id="12_4uo00"]
+
+[sub_resource type="Resource" id="Resource_7gj86"]
+script = ExtResource("4_dqot6")
+correct_datas = Array[ExtResource("2_7ap1q")]([ExtResource("3_15k3t")])
+questionType = 2
+questionText = "Who received a large amount of groceries?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_nmckm"]
+script = ExtResource("4_dqot6")
+correct_datas = Array[ExtResource("2_7ap1q")]([ExtResource("5_0olfs")])
+questionType = 2
+questionText = "Where does the grocery thief live?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_ss2ax"]
+script = ExtResource("4_dqot6")
+correct_datas = Array[ExtResource("2_7ap1q")]([ExtResource("6_ry27e")])
+questionType = 2
+questionText = "Where did the bank robbery take place?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_7ap1q"]
+script = ExtResource("7_4uo00")
+truthful_answer = 5
+questionType = 1
+questionText = "At which hour in the afternoon did Richard disappear?"
+metadata/_custom_type_script = "uid://c6etj67cu2o7x"
+
+[sub_resource type="Resource" id="Resource_15k3t"]
+script = ExtResource("8_o3wd1")
+questionText = "Has anyone seen Richard?"
+metadata/_custom_type_script = "uid://di60qaym01tbh"
+
+[sub_resource type="Resource" id="Resource_dqot6"]
+script = ExtResource("4_dqot6")
+correct_datas = Array[ExtResource("2_7ap1q")]([ExtResource("9_0o4sr"), ExtResource("10_eccs3"), ExtResource("11_evwha")])
+questionType = 2
+questionText = "Who is talking about the police-presence?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_dk7xo"]
+script = ExtResource("4_dqot6")
+correct_datas = Array[ExtResource("2_7ap1q")]([ExtResource("10_eccs3"), ExtResource("11_evwha"), ExtResource("12_4uo00")])
+questionType = 2
+questionText = "Who visited Holloward yesterday?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[resource]
+script = ExtResource("2_uch1h")
+questions = Array[ExtResource("1_nwnm2")]([SubResource("Resource_7gj86"), SubResource("Resource_nmckm"), SubResource("Resource_ss2ax"), SubResource("Resource_7ap1q"), SubResource("Resource_15k3t"), SubResource("Resource_dqot6"), SubResource("Resource_dk7xo")])
+metadata/_custom_type_script = "uid://5jjmv1u4ppl4"

@@ -4,10 +4,12 @@
 [ext_resource type="Resource" uid="uid://bf0twv4owyf27" path="res://resources/Person/Bellport/William Doyle/WilliamDoyleName.tres" id="2_urmqj"]
 [ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_et42a"]
 [ext_resource type="Resource" uid="uid://bnbekf1nr45qg" path="res://resources/Person/Bellport/William Doyle/WilliamDoylePhone.tres" id="4_h3ga5"]
+[ext_resource type="Resource" uid="uid://gmmy65oeuogk" path="res://resources/Person/Bellport/Bellport.tres" id="5_urmqj"]
 
 [resource]
 script = ExtResource("3_et42a")
 name = ExtResource("2_urmqj")
+town = ExtResource("5_urmqj")
 address = ExtResource("1_et42a")
 telephone_number = ExtResource("4_h3ga5")
 base_pitch = 0.2

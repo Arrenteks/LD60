@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TownData" format=3 uid="uid://cf5iw4hen3edm"]
+
+[ext_resource type="Script" uid="uid://bw3m5701cky06" path="res://resources/town_data.gd" id="1_0pjsu"]
+
+[resource]
+script = ExtResource("1_0pjsu")
+town_name = "Fayshield"
+metadata/_custom_type_script = "uid://bw3m5701cky06"

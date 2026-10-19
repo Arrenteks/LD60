@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TownData" format=3 uid="uid://7hsrnkywa12n"]
+
+[ext_resource type="Script" uid="uid://bw3m5701cky06" path="res://resources/town_data.gd" id="1_w3hm5"]
+
+[resource]
+script = ExtResource("1_w3hm5")
+town_name = "Winterholde"
+metadata/_custom_type_script = "uid://bw3m5701cky06"
