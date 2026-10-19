@@ -13,6 +13,8 @@ var tutorial_completed: bool = false
 
 var ingame: bool = false
 
+var correct_percent: float = 0
+
 signal socketOccupancy_changed(is_occupied: bool)
 
 #emit via SignalManager.money_changed.emit()

@@ -76,6 +76,7 @@ func _on_button_pressed() -> void:
 func finish_day():
 	var correct_answers := count_correct_answers();
 	var correct_percentile := (correct_answers / day_resource.questions.size()) * 100
+	SignalManager.correct_percent = correct_percentile
 
 
 func _on_next_page_pressed() -> void:
