@@ -30,18 +30,18 @@ height = 98.0
 
 [node name="GameArea" type="Node2D" unique_id=1015749483]
 
+[node name="Bg" type="Sprite2D" parent="." unique_id=1514668760]
+texture = ExtResource("1_yhdnk")
+centered = false
+
 [node name="Clock" parent="." unique_id=1958296638 instance=ExtResource("6_qqxer")]
-z_index = 1
+z_as_relative = false
 position = Vector2(1639, 214)
 
-[node name="Bg" type="Sprite2D" parent="." unique_id=1514668760]
-position = Vector2(963, 546)
-texture = ExtResource("1_yhdnk")
-
 [node name="Tisch" type="Sprite2D" parent="." unique_id=1693612253]
-position = Vector2(2178, -174)
+position = Vector2(0, 600)
 texture = ExtResource("1_y3m0s")
-offset = Vector2(-1218, 1008)
+centered = false
 
 [node name="Telefon" type="Sprite2D" parent="." unique_id=484774079]
 position = Vector2(509, 244)
@@ -613,6 +613,13 @@ phone_number = "5264"
 [node name="logic_group09" parent="Logic_groups/52" unique_id=56148282 instance=ExtResource("14_knvcx")]
 position = Vector2(-112, 71)
 phone_number = "5262"
+
+[node name="UI" type="Control" parent="." unique_id=701293962]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="input_event" from="Telefonbuch2/Area2D" to="Telefonbuch2" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Fragen2/Area2D" to="Fragen2" method="_on_area_2d_input_event"]
