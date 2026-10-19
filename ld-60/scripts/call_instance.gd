@@ -1,12 +1,15 @@
 extends Node2D
 class_name CallInstance
 
+const DIALOGUE = preload("uid://ccy2o7kramesx")
+
 var status : CallManager.CallStatus
 var call_ressource : CallResource
 var plgCaller : PhoneLogicGroup # Light and Hole of caller
 var plgReciever : PhoneLogicGroup # light and hole of reciever
 var call_rev_group : CallRevGroup # teh cluster of cabels and the switch
 
+var d : DialogueWindow
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#slotLightGroup.phone_logic_group_connected.connect(call_registered)
@@ -69,6 +72,14 @@ func call_registered():
 func start_Caller_request():
 	status = CallManager.CallStatus.CallerRequestAcceptet
 	print_debug("please talk to me")
+	
+	if d == null:
+		d = DIALOGUE.instantiate()
+		add_child(d)
+	d.size = Vector2(1920,1080)
+	d.position = Vector2(0,0)
+	d.play_caller_request(call_ressource)
+	
 	plgCaller.modluate_signal(Color(0.254, 0.75, 0.774, 1.0))
 	# TODO: START CALLER DIALOUGE
 
@@ -90,12 +101,17 @@ func try_start_Dialouge(socket: item_socket):
 		plgReciever.modluate_signal(Color(0.0, 0.392, 0.05, 1.0))
 		status = CallManager.CallStatus.Running
 		print_debug("hurray")
-		var timer = Timer.new()
-		add_child(timer)
-		timer.wait_time = 3
-		timer.one_shot = true
-		timer.timeout.connect(end_call)
-		timer.start()
+		d.play_dialoug()
+		d.dialoug_over.connect(end_call)
+		
+		
+		
+		#var timer = Timer.new()
+		#add_child(timer)
+		#timer.wait_time = 10
+		#timer.one_shot = true
+		#timer.timeout.connect(end_call)
+		#timer.start()
 		
 		
 func end_call():

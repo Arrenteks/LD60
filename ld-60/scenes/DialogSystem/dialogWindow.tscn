@@ -30,7 +30,7 @@ layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("2_xnx6e")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=214871747]
+[node name="Textbox_Text" type="RichTextLabel" parent="." unique_id=214871747]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 8
