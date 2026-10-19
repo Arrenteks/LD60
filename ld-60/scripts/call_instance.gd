@@ -28,6 +28,9 @@ func set_reciever_logic_group(phone_logic_group:PhoneLogicGroup):
 func set_call_rev_group(call_rev_group : CallRevGroup):
 	status =  CallManager.CallStatus.Connected
 	
+	if self.call_rev_group == call_rev_group:
+		return
+	
 	print("callrev connected")
 	self.call_rev_group = call_rev_group
 	
@@ -40,7 +43,7 @@ func set_call_rev_group(call_rev_group : CallRevGroup):
 	
 
 func remove_call_rev_group():
-	if call_rev_group:
+	if !call_rev_group:
 		return
 	call_rev_group.schalter.talking_switch_flipped.disconnect(toogle_talking)
 	call_rev_group.reciever_plugged_in.disconnect(try_start_Dialouge)
