@@ -1,0 +1,641 @@
+[gd_scene format=3 uid="uid://r1u6d8ji0ak1"]
+
+[ext_resource type="Script" uid="uid://83by5j51hvtl" path="res://scripts/game_area.gd" id="1_mt7g5"]
+[ext_resource type="Texture2D" uid="uid://cbn0xvqowkflp" path="res://sprites/Tisch.png" id="1_y3m0s"]
+[ext_resource type="Texture2D" uid="uid://bpg04vbg5xhcu" path="res://sprites/jan/BG.png" id="1_yhdnk"]
+[ext_resource type="Texture2D" uid="uid://44yq2brbco6x" path="res://sprites/Telefonbuch.png" id="2_yhdnk"]
+[ext_resource type="Texture2D" uid="uid://dc4wkcw6qhu22" path="res://sprites/Fragen.png" id="3_t6131"]
+[ext_resource type="PackedScene" uid="uid://cippf1i48wuxx" path="res://scenes/cosmetic/smaller_numbers.tscn" id="4_knvcx"]
+[ext_resource type="Texture2D" uid="uid://bh5m5v3ci76gj" path="res://sprites/jan/Telefon.png" id="4_qqxer"]
+[ext_resource type="Texture2D" uid="uid://buig821qdroj3" path="res://sprites/Maschine/Maschiene.png" id="4_xxp6o"]
+[ext_resource type="PackedScene" uid="uid://b3svnin8ksge6" path="res://scenes/cosmetic/smallest_numbers.tscn" id="5_qealr"]
+[ext_resource type="Script" uid="uid://dnji4byfssote" path="res://scenes/telefonbuch.gd" id="5_yhdnk"]
+[ext_resource type="PackedScene" uid="uid://bgyfhdnsoydww" path="res://scenes/Clock.tscn" id="6_qqxer"]
+[ext_resource type="PackedScene" uid="uid://dg28d7nvok3sm" path="res://scenes/item_cable.tscn" id="7_3tn20"]
+[ext_resource type="Script" uid="uid://c8c45bl52lijn" path="res://scenes/fragen.gd" id="7_t6131"]
+[ext_resource type="Texture2D" uid="uid://b7pfnblanbsb3" path="res://sprites/Schalter.png" id="9_qqxer"]
+[ext_resource type="PackedScene" uid="uid://cau2ckh08fckc" path="res://scenes/Klinke_grabbable.tscn" id="10_yhdnk"]
+[ext_resource type="Script" uid="uid://blk03xswupvv6" path="res://scenes/talking_switch.gd" id="13_knvcx"]
+[ext_resource type="PackedScene" uid="uid://f4vi4hw1qoux" path="res://scenes/phone_logic_group.tscn" id="14_knvcx"]
+[ext_resource type="Script" uid="uid://cik4btopibbi2" path="res://scenes/call_rev_group.gd" id="14_tgoyj"]
+[ext_resource type="PackedScene" uid="uid://bugol3jiohoxy" path="res://scenes/instructions.tscn" id="18_j5l7p"]
+[ext_resource type="PackedScene" uid="uid://byjw55e4oiula" path="res://scenes/end_of_day_message.tscn" id="19_gjqp5"]
+
+[sub_resource type="Gradient" id="Gradient_qealr"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vnn0b"]
+gradient = SubResource("Gradient_qealr")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yeiif"]
+radius = 40.0
+height = 98.0
+
+[node name="GameArea" type="Node2D" unique_id=1015749483]
+script = ExtResource("1_mt7g5")
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=1514668760]
+texture = ExtResource("1_yhdnk")
+centered = false
+
+[node name="Clock" parent="." unique_id=1958296638 instance=ExtResource("6_qqxer")]
+z_as_relative = false
+position = Vector2(1639, 214)
+
+[node name="Tisch" type="Sprite2D" parent="." unique_id=1693612253]
+position = Vector2(0, 600)
+texture = ExtResource("1_y3m0s")
+centered = false
+
+[node name="Telefon" type="Sprite2D" parent="." unique_id=484774079]
+position = Vector2(509, 244)
+texture = ExtResource("4_qqxer")
+
+[node name="Maschiene" type="Sprite2D" parent="." unique_id=1371764844]
+position = Vector2(957, 531)
+texture = ExtResource("4_xxp6o")
+
+[node name="Label" type="Label" parent="Maschiene" unique_id=1065819819]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1052.0
+offset_top = -781.0
+offset_right = -1015.0
+offset_bottom = -688.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "41
+"
+
+[node name="Label3" type="Label" parent="Maschiene" unique_id=1866245457]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -632.0
+offset_top = -780.0
+offset_right = -595.0
+offset_bottom = -687.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "42"
+
+[node name="Label4" type="Label" parent="Maschiene" unique_id=1308610376]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -632.0
+offset_top = -564.0
+offset_right = -595.0
+offset_bottom = -471.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "53"
+
+[node name="Label2" type="Label" parent="Maschiene" unique_id=1089989503]
+offset_left = -401.0
+offset_top = -93.0
+offset_right = -364.0
+theme_override_font_sizes/font_size = 32
+text = "52
+"
+
+[node name="Caller" type="Label" parent="Maschiene" unique_id=511894941]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1127.0
+offset_top = -325.0
+offset_right = -1038.0
+offset_bottom = -232.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.19859768
+theme_override_font_sizes/font_size = 32
+text = "Caller"
+
+[node name="Caller2" type="Label" parent="Maschiene" unique_id=1305406673]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1170.0
+offset_top = -267.0
+offset_right = -1039.0
+offset_bottom = -174.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.1442887
+theme_override_font_sizes/font_size = 32
+text = "Reciever
+"
+
+[node name="Caller3" type="Label" parent="Maschiene" unique_id=1084160619]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1209.0
+offset_top = -197.0
+offset_right = -1078.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.051428802
+theme_override_font_sizes/font_size = 32
+text = "Talking
+Switch
+"
+
+[node name="smaller numbers" parent="Maschiene" unique_id=23622126 instance=ExtResource("4_knvcx")]
+position = Vector2(-322, -289)
+
+[node name="smaller numbers2" parent="Maschiene" unique_id=1384706362 instance=ExtResource("4_knvcx")]
+position = Vector2(-322, -68)
+
+[node name="smaller numbers3" parent="Maschiene" unique_id=595181966 instance=ExtResource("4_knvcx")]
+position = Vector2(86, -68)
+
+[node name="smaller numbers4" parent="Maschiene" unique_id=1888493771 instance=ExtResource("4_knvcx")]
+position = Vector2(85, -286)
+
+[node name="even_smaller_nummbers" type="Node" parent="Maschiene" unique_id=777624915]
+
+[node name="smallest Numbers" parent="Maschiene/even_smaller_nummbers" unique_id=1547327095 instance=ExtResource("5_qealr")]
+position = Vector2(809, 193)
+
+[node name="smallest Numbers2" parent="Maschiene/even_smaller_nummbers" unique_id=756595887 instance=ExtResource("5_qealr")]
+position = Vector2(809, 267)
+
+[node name="smallest Numbers3" parent="Maschiene/even_smaller_nummbers" unique_id=1430857335 instance=ExtResource("5_qealr")]
+position = Vector2(809, 339)
+
+[node name="smallest Numbers4" parent="Maschiene/even_smaller_nummbers" unique_id=1826530208 instance=ExtResource("5_qealr")]
+position = Vector2(809, 408)
+
+[node name="smallest Numbers5" parent="Maschiene/even_smaller_nummbers" unique_id=1804681410 instance=ExtResource("5_qealr")]
+position = Vector2(809, 484)
+
+[node name="smallest Numbers6" parent="Maschiene/even_smaller_nummbers" unique_id=453334031 instance=ExtResource("5_qealr")]
+position = Vector2(809, 556)
+
+[node name="smallest Numbers12" parent="Maschiene/even_smaller_nummbers" unique_id=48275272 instance=ExtResource("5_qealr")]
+position = Vector2(1222, 556)
+
+[node name="smallest Numbers11" parent="Maschiene/even_smaller_nummbers" unique_id=1967796390 instance=ExtResource("5_qealr")]
+position = Vector2(1222, 484)
+
+[node name="smallest Numbers10" parent="Maschiene/even_smaller_nummbers" unique_id=1977959509 instance=ExtResource("5_qealr")]
+position = Vector2(1222, 408)
+
+[node name="smallest Numbers9" parent="Maschiene/even_smaller_nummbers" unique_id=488978447 instance=ExtResource("5_qealr")]
+position = Vector2(1222, 339)
+
+[node name="smallest Numbers8" parent="Maschiene/even_smaller_nummbers" unique_id=340688192 instance=ExtResource("5_qealr")]
+position = Vector2(1222, 267)
+
+[node name="smallest Numbers7" parent="Maschiene/even_smaller_nummbers" unique_id=1951563414 instance=ExtResource("5_qealr")]
+position = Vector2(1221, 187)
+
+[node name="Sprite2D" type="Sprite2D" parent="Maschiene" unique_id=2086663484]
+position = Vector2(-351, -183)
+scale = Vector2(1.765625, 0.140625)
+texture = SubResource("GradientTexture2D_vnn0b")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Maschiene" unique_id=628844967]
+position = Vector2(62, -184)
+scale = Vector2(1.7109375, 0.140625)
+texture = SubResource("GradientTexture2D_vnn0b")
+
+[node name="Telefonbuch2" type="Sprite2D" parent="." unique_id=1888902373]
+position = Vector2(1715, 758)
+texture = ExtResource("2_yhdnk")
+script = ExtResource("5_yhdnk")
+
+[node name="Area2D" type="Area2D" parent="Telefonbuch2" unique_id=1048070148]
+position = Vector2(-17, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Telefonbuch2/Area2D" unique_id=142470229]
+polygon = PackedVector2Array(-150, -73, -41, 71, -12, 100, 184, 100, 177, 67, 26, -101, -136, -110)
+
+[node name="Marker2D" type="Marker2D" parent="Telefonbuch2" unique_id=426781468]
+position = Vector2(-342, -702)
+
+[node name="Fragen2" type="Sprite2D" parent="." unique_id=1114576092]
+position = Vector2(215, 777)
+texture = ExtResource("3_t6131")
+script = ExtResource("7_t6131")
+
+[node name="Area2D" type="Area2D" parent="Fragen2" unique_id=525810955]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fragen2/Area2D" unique_id=1980540274]
+polygon = PackedVector2Array(1, -109, -203, 103, 40, 102, 209, -111)
+
+[node name="Marker2D" type="Marker2D" parent="Fragen2" unique_id=692554654]
+position = Vector2(1, -541)
+
+[node name="Telefonbuch" type="Sprite2D" parent="." unique_id=1777166672]
+visible = false
+position = Vector2(1711, 738)
+texture = ExtResource("2_yhdnk")
+
+[node name="Fragen" type="Sprite2D" parent="." unique_id=94876790]
+visible = false
+position = Vector2(220, 744)
+texture = ExtResource("3_t6131")
+
+[node name="grp_Licht" type="Node2D" parent="." unique_id=1538854915]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1735316648]
+
+[node name="Call-Rev-Group01" type="Node2D" parent="." unique_id=2046552223]
+position = Vector2(655, 737)
+script = ExtResource("14_tgoyj")
+
+[node name="ItemCable01" parent="Call-Rev-Group01" unique_id=223303323 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+z_index = 10
+position = Vector2(44, 4)
+default_color = Color(0.5372549, 0.8509804, 0, 1)
+connection_start = NodePath(".")
+connection_end = NodePath("../Caller01")
+
+[node name="ItemCable02" parent="Call-Rev-Group01" unique_id=2075025389 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+z_index = 10
+position = Vector2(-32, 57)
+connection_start = NodePath(".")
+connection_end = NodePath("../Receiver01")
+
+[node name="Caller01" parent="Call-Rev-Group01" unique_id=1082872510 instance=ExtResource("10_yhdnk")]
+position = Vector2(43, 2)
+has_origin = true
+
+[node name="Receiver01" parent="Call-Rev-Group01" unique_id=1104335867 instance=ExtResource("10_yhdnk")]
+position = Vector2(-28, 77)
+has_origin = true
+
+[node name="Schalter" type="Area2D" parent="Call-Rev-Group01" unique_id=2072394419]
+z_index = 51
+position = Vector2(-82, 119)
+script = ExtResource("13_knvcx")
+metadata/_edit_group_ = true
+
+[node name="Schalter01" type="Sprite2D" parent="Call-Rev-Group01/Schalter" unique_id=2057168219]
+texture = ExtResource("9_qqxer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Call-Rev-Group01/Schalter" unique_id=1284472940]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_yeiif")
+
+[node name="Call-Rev-Group02" type="Node2D" parent="." unique_id=1916104334]
+position = Vector2(856, 719)
+script = ExtResource("14_tgoyj")
+
+[node name="ItemCable01" parent="Call-Rev-Group02" unique_id=110500897 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+z_index = 10
+position = Vector2(44, 4)
+default_color = Color(0.5372549, 0.8509804, 0, 1)
+connection_start = NodePath(".")
+connection_end = NodePath("../Caller01")
+
+[node name="ItemCable02" parent="Call-Rev-Group02" unique_id=1589479211 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+z_index = 10
+position = Vector2(-20, 59)
+connection_start = NodePath(".")
+connection_end = NodePath("../Receiver01")
+
+[node name="Caller01" parent="Call-Rev-Group02" unique_id=614658 instance=ExtResource("10_yhdnk")]
+position = Vector2(43, 2)
+has_origin = true
+
+[node name="Receiver01" parent="Call-Rev-Group02" unique_id=1685729457 instance=ExtResource("10_yhdnk")]
+position = Vector2(-16, 79)
+has_origin = true
+
+[node name="Schalter" type="Area2D" parent="Call-Rev-Group02" unique_id=644322821]
+z_index = 51
+position = Vector2(-77, 127)
+script = ExtResource("13_knvcx")
+metadata/_edit_group_ = true
+
+[node name="Schalter01" type="Sprite2D" parent="Call-Rev-Group02/Schalter" unique_id=1261846848]
+texture = ExtResource("9_qqxer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Call-Rev-Group02/Schalter" unique_id=686944978]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_yeiif")
+
+[node name="Call-Rev-Group03" type="Node2D" parent="." unique_id=329949615]
+position = Vector2(1032, 733)
+script = ExtResource("14_tgoyj")
+
+[node name="ItemCable01" parent="Call-Rev-Group03" unique_id=889347326 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+z_index = 10
+position = Vector2(44, 4)
+default_color = Color(0.5372549, 0.8509804, 0, 1)
+connection_start = NodePath(".")
+connection_end = NodePath("../Caller01")
+
+[node name="ItemCable02" parent="Call-Rev-Group03" unique_id=601669010 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+z_index = 10
+position = Vector2(93, 49)
+connection_start = NodePath(".")
+connection_end = NodePath("../Receiver01")
+
+[node name="Caller01" parent="Call-Rev-Group03" unique_id=1998138295 instance=ExtResource("10_yhdnk")]
+position = Vector2(43, 2)
+has_origin = true
+
+[node name="Receiver01" parent="Call-Rev-Group03" unique_id=1669402361 instance=ExtResource("10_yhdnk")]
+position = Vector2(97, 69)
+has_origin = true
+
+[node name="Schalter" type="Area2D" parent="Call-Rev-Group03" unique_id=1642711815]
+z_index = 51
+position = Vector2(161, 110)
+script = ExtResource("13_knvcx")
+metadata/_edit_group_ = true
+
+[node name="Schalter01" type="Sprite2D" parent="Call-Rev-Group03/Schalter" unique_id=1556118379]
+texture = ExtResource("9_qqxer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Call-Rev-Group03/Schalter" unique_id=1592000998]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_yeiif")
+
+[node name="Call-Rev-Group04" type="Node2D" parent="." unique_id=377651238]
+position = Vector2(1245, 739)
+script = ExtResource("14_tgoyj")
+
+[node name="ItemCable01" parent="Call-Rev-Group04" unique_id=1162814101 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+z_index = 10
+position = Vector2(44, 4)
+default_color = Color(0.5372549, 0.8509804, 0, 1)
+connection_start = NodePath(".")
+connection_end = NodePath("../Caller01")
+
+[node name="ItemCable02" parent="Call-Rev-Group04" unique_id=465821474 node_paths=PackedStringArray("connection_start", "connection_end") instance=ExtResource("7_3tn20")]
+z_index = 10
+position = Vector2(117, 37)
+connection_start = NodePath(".")
+connection_end = NodePath("../Receiver01")
+
+[node name="Caller01" parent="Call-Rev-Group04" unique_id=1960009234 instance=ExtResource("10_yhdnk")]
+position = Vector2(43, 2)
+has_origin = true
+
+[node name="Receiver01" parent="Call-Rev-Group04" unique_id=1892498681 instance=ExtResource("10_yhdnk")]
+position = Vector2(121, 57)
+has_origin = true
+
+[node name="Schalter" type="Area2D" parent="Call-Rev-Group04" unique_id=1691891599]
+z_index = 51
+position = Vector2(190, 91)
+script = ExtResource("13_knvcx")
+metadata/_edit_group_ = true
+
+[node name="Schalter01" type="Sprite2D" parent="Call-Rev-Group04/Schalter" unique_id=1152371261]
+texture = ExtResource("9_qqxer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Call-Rev-Group04/Schalter" unique_id=230341282]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_yeiif")
+
+[node name="Logic_groups" type="Node" parent="." unique_id=2036992731]
+
+[node name="41" type="Node2D" parent="Logic_groups" unique_id=515360791]
+position = Vector2(809, 239)
+
+[node name="logic_group01" parent="Logic_groups/41" unique_id=453329412 instance=ExtResource("14_knvcx")]
+position = Vector2(-113, -77)
+
+[node name="logic_group02" parent="Logic_groups/41" unique_id=484709925 instance=ExtResource("14_knvcx")]
+position = Vector2(-40, -77)
+phone_number = "4124"
+
+[node name="logic_group03" parent="Logic_groups/41" unique_id=1744308929 instance=ExtResource("14_knvcx")]
+position = Vector2(36, -77)
+phone_number = "4126"
+
+[node name="logic_group04" parent="Logic_groups/41" unique_id=2064114180 instance=ExtResource("14_knvcx")]
+position = Vector2(116, -77)
+phone_number = "4128"
+
+[node name="logic_group05" parent="Logic_groups/41" unique_id=1637323199 instance=ExtResource("14_knvcx")]
+position = Vector2(-113, -3)
+phone_number = "4142"
+
+[node name="logic_group06" parent="Logic_groups/41" unique_id=780303926 instance=ExtResource("14_knvcx")]
+position = Vector2(-40, -2)
+phone_number = "4144"
+
+[node name="logic_group07" parent="Logic_groups/41" unique_id=811645999 instance=ExtResource("14_knvcx")]
+position = Vector2(36, -2)
+phone_number = "4146"
+
+[node name="logic_group08" parent="Logic_groups/41" unique_id=921400083 instance=ExtResource("14_knvcx")]
+position = Vector2(116, -2)
+phone_number = "4148"
+
+[node name="logic_group12" parent="Logic_groups/41" unique_id=1137521482 instance=ExtResource("14_knvcx")]
+position = Vector2(117, 72)
+phone_number = "4168"
+
+[node name="logic_group11" parent="Logic_groups/41" unique_id=1030671337 instance=ExtResource("14_knvcx")]
+position = Vector2(37, 72)
+phone_number = "4166"
+
+[node name="logic_group10" parent="Logic_groups/41" unique_id=1150479763 instance=ExtResource("14_knvcx")]
+position = Vector2(-39, 72)
+phone_number = "4164"
+
+[node name="logic_group09" parent="Logic_groups/41" unique_id=1364969956 instance=ExtResource("14_knvcx")]
+position = Vector2(-112, 71)
+phone_number = "4162"
+
+[node name="42" type="Node2D" parent="Logic_groups" unique_id=11800212]
+position = Vector2(1220, 236)
+
+[node name="logic_group01" parent="Logic_groups/42" unique_id=418694531 instance=ExtResource("14_knvcx")]
+position = Vector2(-113, -77)
+phone_number = "4222"
+
+[node name="logic_group02" parent="Logic_groups/42" unique_id=862262048 instance=ExtResource("14_knvcx")]
+position = Vector2(-40, -77)
+phone_number = "4224"
+
+[node name="logic_group03" parent="Logic_groups/42" unique_id=2084929938 instance=ExtResource("14_knvcx")]
+position = Vector2(36, -77)
+phone_number = "4226"
+
+[node name="logic_group04" parent="Logic_groups/42" unique_id=1122283767 instance=ExtResource("14_knvcx")]
+position = Vector2(116, -77)
+phone_number = "4228"
+
+[node name="logic_group05" parent="Logic_groups/42" unique_id=1444972361 instance=ExtResource("14_knvcx")]
+position = Vector2(-113, -3)
+phone_number = "4242"
+
+[node name="logic_group06" parent="Logic_groups/42" unique_id=2107003790 instance=ExtResource("14_knvcx")]
+position = Vector2(-40, -2)
+phone_number = "4244"
+
+[node name="logic_group07" parent="Logic_groups/42" unique_id=48015607 instance=ExtResource("14_knvcx")]
+position = Vector2(36, -2)
+phone_number = "4246"
+
+[node name="logic_group08" parent="Logic_groups/42" unique_id=2040029641 instance=ExtResource("14_knvcx")]
+position = Vector2(116, -2)
+phone_number = "4248"
+
+[node name="logic_group12" parent="Logic_groups/42" unique_id=2003798672 instance=ExtResource("14_knvcx")]
+position = Vector2(117, 72)
+phone_number = "4268"
+
+[node name="logic_group11" parent="Logic_groups/42" unique_id=706491791 instance=ExtResource("14_knvcx")]
+position = Vector2(37, 72)
+phone_number = "4266"
+
+[node name="logic_group10" parent="Logic_groups/42" unique_id=1164196180 instance=ExtResource("14_knvcx")]
+position = Vector2(-39, 72)
+phone_number = "4264"
+
+[node name="logic_group09" parent="Logic_groups/42" unique_id=885320296 instance=ExtResource("14_knvcx")]
+position = Vector2(-112, 71)
+phone_number = "562"
+
+[node name="53" type="Node2D" parent="Logic_groups" unique_id=397848873]
+position = Vector2(1220, 454)
+
+[node name="logic_group01" parent="Logic_groups/53" unique_id=340489555 instance=ExtResource("14_knvcx")]
+position = Vector2(-113, -77)
+phone_number = "5322"
+
+[node name="logic_group02" parent="Logic_groups/53" unique_id=284990882 instance=ExtResource("14_knvcx")]
+position = Vector2(-40, -77)
+phone_number = "5324"
+
+[node name="logic_group03" parent="Logic_groups/53" unique_id=1590901658 instance=ExtResource("14_knvcx")]
+position = Vector2(36, -77)
+phone_number = "5326"
+
+[node name="logic_group04" parent="Logic_groups/53" unique_id=2002894787 instance=ExtResource("14_knvcx")]
+position = Vector2(116, -77)
+phone_number = "5328"
+
+[node name="logic_group05" parent="Logic_groups/53" unique_id=2005915573 instance=ExtResource("14_knvcx")]
+position = Vector2(-113, -3)
+phone_number = "5342"
+
+[node name="logic_group06" parent="Logic_groups/53" unique_id=1948025540 instance=ExtResource("14_knvcx")]
+position = Vector2(-40, -2)
+phone_number = "5344"
+
+[node name="logic_group07" parent="Logic_groups/53" unique_id=441072101 instance=ExtResource("14_knvcx")]
+position = Vector2(36, -2)
+phone_number = "5346"
+
+[node name="logic_group08" parent="Logic_groups/53" unique_id=2062441410 instance=ExtResource("14_knvcx")]
+position = Vector2(116, -2)
+phone_number = "5348"
+
+[node name="logic_group12" parent="Logic_groups/53" unique_id=1115778953 instance=ExtResource("14_knvcx")]
+position = Vector2(117, 72)
+phone_number = "5368"
+
+[node name="logic_group11" parent="Logic_groups/53" unique_id=722055322 instance=ExtResource("14_knvcx")]
+position = Vector2(37, 72)
+phone_number = "5366"
+
+[node name="logic_group10" parent="Logic_groups/53" unique_id=1089595814 instance=ExtResource("14_knvcx")]
+position = Vector2(-39, 72)
+phone_number = "5364"
+
+[node name="logic_group09" parent="Logic_groups/53" unique_id=389071279 instance=ExtResource("14_knvcx")]
+position = Vector2(-112, 71)
+phone_number = "5362"
+
+[node name="52" type="Node2D" parent="Logic_groups" unique_id=1116635256]
+position = Vector2(809, 454)
+
+[node name="logic_group01" parent="Logic_groups/52" unique_id=1262385982 instance=ExtResource("14_knvcx")]
+position = Vector2(-113, -77)
+phone_number = "5222"
+
+[node name="logic_group02" parent="Logic_groups/52" unique_id=1318603702 instance=ExtResource("14_knvcx")]
+position = Vector2(-40, -77)
+phone_number = "5224"
+
+[node name="logic_group03" parent="Logic_groups/52" unique_id=1762302757 instance=ExtResource("14_knvcx")]
+position = Vector2(36, -77)
+phone_number = "5226"
+
+[node name="logic_group04" parent="Logic_groups/52" unique_id=1874305352 instance=ExtResource("14_knvcx")]
+position = Vector2(116, -77)
+phone_number = "5228"
+
+[node name="logic_group05" parent="Logic_groups/52" unique_id=1974665178 instance=ExtResource("14_knvcx")]
+position = Vector2(-113, -3)
+phone_number = "5242"
+
+[node name="logic_group06" parent="Logic_groups/52" unique_id=339773857 instance=ExtResource("14_knvcx")]
+position = Vector2(-40, -2)
+phone_number = "5244"
+
+[node name="logic_group07" parent="Logic_groups/52" unique_id=1677686849 instance=ExtResource("14_knvcx")]
+position = Vector2(36, -2)
+phone_number = "5246"
+
+[node name="logic_group08" parent="Logic_groups/52" unique_id=1754630713 instance=ExtResource("14_knvcx")]
+position = Vector2(116, -2)
+phone_number = "5248"
+
+[node name="logic_group12" parent="Logic_groups/52" unique_id=463085530 instance=ExtResource("14_knvcx")]
+position = Vector2(117, 72)
+phone_number = "5268"
+
+[node name="logic_group11" parent="Logic_groups/52" unique_id=1639658608 instance=ExtResource("14_knvcx")]
+position = Vector2(37, 72)
+phone_number = "5266"
+
+[node name="logic_group10" parent="Logic_groups/52" unique_id=2101616795 instance=ExtResource("14_knvcx")]
+position = Vector2(-39, 72)
+phone_number = "5264"
+
+[node name="logic_group09" parent="Logic_groups/52" unique_id=56148282 instance=ExtResource("14_knvcx")]
+position = Vector2(-112, 71)
+phone_number = "5262"
+
+[node name="UI" type="Control" parent="." unique_id=701293962]
+z_index = 500
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Instructions" parent="UI" unique_id=2030386360 instance=ExtResource("18_j5l7p")]
+layout_mode = 0
+
+[node name="EndOfDayMessage" parent="UI" unique_id=1062873143 instance=ExtResource("19_gjqp5")]
+visible = false
+layout_mode = 1
+
+[connection signal="input_event" from="Telefonbuch2/Area2D" to="Telefonbuch2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Fragen2/Area2D" to="Fragen2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Call-Rev-Group01/Schalter" to="Call-Rev-Group01/Schalter" method="_on_input_event"]
+[connection signal="input_event" from="Call-Rev-Group02/Schalter" to="Call-Rev-Group02/Schalter" method="_on_input_event"]
+[connection signal="input_event" from="Call-Rev-Group03/Schalter" to="Call-Rev-Group03/Schalter" method="_on_input_event"]
+[connection signal="input_event" from="Call-Rev-Group04/Schalter" to="Call-Rev-Group04/Schalter" method="_on_input_event"]

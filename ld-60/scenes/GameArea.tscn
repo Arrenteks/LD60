@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://r1u6d8ji0ak1"]
 
+[ext_resource type="Script" uid="uid://83by5j51hvtl" path="res://scripts/game_area.gd" id="1_mt7g5"]
 [ext_resource type="Texture2D" uid="uid://cbn0xvqowkflp" path="res://sprites/Tisch.png" id="1_y3m0s"]
 [ext_resource type="Texture2D" uid="uid://bpg04vbg5xhcu" path="res://sprites/jan/BG.png" id="1_yhdnk"]
 [ext_resource type="Texture2D" uid="uid://44yq2brbco6x" path="res://sprites/Telefonbuch.png" id="2_yhdnk"]
@@ -17,6 +18,8 @@
 [ext_resource type="Script" uid="uid://blk03xswupvv6" path="res://scenes/talking_switch.gd" id="13_knvcx"]
 [ext_resource type="PackedScene" uid="uid://f4vi4hw1qoux" path="res://scenes/phone_logic_group.tscn" id="14_knvcx"]
 [ext_resource type="Script" uid="uid://cik4btopibbi2" path="res://scenes/call_rev_group.gd" id="14_tgoyj"]
+[ext_resource type="PackedScene" uid="uid://bugol3jiohoxy" path="res://scenes/instructions.tscn" id="18_j5l7p"]
+[ext_resource type="PackedScene" uid="uid://byjw55e4oiula" path="res://scenes/end_of_day_message.tscn" id="19_gjqp5"]
 
 [sub_resource type="Gradient" id="Gradient_qealr"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -29,6 +32,7 @@ radius = 40.0
 height = 98.0
 
 [node name="GameArea" type="Node2D" unique_id=1015749483]
+script = ExtResource("1_mt7g5")
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=1514668760]
 texture = ExtResource("1_yhdnk")
@@ -228,7 +232,7 @@ position = Vector2(-17, 2)
 polygon = PackedVector2Array(-150, -73, -41, 71, -12, 100, 184, 100, 177, 67, 26, -101, -136, -110)
 
 [node name="Marker2D" type="Marker2D" parent="Telefonbuch2" unique_id=426781468]
-position = Vector2(-43, -521)
+position = Vector2(-342, -702)
 
 [node name="Fragen2" type="Sprite2D" parent="." unique_id=1114576092]
 position = Vector2(215, 777)
@@ -615,11 +619,19 @@ position = Vector2(-112, 71)
 phone_number = "5262"
 
 [node name="UI" type="Control" parent="." unique_id=701293962]
+z_index = 500
 custom_maximum_size = Vector2(0, 0)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Instructions" parent="UI" unique_id=2030386360 instance=ExtResource("18_j5l7p")]
+layout_mode = 0
+
+[node name="EndOfDayMessage" parent="UI" unique_id=1062873143 instance=ExtResource("19_gjqp5")]
+visible = false
+layout_mode = 1
 
 [connection signal="input_event" from="Telefonbuch2/Area2D" to="Telefonbuch2" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Fragen2/Area2D" to="Fragen2" method="_on_area_2d_input_event"]
