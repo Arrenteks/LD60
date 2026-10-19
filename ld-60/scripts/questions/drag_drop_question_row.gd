@@ -15,7 +15,7 @@ func setup():
 	questiontext.text = attched_question.questionText
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
-	return data is AddressData || data is NameData || data is TelephoneNumberData
+	return data is AddressData || data is NameData || data is TelephoneNumberData || data is TownData
 	
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	person_datas.append(data)

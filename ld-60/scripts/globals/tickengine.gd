@@ -15,6 +15,24 @@ var game_time : Game_Time;
 var game_time_event_dictionary : Dictionary[String, Game_Routine_Event]
 
 const TEST_CALL = preload("uid://i1bayk800x8w")
+const DAY_1_CALL_1 = preload("uid://c3a21lxov6x2f")
+const DAY_1_CALL_2 = preload("uid://btpkkalwsh1dp")
+const DAY_1_CALL_3 = preload("uid://csqb133mby48f")
+const DAY_1_CALL_4 = preload("uid://dij5iyklq8d2o")
+
+const DAY_2_CALL_1 = preload("uid://cd0y7g4unluje")
+const DAY_2_CALL_2 = preload("uid://ca1cqv4dcdflj")
+const DAY_2_CALL_3 = preload("uid://cb5yh5u8xtfj0")
+const DAY_2_CALL_4 = preload("uid://c0e1oprup5eov")
+const DAY_2_CALL_5 = preload("uid://bkh0b53ijonwo")
+
+const DAY_3_CALL_1 = preload("uid://brcdnrt3vjvfi")
+const DAY_3_CALL_2 = preload("uid://bqkmp1g2s1bgo")
+const DAY_3_CALL_3 = preload("uid://280uxl0t8sbt")
+const DAY_3_CALL_4 = preload("uid://bjvtgsqavk45v")
+const DAY_3_CALL_5 = preload("uid://bbrs27338wqcp")
+const DAY_3_CALL_6 = preload("uid://c2xcsl0uc5jcb")
+
 
 var day: int = 1
 
@@ -24,7 +42,8 @@ func toggle_pause():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	toggle_pause()
+	#toggle_pause()
+	start_day()
 	game_time = Game_Time.new(start_hour_tens, start_hour_first, start_minute_tens, start_minute_first)
 	tick_timer.start(tick_timer_duration);
 
@@ -41,11 +60,23 @@ func _get_day_events():
 	game_time_event_dictionary["16:00"] = Game_Routine_Event.new(GameRoutineEventType.EndDay)
 	match day:
 		1:
-			game_time_event_dictionary["08:05"] = Game_Routine_Event.new(GameRoutineEventType.Call, TEST_CALL)
+			game_time_event_dictionary["08:20"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_1_CALL_1)
+			game_time_event_dictionary["10:20"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_1_CALL_2)
+			game_time_event_dictionary["12:20"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_1_CALL_3)
+			game_time_event_dictionary["14:20"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_1_CALL_4)
 		2:
-			game_time_event_dictionary["08:05"] = Game_Routine_Event.new(GameRoutineEventType.Call, TEST_CALL)
+			game_time_event_dictionary["08:10"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_2_CALL_1)
+			game_time_event_dictionary["9:50"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_2_CALL_2)
+			game_time_event_dictionary["11:40"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_2_CALL_3)
+			game_time_event_dictionary["13:30"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_2_CALL_4)
+			game_time_event_dictionary["14:40"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_2_CALL_5)
 		3:
-			game_time_event_dictionary["08:05"] = Game_Routine_Event.new(GameRoutineEventType.Call, TEST_CALL)
+			game_time_event_dictionary["08:10"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_3_CALL_1)
+			game_time_event_dictionary["9:50"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_3_CALL_2)
+			game_time_event_dictionary["11:00"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_3_CALL_3)
+			game_time_event_dictionary["12:30"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_3_CALL_4)
+			game_time_event_dictionary["13:30"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_3_CALL_5)
+			game_time_event_dictionary["14:40"] = Game_Routine_Event.new(GameRoutineEventType.Call, DAY_3_CALL_6)
 		_:
 			print("This is the end of all time.")
 		

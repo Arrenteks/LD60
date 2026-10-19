@@ -57,7 +57,7 @@ func play_next_line():
 	if current_call_position < 0:
 		current_dialogue = current_call.diaologue[current_call_position]
 		active_speaker = current_call.caller
-		active_text = current_call.diaologue[0].text #TODO
+		active_text = current_call.caller_request.text #TODO
 	# else advance the dialogue
 	else:
 		current_dialogue = current_call.diaologue[current_call_position]

@@ -11,6 +11,6 @@ func set_data(data : PersonData, index : int) -> void:
 	data_text.text = data._get_text()
 
 func _on_button_pressed() -> void:
-	removal_triggered.emit()
+	removal_triggered.emit(index)
 	self.queue_free()
 	

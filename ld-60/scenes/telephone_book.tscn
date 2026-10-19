@@ -2,6 +2,21 @@
 
 [ext_resource type="Script" uid="uid://cjl50ysqh2cff" path="res://scripts/telephone_book.gd" id="1_ukddc"]
 [ext_resource type="Theme" uid="uid://bj3n7tyqjwgod" path="res://themes/telephone_book.tres" id="1_wdrb8"]
+[ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_x5imw"]
+[ext_resource type="Resource" uid="uid://cv2vrkuwvhjfu" path="res://resources/Person/Bellport/Brian Howard/BrianHoward.tres" id="4_j5wbm"]
+[ext_resource type="Resource" uid="uid://b0dsknauij3i3" path="res://resources/Person/Bellport/Susan Howard/SusanHoward.tres" id="5_51nva"]
+[ext_resource type="Resource" uid="uid://8dggi2xpgyvm" path="res://resources/Person/Bellport/William Doyle/WilliamDoyle.tres" id="6_mf578"]
+[ext_resource type="Resource" uid="uid://dvcrad2w4vbtk" path="res://resources/Person/Fayshield/Jean Hopkins/JeanHopkins.tres" id="7_qnwh3"]
+[ext_resource type="Resource" uid="uid://ct41j2vwpotr5" path="res://resources/Person/Fayshield/Laura Tyler/LauraTyler.tres" id="8_igylw"]
+[ext_resource type="Resource" uid="uid://buryvstdvnwdm" path="res://resources/Person/Fayshield/Margret Hudson/MargretHudson.tres" id="9_xf1dj"]
+[ext_resource type="Resource" uid="uid://cmvflldb1es2y" path="res://resources/Person/Fayshield/Matthew Clarke/MatthewClark.tres" id="10_x2qtq"]
+[ext_resource type="Resource" uid="uid://ni2cnwi60axq" path="res://resources/Person/Holloward/Casey Chapman/CaseyChapman.tres" id="11_eo6q6"]
+[ext_resource type="Resource" uid="uid://dv3l127q5y620" path="res://resources/Person/Holloward/Lena Murphy/LenaMurphy.tres" id="12_2j2aw"]
+[ext_resource type="Resource" uid="uid://toe6wmjv3adn" path="res://resources/Person/Holloward/Paul Murphy/PaulMurphy.tres" id="13_e8a7k"]
+[ext_resource type="Resource" uid="uid://cqy2uqxsbadxb" path="res://resources/Person/Holloward/Richard Chapman/RichardChapman.tres" id="14_s7btq"]
+[ext_resource type="Resource" uid="uid://djq2atw6fbbw8" path="res://resources/Person/Winterholde/James Smith/JamesSmith.tres" id="15_oqmk7"]
+[ext_resource type="Resource" uid="uid://e108mppdbg7n" path="res://resources/Person/Winterholde/Peter Powell/PeterPowell.tres" id="16_q4lay"]
+[ext_resource type="Resource" uid="uid://bws13q6m44ed1" path="res://resources/Person/Winterholde/Sarah Butler/SarahButler.tres" id="17_tve2y"]
 
 [node name="TelephoneBook" type="Control" unique_id=1928895459]
 layout_mode = 3
@@ -13,6 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_wdrb8")
 script = ExtResource("1_ukddc")
+people = Array[ExtResource("3_x5imw")]([ExtResource("4_j5wbm"), ExtResource("5_51nva"), ExtResource("6_mf578"), ExtResource("7_qnwh3"), ExtResource("8_igylw"), ExtResource("9_xf1dj"), ExtResource("10_x2qtq"), ExtResource("11_eo6q6"), ExtResource("12_2j2aw"), ExtResource("13_e8a7k"), ExtResource("14_s7btq"), ExtResource("15_oqmk7"), ExtResource("16_q4lay"), ExtResource("17_tve2y")])
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=497948910]
 layout_mode = 0
