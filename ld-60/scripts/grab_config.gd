@@ -12,20 +12,28 @@ var is_hovered: bool = false
 @export var has_origin: bool = false
 @export var weight: float = 5
 
+@onready var bottom: Sprite2D = $Bottom
+@onready var sprite_2d: Sprite2D = $Sprite2D
+
+
 #signal up
 signal i_was_sloted_in(socket : item_socket)
 #@onready var call_rev_group: Node2D = $"../Call-Rev-Group01"
 
 func slotted_in(socket : item_socket):
+	bottom.visible = false
+	sprite_2d.visible = true
 	i_was_sloted_in.emit(socket)
 	pass
 
 func slotted_out():
+	bottom.visible = true
+	sprite_2d.visible = false
 	pass
 
 func _ready():
 	sockets = get_tree().get_nodes_in_group("item_socket")
-	og_pos = self.position
+	og_pos = self.global_position
 	
 func _physics_process(delta: float) -> void:
 	if is_grabbed == true:
@@ -33,10 +41,10 @@ func _physics_process(delta: float) -> void:
 		for socket in sockets:
 			socket.release(self)
 		tween = get_tree().create_tween()
-		tween.tween_property(self, "position", get_global_mouse_position()-mouse_offset, weight * delta)
+		tween.tween_property(self, "global_position", get_global_mouse_position()-mouse_offset, weight * delta)
 	elif has_origin == true && is_inside_socket != true:
 		tween = get_tree().create_tween()
-		tween.tween_property(self, "position", og_pos, weight * delta)
+		tween.tween_property(self, "global_position", og_pos, weight * delta)
 		
 func _on_magnet_pull_zone_mouse_entered() -> void:
 	is_hovered = true
@@ -58,4 +66,4 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 						is_inside_socket = true
 						snap_position = socket.global_position
 						tween = get_tree().create_tween()
-						tween.tween_property(self, "position", snap_position, weight* get_process_delta_time())
+						tween.tween_property(self, "global_position", snap_position, 0.1)

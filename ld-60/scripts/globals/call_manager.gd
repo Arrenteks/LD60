@@ -9,7 +9,7 @@ signal call_started
 
 var phone_logic_groups : Array[PhoneLogicGroup]
 
-var call_dictionary : Dictionary[CallResource, CallStatus]
+#var call_dictionary : Dictionary[CallResource, CallStatus]
 var call_list : Array[CallInstance]
 
 signal connect_logic_group(callinstance:CallInstance)
@@ -21,6 +21,9 @@ func _ready() -> void:
 	try_connect_call_rev_groupe.connect(try_connect_ref_g)
 
 func start_call(call_resource : CallResource):
+	for i in phone_logic_groups:
+		if phone_logic_groups.count(i) > 1:
+			print_debug(str(i.phone_number)+" has more than one slot. this will break stuff!")
 	for call in call_list:
 		if(call.status == CallStatus.Running):
 			interrupt_call.emit(call)

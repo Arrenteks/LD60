@@ -1,33 +1,10 @@
 [gd_scene format=3 uid="uid://bgyfhdnsoydww"]
 
 [ext_resource type="Script" uid="uid://t3raufy8xgqj" path="res://scripts/clock.gd" id="1_ohn53"]
+[ext_resource type="Texture2D" uid="uid://cduhbnhtfplso" path="res://sprites/jan/Uhr.png" id="2_5c8g3"]
 [ext_resource type="Texture2D" uid="uid://3cof1c0u4nnc" path="res://sprites/icon.svg" id="2_ohn53"]
-
-[sub_resource type="Gradient" id="Gradient_63ma7"]
-offsets = PackedFloat32Array(0.47651008, 0.49217004)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_hxdpb"]
-gradient = SubResource("Gradient_63ma7")
-width = 256
-height = 256
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0, 0)
-
-[sub_resource type="Gradient" id="Gradient_y451n"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0, 0.7411765, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_ca7ix"]
-gradient = SubResource("Gradient_y451n")
-
-[sub_resource type="Gradient" id="Gradient_ohn53"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.8627451, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ca7ix"]
-gradient = SubResource("Gradient_ohn53")
+[ext_resource type="Texture2D" uid="uid://dpcj2lx2lfexx" path="res://sprites/jan/Uhr_Stundenzeiger.png" id="4_3takh"]
+[ext_resource type="Texture2D" uid="uid://bhsa8ed1xlddm" path="res://sprites/jan/Uhr_Minutenzeiger.png" id="5_gb3jo"]
 
 [node name="Clock" type="Node2D" unique_id=1958296638 node_paths=PackedStringArray("hour_hand", "minute_hand")]
 script = ExtResource("1_ohn53")
@@ -35,10 +12,11 @@ hour_hand = NodePath("HourHand")
 minute_hand = NodePath("MinuteHand")
 
 [node name="Clockface" type="Sprite2D" parent="." unique_id=341975232]
-scale = Vector2(2.1210938, 2.1210938)
-texture = SubResource("GradientTexture2D_hxdpb")
+position = Vector2(3, 0)
+texture = ExtResource("2_5c8g3")
 
 [node name="striche" type="Node2D" parent="Clockface" unique_id=77097166]
+visible = false
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Node2D" type="Node2D" parent="Clockface/striche" unique_id=185393286]
@@ -152,14 +130,15 @@ texture = ExtResource("2_ohn53")
 scale = Vector2(2.1210938, 2.1210938)
 
 [node name="Sprite2D" type="Sprite2D" parent="HourHand" unique_id=167382175]
-position = Vector2(0, -27.344)
-scale = Vector2(0.02, 54.689)
-texture = SubResource("GradientTexture1D_ca7ix")
+position = Vector2(-0.4714549, 0)
+rotation = 3.1415927
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("4_3takh")
 
 [node name="MinuteHand" type="Node2D" parent="." unique_id=2124031003]
 scale = Vector2(2.1210935, 2.1210935)
 
 [node name="Sprite2D" type="Sprite2D" parent="MinuteHand" unique_id=741355261]
-position = Vector2(0, -38.659)
-scale = Vector2(0.058932193, 1.2081037)
-texture = SubResource("GradientTexture2D_ca7ix")
+position = Vector2(0.94290984, 0)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("5_gb3jo")

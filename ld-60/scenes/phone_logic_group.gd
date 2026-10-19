@@ -26,7 +26,7 @@ func _ready() -> void:
 
 func try_begin_call(call: CallInstance):
 	var phone_number = call.call_ressource
-	print (call.call_ressource.caller.telephone_number._get_text())
+	#print (self.phone_number)
 	if(self.phone_number == phone_number.caller.telephone_number._get_text()):
 		print("try call")
 		phone_logic_group_connected.emit(self)
