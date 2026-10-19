@@ -24,6 +24,7 @@ general/default_playback_type.web=0
 
 SignalManager="*uid://4t6aji4ot7y7"
 Tickengine="*uid://db5a012kxqppb"
+CallManager="*uid://b38jfyvvy3rqa"
 
 [display]
 

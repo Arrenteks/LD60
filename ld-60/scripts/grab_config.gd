@@ -12,6 +12,17 @@ var is_hovered: bool = false
 @export var has_origin: bool = false
 @export var weight: float = 5
 
+#signal up
+signal i_was_sloted_in(socket : item_socket)
+#@onready var call_rev_group: Node2D = $"../Call-Rev-Group01"
+
+func slotted_in(socket : item_socket):
+	i_was_sloted_in.emit(socket)
+	pass
+
+func slotted_out():
+	pass
+
 func _ready():
 	sockets = get_tree().get_nodes_in_group("item_socket")
 	og_pos = self.position
@@ -45,6 +56,6 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 					if socket.is_socket_empty():
 						socket.occupy(self)
 						is_inside_socket = true
-						snap_position = socket.position
+						snap_position = socket.global_position
 						tween = get_tree().create_tween()
 						tween.tween_property(self, "position", snap_position, weight* get_process_delta_time())
