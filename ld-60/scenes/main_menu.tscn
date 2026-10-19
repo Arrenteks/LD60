@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://ctilyg0o6uxhn"]
+
+[ext_resource type="Script" uid="uid://qyamap3oxnaw" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://bpg04vbg5xhcu" path="res://sprites/jan/BG.png" id="1_ekxnf"]
+[ext_resource type="Theme" uid="uid://7dqop2hw1xk7" path="res://themes/button.tres" id="1_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=1693471790]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="BG" type="TextureRect" parent="." unique_id=275914415]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_ekxnf")
+
+[node name="Menu Content" type="VBoxContainer" parent="." unique_id=1301810147]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("1_l6cm7")
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="StartGameButton" type="Button" parent="Menu Content" unique_id=1457547151]
+custom_minimum_size = Vector2(232, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Start Game"
+
+[node name="SettingsButton" type="Button" parent="Menu Content" unique_id=591920104]
+visible = false
+custom_minimum_size = Vector2(182, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Settings
+"
+
+[node name="CreditsButton" type="Button" parent="Menu Content" unique_id=2046339929]
+custom_minimum_size = Vector2(168, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="Menu Content" unique_id=1395339645]
+custom_minimum_size = Vector2(125, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Quit
+"
+
+[node name="TextureRect" type="TextureRect" parent="Menu Content" unique_id=1010566384]
+layout_mode = 2
+
+[node name="Credits" type="Control" parent="." unique_id=276265631]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CreditsBG" type="TextureRect" parent="Credits" unique_id=402162803]
+modulate = Color(0.6542321, 0.6542321, 0.654232, 1)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_ekxnf")
+
+[node name="CreditsContent" type="VBoxContainer" parent="Credits" unique_id=866900801]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+alignment = 1
+
+[node name="CreditsTitle" type="Label" parent="Credits/CreditsContent" unique_id=516801350]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Credits/CreditsContent" unique_id=979571650]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ArtistsLabel" type="Label" parent="Credits/CreditsContent" unique_id=437463043]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Artists"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Artists" type="Label" parent="Credits/CreditsContent" unique_id=900228094]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "emilia_heide, Spedinja"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GameDesign" type="Label" parent="Credits/CreditsContent" unique_id=1113030249]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Game Design"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GameDesigner" type="Label" parent="Credits/CreditsContent" unique_id=523239156]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Duckistopheles, Nira"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ProgrammingLabel" type="Label" parent="Credits/CreditsContent" unique_id=1666034556]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Programming"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Programmer" type="Label" parent="Credits/CreditsContent" unique_id=506251151]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Arrenteks, CGraen, Duckistopheles, Spedinja, UmbraLux"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sound" type="Label" parent="Credits/CreditsContent" unique_id=271924727]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Sound"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sound_Persons" type="Label" parent="Credits/CreditsContent" unique_id=340480626]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Arrenteks, Duckistopheles, Nira, Spedinja"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Storytelling" type="Label" parent="Credits/CreditsContent" unique_id=1127871072]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Storytelling"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Storyteller" type="Label" parent="Credits/CreditsContent" unique_id=671926147]
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Nira"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Spacer" type="Control" parent="Credits/CreditsContent" unique_id=294807804]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Back2Menu" type="Button" parent="Credits/CreditsContent" unique_id=270080963]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_l6cm7")
+text = "Back to Menu"
+
+[connection signal="pressed" from="Menu Content/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Menu Content/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Menu Content/QuitButton" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Credits/CreditsContent/Back2Menu" to="." method="_on_credits_back_2_menu_pressed"]
