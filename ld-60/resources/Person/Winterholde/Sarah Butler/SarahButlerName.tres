@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_o6byn")
-name = "Sarah Butler"
+person_name = "Sarah Butler"
 metadata/_custom_type_script = "uid://boab74wurw2j7"

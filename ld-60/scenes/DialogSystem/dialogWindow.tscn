@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://ccy2o7kramesx"]
 
 [ext_resource type="Script" uid="uid://derdv74ksphuc" path="res://scripts/DialogSystem/dialog_window.gd" id="1_hgno8"]
+[ext_resource type="Theme" uid="uid://0js0fp62s0u8" path="res://themes/namebox_panel.tres" id="2_8dpqm"]
 [ext_resource type="Script" uid="uid://b0nkrt5e4ts1m" path="res://scenes/DialogSystem/voice_acting.gd" id="2_s5x2p"]
+[ext_resource type="Theme" uid="uid://xydurjugrgpw" path="res://themes/textbox_panel.tres" id="2_xnx6e"]
 
-[node name="DialogWindow" type="MarginContainer" unique_id=235159567 node_paths=PackedStringArray("textbox")]
+[node name="DialogWindow" type="MarginContainer" unique_id=235159567]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,14 +16,43 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 20
 script = ExtResource("1_hgno8")
-textbox = NodePath("RichTextLabel")
+
+[node name="Callerbox" type="Panel" parent="." unique_id=1416094664]
+custom_minimum_size = Vector2(500, 230)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("2_8dpqm")
+
+[node name="Textbox" type="Panel" parent="." unique_id=1709207811]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_xnx6e")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=214871747]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 8
+theme = ExtResource("2_xnx6e")
 
 [node name="VoiceActing" type="AudioStreamPlayer" parent="." unique_id=5364708]
 pitch_scale = 2.0
 playback_type = 1
 script = ExtResource("2_s5x2p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=799393920]
+custom_minimum_size = Vector2(500, 230)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="SpeakerName" type="Label" parent="VBoxContainer" unique_id=1634428323]
+custom_minimum_size = Vector2(480, 80)
+custom_maximum_size = Vector2(480, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_8dpqm")
+text = "TEST"
+horizontal_alignment = 1
+vertical_alignment = 1

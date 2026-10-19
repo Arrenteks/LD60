@@ -10,4 +10,5 @@ script = ExtResource("3_0njks")
 name = ExtResource("2_0njks")
 address = ExtResource("1_0njks")
 telephone_number = ExtResource("4_v6wjh")
+base_pitch = 0.55
 metadata/_custom_type_script = "uid://bxo062f3w34bj"

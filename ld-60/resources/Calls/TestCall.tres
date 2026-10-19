@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="CallResource" format=3 uid="uid://i1bayk800x8w"]
+
+[ext_resource type="Script" uid="uid://dkijwy1pq2wnf" path="res://resources/Calls/DialougPart.gd" id="1_8k40y"]
+[ext_resource type="Resource" uid="uid://cv2vrkuwvhjfu" path="res://resources/Person/Bellport/Brian Howard/BrianHoward.tres" id="1_508a5"]
+[ext_resource type="Script" uid="uid://dixhkhiddw71g" path="res://resources/Calls/CallResource.gd" id="1_lx6m6"]
+[ext_resource type="Resource" uid="uid://8dggi2xpgyvm" path="res://resources/Person/Bellport/William Doyle/WilliamDoyle.tres" id="2_ysygl"]
+
+[sub_resource type="Resource" id="Resource_niw6r"]
+script = ExtResource("1_8k40y")
+speaker = ExtResource("1_508a5")
+text = "Hey, how are you doing i could skjfkslda sdiie fdksfsdi dkfdskjf jdfhjsdni . sdfjhsdu . dufh. dskfhsd"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_et42a"]
+script = ExtResource("1_8k40y")
+speaker = ExtResource("2_ysygl")
+text = "schwubdieuidhfjashg kjfghjdfah kdfjhashjgdf jdfhkajdfh djskfghas kdjifha"
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_urmqj"]
+script = ExtResource("1_8k40y")
+speaker = ExtResource("1_508a5")
+text = "strakhuirs gjhskfa khsgjaf kjhfsda kjsdhf jkhsdf kjhfs."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[sub_resource type="Resource" id="Resource_h3ga5"]
+script = ExtResource("1_8k40y")
+speaker = ExtResource("2_ysygl")
+text = "jhdgfhsd tscho."
+metadata/_custom_type_script = "uid://dkijwy1pq2wnf"
+
+[resource]
+script = ExtResource("1_lx6m6")
+callId = "Day1Call1"
+caller = ExtResource("1_508a5")
+ceciever = ExtResource("2_ysygl")
+diaologue = Array[ExtResource("1_8k40y")]([SubResource("Resource_niw6r"), SubResource("Resource_et42a"), SubResource("Resource_urmqj"), SubResource("Resource_h3ga5")])
+metadata/_custom_type_script = "uid://dixhkhiddw71g"
