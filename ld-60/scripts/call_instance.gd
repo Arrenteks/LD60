@@ -67,6 +67,8 @@ func toogle_talking(talking:bool):
 	pass
 
 func call_registered():
+	if !plgCaller:
+		return
 	#print("registered")
 	#print(plgCaller)
 	#print(plgReciever)

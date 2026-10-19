@@ -2,12 +2,14 @@
 
 [ext_resource type="Resource" uid="uid://d0nduhnlcnwyt" path="res://resources/Person/Winterholde/Sarah Butler/GreenLane5566.tres" id="1_jh6io"]
 [ext_resource type="Resource" uid="uid://boik10fjwfqpl" path="res://resources/Person/Winterholde/Sarah Butler/SarahButlerName.tres" id="2_qatgn"]
-[ext_resource type="Script" uid="uid://cw3n2qf3u611g" path="res://resources/person_resources.gd" id="3_jh6io"]
+[ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_jh6io"]
 [ext_resource type="Resource" uid="uid://c8twyn3ovg6wl" path="res://resources/Person/Winterholde/Sarah Butler/SarahButlerPhone.tres" id="4_ss2ax"]
+[ext_resource type="Resource" uid="uid://7hsrnkywa12n" path="res://resources/Person/Winterholde/Winterholde.tres" id="5_qatgn"]
 
 [resource]
 script = ExtResource("3_jh6io")
 name = ExtResource("2_qatgn")
+town = ExtResource("5_qatgn")
 address = ExtResource("1_jh6io")
 telephone_number = ExtResource("4_ss2ax")
 base_pitch = 1.0

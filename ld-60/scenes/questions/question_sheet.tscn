@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dd06wyaj3erju"]
 
 [ext_resource type="Script" uid="uid://5s3v2rjf2igx" path="res://scripts/questions/question_sheet.gd" id="1_gc8ai"]
+[ext_resource type="Resource" uid="uid://caxa57avn3vkr" path="res://resources/days/Day1.tres" id="2_gpaum"]
 
 [node name="QuestionSheet" type="Control" unique_id=451217894]
 z_index = 100
@@ -13,12 +14,25 @@ offset_bottom = -0.44006348
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gc8ai")
+day_resource = ExtResource("2_gpaum")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=781988029]
 layout_mode = 0
 offset_right = 551.0
 offset_bottom = 665.0
 color = Color(0.95166034, 0.86954165, 0.810952, 1)
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=990251281]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -36.0
+offset_right = 116.0
+offset_bottom = -5.0
+grow_vertical = 0
+text = "Test answers"
 
 [node name="QuestionRows" type="VBoxContainer" parent="ColorRect" unique_id=1714389259]
 layout_mode = 1
@@ -63,21 +77,6 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "<"
 
-[node name="Button" type="Button" parent="." unique_id=990251281]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -258.5
-offset_top = -42.0
-offset_right = -149.5
-offset_bottom = -11.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Test answers"
-
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ColorRect/nextPage" to="." method="_on_next_page_pressed"]
 [connection signal="pressed" from="ColorRect/prevPage" to="." method="_on_prev_page_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

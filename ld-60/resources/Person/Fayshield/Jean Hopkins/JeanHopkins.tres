@@ -3,11 +3,13 @@
 [ext_resource type="Resource" uid="uid://ex2rhsy7bk10" path="res://resources/Person/Fayshield/Jean Hopkins/LilyWay5.tres" id="1_ax3o0"]
 [ext_resource type="Resource" uid="uid://21vvtwn4tyf" path="res://resources/Person/Fayshield/Jean Hopkins/JeanHopkinsName.tres" id="1_v8v14"]
 [ext_resource type="Resource" uid="uid://co6ack7a7igv5" path="res://resources/Person/Fayshield/Jean Hopkins/JeanHopkinsPhone.tres" id="3_ax3o0"]
-[ext_resource type="Script" uid="uid://cw3n2qf3u611g" path="res://resources/person_resources.gd" id="3_igk5v"]
+[ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_igk5v"]
+[ext_resource type="Resource" uid="uid://cf5iw4hen3edm" path="res://resources/Person/Fayshield/Fayshield.tres" id="5_igk5v"]
 
 [resource]
 script = ExtResource("3_igk5v")
 name = ExtResource("1_v8v14")
+town = ExtResource("5_igk5v")
 address = ExtResource("1_ax3o0")
 telephone_number = ExtResource("3_ax3o0")
 pitch_varianz = 0.2

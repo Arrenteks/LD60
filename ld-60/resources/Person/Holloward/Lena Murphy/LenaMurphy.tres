@@ -4,10 +4,12 @@
 [ext_resource type="Resource" uid="uid://dwyj7ebctcjpu" path="res://resources/Person/Holloward/Lena Murphy/LenaMurphyName.tres" id="1_jefo6"]
 [ext_resource type="Resource" uid="uid://c6bv4oitslq6f" path="res://resources/Person/Holloward/Lena Murphy/LenaMurphyPhone.tres" id="3_d8hi1"]
 [ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_jnxut"]
+[ext_resource type="Resource" uid="uid://cu3jyl0rkw34o" path="res://resources/Person/Holloward/Holloward.tres" id="5_jnxut"]
 
 [resource]
 script = ExtResource("3_jnxut")
 name = ExtResource("1_jefo6")
+town = ExtResource("5_jnxut")
 address = ExtResource("1_d8hi1")
 telephone_number = ExtResource("3_d8hi1")
 metadata/_custom_type_script = "uid://bxo062f3w34bj"

@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="Day" format=3 uid="uid://bm0vcp1wfgqr5"]
+
+[ext_resource type="Script" uid="uid://blcx8oly3lfly" path="res://resources/question.gd" id="1_a40uj"]
+[ext_resource type="Script" uid="uid://5jjmv1u4ppl4" path="res://resources/day.gd" id="2_4lqq4"]
+[ext_resource type="Script" uid="uid://di60qaym01tbh" path="res://resources/boolquestion.gd" id="2_ha2c6"]
+[ext_resource type="Script" uid="uid://c6etj67cu2o7x" path="res://resources/intquestion.gd" id="3_273jl"]
+[ext_resource type="Script" uid="uid://bxo062f3w34bj" path="res://resources/person_data.gd" id="4_r8wis"]
+[ext_resource type="Resource" uid="uid://dlxrhkxwevamx" path="res://resources/Person/Winterholde/James Smith/JamesSmithName.tres" id="5_f1p3y"]
+[ext_resource type="Script" uid="uid://n8cadt7wn8ir" path="res://resources/drag_drop_question.gd" id="6_gb3mg"]
+[ext_resource type="Resource" uid="uid://01xmidvnihn4" path="res://resources/Person/Holloward/Paul Murphy/PaulMurphyName.tres" id="7_sfxy3"]
+[ext_resource type="Resource" uid="uid://b45r5gbiw77fa" path="res://resources/Person/Fayshield/Matthew Clarke/MatthewClarkName.tres" id="8_jk80j"]
+[ext_resource type="Resource" uid="uid://21vvtwn4tyf" path="res://resources/Person/Fayshield/Jean Hopkins/JeanHopkinsName.tres" id="9_f1p3y"]
+[ext_resource type="Resource" uid="uid://dpah32or2457e" path="res://resources/Person/Bellport/Brian Howard/BrianHowardName.tres" id="10_gb3mg"]
+[ext_resource type="Resource" uid="uid://dut70wawxn8i3" path="res://resources/Person/Bellport/Susan Howard/SusanHowardName.tres" id="11_sfxy3"]
+
+[sub_resource type="Resource" id="Resource_vtw6b"]
+script = ExtResource("2_ha2c6")
+questionText = "Was anything stolen during the break-ins in Winterholde?"
+metadata/_custom_type_script = "uid://di60qaym01tbh"
+
+[sub_resource type="Resource" id="Resource_ety7m"]
+script = ExtResource("3_273jl")
+truthful_answer = 3
+questionText = " At which hour in the afternoon did one break-in occur?"
+metadata/_custom_type_script = "uid://c6etj67cu2o7x"
+
+[sub_resource type="Resource" id="Resource_64bny"]
+script = ExtResource("6_gb3mg")
+correct_datas = Array[ExtResource("4_r8wis")]([ExtResource("5_f1p3y")])
+questionType = 2
+questionText = "Who was seen on a property around the time of a break-in?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_3f7jj"]
+script = ExtResource("6_gb3mg")
+correct_datas = Array[ExtResource("4_r8wis")]([ExtResource("7_sfxy3"), ExtResource("8_jk80j")])
+questionType = 2
+questionText = " Who made plans that require a large amount of money?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_1rnv5"]
+script = ExtResource("6_gb3mg")
+correct_datas = Array[ExtResource("4_r8wis")]([ExtResource("7_sfxy3"), ExtResource("8_jk80j")])
+questionType = 2
+questionText = "Who needs the help of a car"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_rhn2j"]
+script = ExtResource("6_gb3mg")
+correct_datas = Array[ExtResource("4_r8wis")]([ExtResource("9_f1p3y")])
+questionType = 2
+questionText = "Who stole a car to help friends out?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_st3qs"]
+script = ExtResource("6_gb3mg")
+correct_datas = Array[ExtResource("4_r8wis")]([ExtResource("10_gb3mg"), ExtResource("11_sfxy3")])
+questionType = 2
+questionText = "Who was last seen visiting Holloward before Richard's disappearance?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[sub_resource type="Resource" id="Resource_k402w"]
+script = ExtResource("6_gb3mg")
+correct_datas = Array[ExtResource("4_r8wis")]([ExtResource("11_sfxy3")])
+questionType = 2
+questionText = "Who was last seen with Richard?"
+metadata/_custom_type_script = "uid://n8cadt7wn8ir"
+
+[resource]
+script = ExtResource("2_4lqq4")
+questions = Array[ExtResource("1_a40uj")]([SubResource("Resource_vtw6b"), SubResource("Resource_ety7m"), SubResource("Resource_64bny"), SubResource("Resource_3f7jj"), SubResource("Resource_1rnv5"), SubResource("Resource_rhn2j"), SubResource("Resource_st3qs"), SubResource("Resource_k402w")])
+metadata/_custom_type_script = "uid://5jjmv1u4ppl4"

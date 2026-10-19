@@ -2,12 +2,14 @@
 
 [ext_resource type="Resource" uid="uid://cd0qyursqldt5" path="res://resources/Person/Holloward/Richard Chapman/SnowflakeRow32.tres" id="1_4iukt"]
 [ext_resource type="Resource" uid="uid://cl3n36nag18gc" path="res://resources/Person/Holloward/Richard Chapman/RichardChapmanName.tres" id="2_sppjf"]
-[ext_resource type="Script" uid="uid://cw3n2qf3u611g" path="res://resources/person_resources.gd" id="3_4iukt"]
+[ext_resource type="Script" uid="uid://bdfjjmb558mr7" path="res://resources/person_resources.gd" id="3_4iukt"]
 [ext_resource type="Resource" uid="uid://c83wjcnw6s8yd" path="res://resources/Person/Holloward/Richard Chapman/RichardChapmanPhone.tres" id="4_j5nru"]
+[ext_resource type="Resource" uid="uid://cu3jyl0rkw34o" path="res://resources/Person/Holloward/Holloward.tres" id="5_sppjf"]
 
 [resource]
 script = ExtResource("3_4iukt")
 name = ExtResource("2_sppjf")
+town = ExtResource("5_sppjf")
 address = ExtResource("1_4iukt")
 telephone_number = ExtResource("4_j5nru")
 base_pitch = 0.2
