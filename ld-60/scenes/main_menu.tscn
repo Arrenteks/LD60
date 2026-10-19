@@ -219,6 +219,7 @@ size_flags_vertical = 4
 theme = ExtResource("1_l6cm7")
 text = "Back to Menu"
 
+[connection signal="pressed" from="Menu Content/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="Menu Content/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Menu Content/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Menu Content/QuitButton" to="." method="_on_quit_pressed"]

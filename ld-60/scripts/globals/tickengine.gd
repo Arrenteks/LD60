@@ -16,6 +16,7 @@ var game_time_event_dictionary : Dictionary[String, Game_Routine_Event]
 
 const TEST_CALL = preload("uid://i1bayk800x8w")
 
+var day: int = 1
 
 func toggle_pause():
 	is_paused = !is_paused;
@@ -23,9 +24,31 @@ func toggle_pause():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	toggle_pause()
 	game_time = Game_Time.new(start_hour_tens, start_hour_first, start_minute_tens, start_minute_first)
-	game_time_event_dictionary["08:05"] = Game_Routine_Event.new(GameRoutineEventType.Call, TEST_CALL)
 	tick_timer.start(tick_timer_duration);
+
+func start_day():
+	start_hour_tens = 0;
+	start_hour_first = 8;
+	start_minute_tens = 0;
+	start_minute_first = 0;
+	_get_day_events()
+
+func _get_day_events():
+	game_time_event_dictionary.clear()
+	game_time_event_dictionary["08:00"] = Game_Routine_Event.new(GameRoutineEventType.StartDay)
+	game_time_event_dictionary["16:00"] = Game_Routine_Event.new(GameRoutineEventType.EndDay)
+	match day:
+		1:
+			game_time_event_dictionary["08:05"] = Game_Routine_Event.new(GameRoutineEventType.Call, TEST_CALL)
+		2:
+			game_time_event_dictionary["08:05"] = Game_Routine_Event.new(GameRoutineEventType.Call, TEST_CALL)
+		3:
+			game_time_event_dictionary["08:05"] = Game_Routine_Event.new(GameRoutineEventType.Call, TEST_CALL)
+		_:
+			print("This is the end of all time.")
+		
 
 func _on_timer_timeout() -> void:
 	print(game_time.get_current_time_string())
@@ -54,6 +77,7 @@ func _try_invoke_game_time_event(game_time : Game_Time) -> void:
 				print("Welcome at work!")
 			GameRoutineEventType.EndDay:
 				SignalManager.end_day.emit()
+				toggle_pause()
 				print("See you tomorrow!")
 			GameRoutineEventType.Boss:
 				SignalManager.boss.emit()

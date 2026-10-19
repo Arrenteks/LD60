@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bugol3jiohoxy"]
+
+[ext_resource type="Script" uid="uid://ckdbab3n1hkym" path="res://scripts/instructions.gd" id="1_dkfqi"]
+[ext_resource type="Theme" uid="uid://xydurjugrgpw" path="res://themes/textbox_panel.tres" id="2_njqp3"]
+[ext_resource type="Theme" uid="uid://7dqop2hw1xk7" path="res://themes/button.tres" id="3_c00ax"]
+
+[node name="Instructions" type="Control" unique_id=2030386360]
+custom_maximum_size = Vector2(1820, 980)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dkfqi")
+
+[node name="Panel" type="Panel" parent="." unique_id=1576480113]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 1870.0
+offset_bottom = 1030.0
+theme = ExtResource("2_njqp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=87544572]
+custom_minimum_size = Vector2(1700, 880)
+custom_maximum_size = Vector2(1700, 880)
+layout_mode = 0
+offset_left = 60.0
+offset_right = 1760.0
+offset_bottom = 880.0
+theme_override_constants/separation = 0
+
+[node name="DayCount" type="Label" parent="Panel/VBoxContainer" unique_id=667165641]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Day 1"
+horizontal_alignment = 1
+
+[node name="InfoMessage" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=1279380659]
+custom_minimum_size = Vector2(1800, 882)
+custom_maximum_size = Vector2(1800, 882)
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "Good Morning. 
+For the next few days your job will be here in the telephone exchange centre. Our investigation team has compiled questions based on already gathered intel to current cases. You will need to answer them by listening in to the calls that go through your station every day and consulting telephone-book. Make sure you have all the answers ready at the end of the day at 4pm.
+
+Here are the current cases you will be given questions to, and if you have never worked on such a station before, I have attached a note below where your work-process is explained in detail:
+
+- A groecry theft at the local supermarket in Feyshield
+- A bankrobbery
+- A missing person in Holloward
+Have a good day!
+
+[b]How the telephone exchange station works:[/b]
+
+blinking lamp indicates incoming call
+
+connect a incoming cable to the slot of the incoming call
+
+enable the corresponding switch to talk to the new caller
+
+listen to the desired connection the caller wants you to establish
+
+slot the corresponding outgoing cable into the frequency the caller wants to connect to
+
+consult the telephone book in case callers don't know the number they want to reach
+leave the switch enabled to listen to the call
+
+a newly connected call will overwrite the last call that is being listend to, avoid having multiple calls overlaping each other
+
+Look at the questions sheet at the start of the day before the first call comes in and answer the questions throughout the day
+
+To make things easier, you can directly drag information from the telephone book into most asnwer fields"
+
+[node name="Close" type="Button" parent="Panel" unique_id=1487543417]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_c00ax")
+text = "Close"
+
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
