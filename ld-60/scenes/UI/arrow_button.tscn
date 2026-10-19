@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bhlgtdo4p5qox"]
+
+[ext_resource type="Texture2D" uid="uid://dt0retboohetv" path="res://sprites/UI/R_Button_Normal.png" id="1_tpgwl"]
+[ext_resource type="Texture2D" uid="uid://b75wp2j5l4rx6" path="res://sprites/UI/R_Button_Pressed.png" id="2_m37gq"]
+[ext_resource type="Texture2D" uid="uid://doc5a5qgn3uvd" path="res://sprites/UI/R_Button_Hover.png" id="3_lf07a"]
+[ext_resource type="Texture2D" uid="uid://bjnss2o5jd3wf" path="res://sprites/UI/R_Button_Disabled.png" id="4_m37gq"]
+
+[node name="ArrowButton" type="TextureButton" unique_id=643081911]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_tpgwl")
+texture_pressed = ExtResource("2_m37gq")
+texture_hover = ExtResource("3_lf07a")
+texture_disabled = ExtResource("4_m37gq")
