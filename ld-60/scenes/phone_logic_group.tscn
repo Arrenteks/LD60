@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://f4vi4hw1qoux"]
+
+[ext_resource type="Script" uid="uid://wxrgvaqrbs1f" path="res://scenes/phone_logic_group.gd" id="1_oteuw"]
+[ext_resource type="Texture2D" uid="uid://d2lkt570lsh47" path="res://sprites/Maschine/Licht.png" id="2_df1y2"]
+[ext_resource type="PackedScene" uid="uid://cfr7y5r6fisa7" path="res://scenes/socket.tscn" id="3_ot8ao"]
+
+[node name="logic_group01" type="Node2D" unique_id=1637323199]
+script = ExtResource("1_oteuw")
+phone_number = "4122"
+active_tint_color = Color(0.79898256, 0, 0, 1)
+inactive_tint_color = Color(0, 0, 0, 0)
+
+[node name="Licht" type="Sprite2D" parent="." unique_id=133085000]
+position = Vector2(1, -35)
+texture = ExtResource("2_df1y2")
+
+[node name="ItemSocket01" parent="." unique_id=1394437148 instance=ExtResource("3_ot8ao")]
+position = Vector2(1, 0)
+collision_mask = 1
+monitoring = true
