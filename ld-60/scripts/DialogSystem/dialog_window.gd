@@ -8,12 +8,15 @@ class_name DialogueWindow
 @export var textDelay: float = 1
 var isTyping: bool = false
 var typeTimer: float = 0
+
+# ---- Deprecated ---- #
 var futureText: Array[String]
 var arrayPosition: int = 0
+# ---- Deprecated ---- #
 
 var current_call: CallResource
 var current_call_position: int = 0
-
+@onready var speaker_name: Label = $VBoxContainer/SpeakerName
 
 # Called when the node enters the scene tree for the first time.
 
@@ -37,6 +40,7 @@ func play_next_line():
 	var active_speaker: PersonResource = current_dialogue.speaker
 	var active_text: String = current_dialogue.text
 	voice_acting.set_character_params(active_speaker.base_pitch,active_speaker.pitch_varianz,&"Caller")
+	speaker_name.text = active_speaker.name.person_name
 	startText(active_text)
 
 func addText(newText: Array[String]):

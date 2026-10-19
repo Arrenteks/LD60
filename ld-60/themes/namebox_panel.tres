@@ -1,0 +1,21 @@
+[gd_resource type="Theme" format=3 uid="uid://0js0fp62s0u8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2tps"]
+bg_color = Color(0.16078432, 0.16078432, 0.16078432, 1)
+border_width_left = 9
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 9
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[resource]
+Label/colors/font_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
+Label/font_sizes/font_size = 26
+Panel/styles/panel = SubResource("StyleBoxFlat_y2tps")
+RichTextLabel/colors/default_color = Color(0.84705883, 0.84705883, 0.84705883, 1)
+RichTextLabel/font_sizes/mono_font_size = 25
+RichTextLabel/font_sizes/normal_font_size = 25
